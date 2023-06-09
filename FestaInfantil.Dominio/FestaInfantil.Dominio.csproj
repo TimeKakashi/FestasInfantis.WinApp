@@ -6,11 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="ModuloCompartilhado\" />
-    <Folder Include="ModuloCliente\" />
-    <Folder Include="ModuloFesta\" />
-    <Folder Include="ModuloTema\" />
-  </ItemGroup>
-
 </Project>
