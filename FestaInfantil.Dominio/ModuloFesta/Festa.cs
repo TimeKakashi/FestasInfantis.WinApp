@@ -4,7 +4,7 @@ using FestaInfantil.Dominio.ModuloTema;
 
 namespace FestaInfantil.Dominio.ModuloFesta
 {
-    public class Festa : EntidadeBase
+    public class Festa : EntidadeBase<Festa>
     {
         public Tema tema { get; set; }
         public Cliente cliente { get; set; }
