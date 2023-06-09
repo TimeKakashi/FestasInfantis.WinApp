@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace FestaInfantil.Dominio.ModuloCompartilhado
 {
-    public class EntidadeBase
+    public class EntidadeBase<T>
     {
         public int id;
+
+        public void AtualizarInformacoes<T>(T itemAtualizado) where T : EntidadeBase<T>
+        {
+            throw new NotImplementedException();
+        }
     }
 }
