@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
+using FestaInfantil.Dominio.ModuloTema;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class ListagemTemaControl : UserControl
     {
+        RepositorioItens RepositorioItens { get; set; }
         public ListagemTemaControl()
         {
             InitializeComponent();
+            RepositorioItens = new RepositorioItens();
         }
+
+       
     }
 }

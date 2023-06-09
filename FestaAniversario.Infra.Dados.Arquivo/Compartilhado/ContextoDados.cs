@@ -13,20 +13,21 @@ namespace FestaAniversario.Infra.Dados.Arquivo.Compartilhado
         public List<Cliente> clientes;
         public List<Festa> festas;
         public List<Tema> temas;
+        public List<Itens> itens;
 
         public ContextoDados()
         {
             clientes = new List<Cliente>();
             festas = new List<Festa>();
             temas = new List<Tema>();
-           
+            itens = new List<Itens>();
         }
 
         public ContextoDados(bool carregarDados) : this()
         {
             if (File.Exists(NOME_ARQUIVO) == false)
             {
-                //NOME_ARQUIVO = File.Create(NOME_ARQUIVO).ToString();
+                File.Create(NOME_ARQUIVO);
             }
 
             CarregarArquivo();
