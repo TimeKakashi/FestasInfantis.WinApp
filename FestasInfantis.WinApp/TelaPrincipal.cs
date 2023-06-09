@@ -1,10 +1,15 @@
 namespace FestasInfantis.WinApp
 {
-    public partial class Form1 : Form
+    public partial class TelaPrincipal : Form
     {
-        public Form1()
+        public TelaPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

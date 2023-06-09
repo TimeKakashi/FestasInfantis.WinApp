@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Compartilhado\" />
+    <Folder Include="ModuloCliente\" />
+    <Folder Include="ModuloFesta\" />
+    <Folder Include="ModuloTema\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FestaInfantil.Dominio\FestaInfantil.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
