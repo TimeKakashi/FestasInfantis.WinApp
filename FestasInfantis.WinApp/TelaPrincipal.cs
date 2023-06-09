@@ -1,3 +1,6 @@
+using FestaAniversario.Infra.Dados.Arquivo.Compartilhado;
+using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
+
 using FestaInfantil.Dominio.ModuloCliente;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
@@ -6,6 +9,8 @@ namespace FestasInfantis.WinApp
 {
     public partial class TelaPrincipal : Form
     {
+        static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
+        private RepositorioItens repositorioItens = new RepositorioItens(contextoDados);
         private ControladorBase controlador;
         private RepositorioCliente repositorioCliente = new RepositorioCliente();
         private static TelaPrincipal telaPrincipal;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FestaInfantil.Dominio.ModuloTema;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +11,13 @@ using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-    public partial class ListagemTemaControl : UserControl
+    public partial class TelaTema : Form
     {
-        RepositorioItens RepositorioItens { get; set; }
-        public ListagemTemaControl()
+        public TelaTema()
         {
             InitializeComponent();
-            RepositorioItens = new RepositorioItens();
         }
 
-       
+        
     }
 }
