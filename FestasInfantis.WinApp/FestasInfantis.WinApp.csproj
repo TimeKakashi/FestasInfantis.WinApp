@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Compartilhado\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FestaAniversario.Infra.Dados.Arquivo\FestaAniversario.Infra.Dados.Arquivo.csproj" />
     <ProjectReference Include="..\FestaInfantil.Dominio\FestaInfantil.Dominio.csproj" />
   </ItemGroup>
