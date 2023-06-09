@@ -11,21 +11,13 @@ using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-    public partial class ListagemTemaControl : UserControl
+    public partial class TelaTema : Form
     {
-        public ListagemTemaControl()
+        public TelaTema()
         {
             InitializeComponent();
         }
 
-        public void AtualizarRegistros(List<Temas> listaItens)
-        {
-            grid.Rows.Clear();
-
-            foreach (Temas item in listaItens)
-            {
-                grid.Rows.Add(item.id, item.valor);
-            }
-        }
+        
     }
 }

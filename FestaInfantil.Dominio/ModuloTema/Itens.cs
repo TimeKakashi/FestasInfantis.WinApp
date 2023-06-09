@@ -3,7 +3,7 @@
 
 namespace FestaInfantil.Dominio.ModuloTema
 {
-    public class Itens : EntidadeBase<Itens>
+    public class Temas : EntidadeBase<Temas>
     {
         public decimal valor { get; set; }
     }

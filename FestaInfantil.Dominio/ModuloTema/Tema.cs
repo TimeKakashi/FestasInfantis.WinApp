@@ -10,7 +10,7 @@ namespace FestaInfantil.Dominio.ModuloTema
         public TimeSpan horaInicio { get; set; }
         public TimeSpan horaFinal { get; set; }
 
-        public List<Itens> listaItens { get; set; }
+        public List<Temas> listaItens { get; set; }
 
         public Tema()
         {
@@ -24,7 +24,7 @@ namespace FestaInfantil.Dominio.ModuloTema
             this.data = data;
             this.horaInicio = horaInicio;
             this.horaFinal = horaFinal;
-            this.listaItens = new List<Itens>();
+            this.listaItens = new List<Temas>();
         }
     }
 }

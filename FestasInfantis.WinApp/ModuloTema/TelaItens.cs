@@ -19,11 +19,11 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
 
         }
-        private void popularListBox(Tema temaSelecionado)
+        private void popularListBoxItens(Tema temaSelecionado)
         {
             lbItens.Items.Clear();
 
-            foreach (Itens item in temaSelecionado.listaItens)
+            foreach (Temas item in temaSelecionado.listaItens)
             {
                 lbItens.Items.Add(item);
             }
