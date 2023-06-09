@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
+
+using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class ListagemTemaControl : UserControl
     {
-        RepositorioItens RepositorioItens { get; set; }
         public ListagemTemaControl()
         {
             InitializeComponent();
-            RepositorioItens = new RepositorioItens();
         }
 
        

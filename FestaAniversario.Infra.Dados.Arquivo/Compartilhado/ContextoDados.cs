@@ -8,7 +8,7 @@ namespace FestaAniversario.Infra.Dados.Arquivo.Compartilhado
 {
     public class ContextoDados
     {
-        private const string NOME_ARQUIVO = "Compartilhado\\e-Agenda.json";
+        private const string NOME_ARQUIVO = "Compartilhado\\FestasInfantis.json";
 
         public List<Cliente> clientes;
         public List<Festa> festas;
@@ -27,7 +27,8 @@ namespace FestaAniversario.Infra.Dados.Arquivo.Compartilhado
         {
             if (File.Exists(NOME_ARQUIVO) == false)
             {
-                File.Create(NOME_ARQUIVO);
+                //File.Create(NOME_ARQUIVO);
+                File.Create("").ToString();
             }
 
             CarregarArquivo();
