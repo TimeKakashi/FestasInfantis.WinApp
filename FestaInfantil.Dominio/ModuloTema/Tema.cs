@@ -2,7 +2,7 @@
 using FestaInfantil.Dominio.ModuloCompartilhado;
 namespace FestaInfantil.Dominio.ModuloTema
 {
-    public class Tema : EntidadeBase
+    public class Tema : EntidadeBase<Tema>
     {
         public string enderecoFesta {  get; set; }
         public Cliente cliente { get; set; }
