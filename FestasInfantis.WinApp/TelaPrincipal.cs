@@ -53,7 +53,7 @@ namespace FestasInfantis.WinApp
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
 
-
+            
         }
     }
 }
