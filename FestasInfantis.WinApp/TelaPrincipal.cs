@@ -17,11 +17,28 @@ namespace FestasInfantis.WinApp
         {
             InitializeComponent();
         }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
+        private void ConfigurarTelaPrincipal(ControladorBase controladorBase)
         {
+            labelTipoCadastro.Text = controlador.ObterTipoCadastro();
+            ConfigurarToolTips(controlador);
+            ConfigurarListagem(controlador);
 
         }
+        private void ConfigurarToolTips(ControladorBase controlador)
+        {
+            btnInserir.Text = controlador.ToolTipInserir;
+            btnEditar.Text = controlador.ToolTipEditar;
+            btnExcluir.Text = controlador.ToolTipExcluir;
+        }
+        private void ConfigurarListagem(ControladorBase controladorBase)
+        {
+            UserControl listagem = controladorBase.ObterListagem();
+            listagem.Dock = DockStyle.Fill;
+            panelRegistros.Controls.Clear();
+            panelRegistros.Controls.Add(listagem);
+
+        }
+
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -34,8 +51,9 @@ namespace FestasInfantis.WinApp
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorCliente(repositorioCliente);
+            ConfigurarTelaPrincipal(controlador);
 
-            
+
         }
     }
 }

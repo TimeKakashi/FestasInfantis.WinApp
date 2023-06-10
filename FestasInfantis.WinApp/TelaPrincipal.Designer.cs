@@ -35,14 +35,14 @@
             temasToolStripMenuItem = new ToolStripMenuItem();
             festasToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
+            btnInserir = new ToolStripButton();
+            btnEditar = new ToolStripButton();
+            btnExcluir = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
-            toolStripLabel1 = new ToolStripLabel();
+            labelTipoCadastro = new ToolStripLabel();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            panel1 = new Panel();
+            panelRegistros = new Panel();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             clientesToolStripMenuItem.BackColor = SystemColors.Control;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(180, 22);
+            clientesToolStripMenuItem.Size = new Size(121, 22);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
@@ -79,7 +79,7 @@
             // 
             temasToolStripMenuItem.BackColor = SystemColors.Control;
             temasToolStripMenuItem.Name = "temasToolStripMenuItem";
-            temasToolStripMenuItem.Size = new Size(180, 22);
+            temasToolStripMenuItem.Size = new Size(121, 22);
             temasToolStripMenuItem.Text = "Temas";
             // 
             // festasToolStripMenuItem
@@ -92,7 +92,7 @@
             // toolStrip1
             // 
             toolStrip1.BackColor = SystemColors.Control;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator1, toolStripLabel1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
@@ -100,50 +100,50 @@
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnInserir
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = Properties.Resources.add_circle_FILL0_wght400_GRAD0_opsz24__1_;
-            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Padding = new Padding(7);
-            toolStripButton1.Size = new Size(42, 42);
-            toolStripButton1.Text = "toolStripButton1";
-            toolStripButton1.Click += toolStripButton1_Click;
+            btnInserir.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnInserir.Image = Properties.Resources.add_circle_FILL0_wght400_GRAD0_opsz24__1_;
+            btnInserir.ImageScaling = ToolStripItemImageScaling.None;
+            btnInserir.ImageTransparentColor = Color.Magenta;
+            btnInserir.Name = "btnInserir";
+            btnInserir.Padding = new Padding(7);
+            btnInserir.Size = new Size(42, 42);
+            btnInserir.Text = "toolStripButton1";
+            btnInserir.Click += toolStripButton1_Click;
             // 
-            // toolStripButton2
+            // btnEditar
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = Properties.Resources.edit_FILL0_wght400_GRAD0_opsz24__1_;
-            toolStripButton2.ImageScaling = ToolStripItemImageScaling.None;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Padding = new Padding(7);
-            toolStripButton2.Size = new Size(42, 42);
-            toolStripButton2.Text = "toolStripButton2";
+            btnEditar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnEditar.Image = Properties.Resources.edit_FILL0_wght400_GRAD0_opsz24__1_;
+            btnEditar.ImageScaling = ToolStripItemImageScaling.None;
+            btnEditar.ImageTransparentColor = Color.Magenta;
+            btnEditar.Name = "btnEditar";
+            btnEditar.Padding = new Padding(7);
+            btnEditar.Size = new Size(42, 42);
+            btnEditar.Text = "toolStripButton2";
             // 
-            // toolStripButton3
+            // btnExcluir
             // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton3.Image = Properties.Resources.delete_FILL0_wght400_GRAD0_opsz24__1_;
-            toolStripButton3.ImageScaling = ToolStripItemImageScaling.None;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Padding = new Padding(7);
-            toolStripButton3.Size = new Size(42, 42);
-            toolStripButton3.Text = "toolStripButton3";
+            btnExcluir.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnExcluir.Image = Properties.Resources.delete_FILL0_wght400_GRAD0_opsz24__1_;
+            btnExcluir.ImageScaling = ToolStripItemImageScaling.None;
+            btnExcluir.ImageTransparentColor = Color.Magenta;
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Padding = new Padding(7);
+            btnExcluir.Size = new Size(42, 42);
+            btnExcluir.Text = "toolStripButton3";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 45);
             // 
-            // toolStripLabel1
+            // labelTipoCadastro
             // 
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(181, 42);
-            toolStripLabel1.Text = "Rafaela Decorações Tela Principal";
+            labelTipoCadastro.Name = "labelTipoCadastro";
+            labelTipoCadastro.Size = new Size(181, 42);
+            labelTipoCadastro.Text = "Rafaela Decorações Tela Principal";
             // 
             // statusStrip1
             // 
@@ -161,15 +161,15 @@
             toolStripStatusLabel1.Size = new Size(52, 17);
             toolStripStatusLabel1.Text = "{rodape}";
             // 
-            // panel1
+            // panelRegistros
             // 
-            panel1.BackColor = SystemColors.ControlDark;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 70);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(603, 279);
-            panel1.TabIndex = 4;
+            panelRegistros.BackColor = SystemColors.ControlDark;
+            panelRegistros.BorderStyle = BorderStyle.FixedSingle;
+            panelRegistros.Dock = DockStyle.Fill;
+            panelRegistros.Location = new Point(0, 70);
+            panelRegistros.Name = "panelRegistros";
+            panelRegistros.Size = new Size(603, 279);
+            panelRegistros.TabIndex = 4;
             // 
             // TelaPrincipal
             // 
@@ -177,7 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(603, 371);
-            Controls.Add(panel1);
+            Controls.Add(panelRegistros);
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
@@ -202,13 +202,13 @@
         private ToolStripMenuItem temasToolStripMenuItem;
         private ToolStripMenuItem festasToolStripMenuItem;
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
+        private ToolStripButton btnInserir;
+        private ToolStripButton btnEditar;
+        private ToolStripButton btnExcluir;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripLabel toolStripLabel1;
+        private ToolStripLabel labelTipoCadastro;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private Panel panel1;
+        private Panel panelRegistros;
     }
 }
