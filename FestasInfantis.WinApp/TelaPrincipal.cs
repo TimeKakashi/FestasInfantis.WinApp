@@ -2,6 +2,7 @@ using FestaAniversario.Infra.Dados.Arquivo.Compartilhado;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
 using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp
 {
@@ -9,8 +10,8 @@ namespace FestasInfantis.WinApp
     {
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
         private RepositorioItens repositorioItens = new RepositorioItens(contextoDados);
-        public ControladorBase controladorBase { get; set; }
-        private RepositorioCliente repositorioCliente = new RepositorioCliente();
+        public ControladorBase controlador { get; set; }
+        private RepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
         private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
         {
@@ -20,6 +21,21 @@ namespace FestasInfantis.WinApp
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (controlador == null)
+                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            controlador.Inserir();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioCliente);
+
+            
         }
     }
 }

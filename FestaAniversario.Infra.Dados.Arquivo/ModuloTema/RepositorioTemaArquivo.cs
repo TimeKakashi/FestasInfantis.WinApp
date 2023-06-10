@@ -1,4 +1,5 @@
 ﻿using FestaAniversario.Infra.Dados.Arquivo.Compartilhado;
+using FestaInfantil.Dominio.ModuloCliente;
 using FestaInfantil.Dominio.ModuloTema;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FestaAniversario.Infra.Dados.Arquivo.ModuloTema
 {
-    public class RepositorioTemaArquivo : RepositorioArquivoBase<Tema>
+    public class RepositorioTemaArquivo : RepositorioArquivoBase<Tema>, IRepositorioTema
     {
         public RepositorioTemaArquivo(ContextoDados contextoDados) : base(contextoDados)
         {

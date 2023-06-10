@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FestaInfantil.Dominio.ModuloCliente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,33 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     public partial class TelaCliente : Form
     {
+        private Cliente cliente;
+
+        public Cliente Cliente
+        {
+            set
+            {
+                tbEndereco.Text = value.endereco;
+                tbNome.Text = value.nome;
+                tbNumero.Text = value.telefone;
+            }
+            get
+            {
+                return cliente;
+            }
+        }
         public TelaCliente()
         {
             InitializeComponent();
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            string nome = tbNome.Text;
+            string endereco = tbEndereco.Text;
+            string telefone = tbNumero.Text;
+
+            cliente = new Cliente(nome, telefone, endereco);
         }
     }
 }

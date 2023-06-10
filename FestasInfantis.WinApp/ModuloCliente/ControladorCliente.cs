@@ -1,16 +1,17 @@
 ﻿using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
+using FestaInfantil.Dominio.ModuloCliente;
 using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloCliente
 {
     public class ControladorCliente : ControladorBase
     {
-        private RepositorioCliente repositorioContato;
+        private RepositorioCliente repositorioCliente;
         private ListagemClienteControl listagemCliente;
 
         public ControladorCliente(RepositorioCliente repositorioCliente)
         {
-            this.repositorioContato = repositorioContato;
+            this.repositorioCliente = repositorioCliente;
         }
 
         public override string ToolTipInserir { get { return "Inserir um novo Cliente"; } }
@@ -31,7 +32,14 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override void Inserir()
         {
-            throw new NotImplementedException();
+            TelaCliente telaCliente = new TelaCliente();
+
+            if(telaCliente.ShowDialog() == DialogResult.OK)
+            {
+                Cliente cliente = telaCliente.Cliente;
+
+                repositorioCliente.Inserir(cliente);
+            }
         }
         private void CarregarContatos()
         {
