@@ -35,7 +35,23 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorCliente(repositorioCliente);
 
-            
+            ConfigurarTelaPrincipal();
+        }
+
+        private void ConfigurarListagem()
+        {
+            UserControl listagem = controlador.ObterListagem();
+
+            listagem.Dock = DockStyle.Fill;
+
+            panel.Controls.Clear();
+
+            panel.Controls.Add(listagem);
+        }
+
+        public void ConfigurarTelaPrincipal()
+        {
+            ConfigurarListagem();
         }
     }
 }

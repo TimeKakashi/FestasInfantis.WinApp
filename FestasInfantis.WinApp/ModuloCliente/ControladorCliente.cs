@@ -20,16 +20,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override string ToolTipExcluir { get { return "Excluir Cliente existente"; } }
 
-        public override void Editar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Excluir()
-        {
-            throw new NotImplementedException();
-        }
-
         public override void Inserir()
         {
             TelaCliente telaCliente = new TelaCliente();
@@ -41,22 +31,36 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 repositorioCliente.Inserir(cliente);
             }
         }
-        private void CarregarContatos()
-        {
 
+        public override void Editar()
+        {
+            throw new NotImplementedException();
         }
+
+        public override void Excluir()
+        {
+            throw new NotImplementedException();
+        }
+
         public override UserControl ObterListagem()
         {
             if (listagemCliente == null)
                 listagemCliente = new ListagemClienteControl();
 
-            CarregarContatos();
+            CarregarClientes();
             return listagemCliente;
         }
 
         public override string ObterTipoCadastro()
         {
             return "Cadastro de Cliente";
+        }
+
+        public void CarregarClientes()
+        {
+            List<Cliente> clientes = repositorioCliente.SelecionarTodos();
+
+            listagemCliente.AtualizarRegistros(clientes);
         }
 
 

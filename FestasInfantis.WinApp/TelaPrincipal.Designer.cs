@@ -42,7 +42,7 @@
             toolStripLabel1 = new ToolStripLabel();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            panel1 = new Panel();
+            panel = new Panel();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             clientesToolStripMenuItem.BackColor = SystemColors.Control;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(180, 22);
+            clientesToolStripMenuItem.Size = new Size(121, 22);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
@@ -79,7 +79,7 @@
             // 
             temasToolStripMenuItem.BackColor = SystemColors.Control;
             temasToolStripMenuItem.Name = "temasToolStripMenuItem";
-            temasToolStripMenuItem.Size = new Size(180, 22);
+            temasToolStripMenuItem.Size = new Size(121, 22);
             temasToolStripMenuItem.Text = "Temas";
             // 
             // festasToolStripMenuItem
@@ -161,15 +161,15 @@
             toolStripStatusLabel1.Size = new Size(52, 17);
             toolStripStatusLabel1.Text = "{rodape}";
             // 
-            // panel1
+            // panel
             // 
-            panel1.BackColor = SystemColors.ControlDark;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 70);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(603, 279);
-            panel1.TabIndex = 4;
+            panel.BackColor = SystemColors.ControlDark;
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Dock = DockStyle.Fill;
+            panel.Location = new Point(0, 70);
+            panel.Name = "panel";
+            panel.Size = new Size(603, 279);
+            panel.TabIndex = 4;
             // 
             // TelaPrincipal
             // 
@@ -177,7 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(603, 371);
-            Controls.Add(panel1);
+            Controls.Add(panel);
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
@@ -209,6 +209,6 @@
         private ToolStripLabel toolStripLabel1;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private Panel panel1;
+        private Panel panel;
     }
 }
