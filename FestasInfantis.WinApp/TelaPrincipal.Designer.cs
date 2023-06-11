@@ -122,6 +122,7 @@
             btnEditar.Padding = new Padding(7);
             btnEditar.Size = new Size(42, 42);
             btnEditar.Text = "toolStripButton2";
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -133,6 +134,7 @@
             btnExcluir.Padding = new Padding(7);
             btnExcluir.Size = new Size(42, 42);
             btnExcluir.Text = "toolStripButton3";
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // toolStripSeparator1
             // 

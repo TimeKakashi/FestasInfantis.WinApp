@@ -20,6 +20,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override string ToolTipExcluir { get { return "Excluir Cliente existente"; } }
 
+        private Cliente ObterClienteSelecionado()
+        {
+            int id = listagemCliente.ObterIdSelecionado();
+
+            return repositorioCliente.SelecionarPorId(id);
+        }
         public override void Inserir()
         {
             TelaCliente telaCliente = new TelaCliente();
@@ -34,14 +40,64 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override void Editar()
         {
-            throw new NotImplementedException();
+            Cliente cliente = ObterClienteSelecionado();
+
+            if (cliente == null)
+            {
+                MessageBox.Show($"Selecione um cliente primeiro!",
+                    "Edição de Clientes",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            int id = 0;
+            TelaCliente telaCliente = new TelaCliente();
+            telaCliente.Cliente = cliente;
+            id = cliente.id;
+
+            DialogResult opcaoEscolhida = telaCliente.ShowDialog();
+
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                telaCliente.Cliente.id = id;
+                repositorioCliente.Editar(id, telaCliente.Cliente);
+
+                CarregarClientes();
+            }
+            else
+            {
+                MessageBox.Show("Cancelado!");
+                return;
+            }
         }
+
 
         public override void Excluir()
         {
-            throw new NotImplementedException();
-        }
+            Cliente cliente = ObterClienteSelecionado();
 
+            if (cliente == null)
+            {
+                MessageBox.Show($"Selecione um cliente primeiro!",
+                    "Exclusão de Clientes",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir o cliente {cliente.nome}?", "Exclusão de Clientes",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                repositorioCliente.Excluir(cliente);
+
+                CarregarClientes();
+            }
+        }
         public override UserControl ObterListagem()
         {
             if (listagemCliente == null)
