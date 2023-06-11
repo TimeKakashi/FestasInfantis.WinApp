@@ -4,12 +4,9 @@ namespace FestaInfantil.Dominio.ModuloTema
 {
     public class Tema : EntidadeBase<Tema>
     {
-        public string enderecoFesta {  get; set; }
-        public Cliente cliente { get; set; }
-        public DateTime data { get; set; }
-        public TimeSpan horaInicio { get; set; }
-        public TimeSpan horaFinal { get; set; }
-
+        
+        public string descricao { get; set; }
+        public decimal valor { get; set; }
         public List<Tema> listaItens { get; set; }
 
         public Tema()
@@ -17,24 +14,30 @@ namespace FestaInfantil.Dominio.ModuloTema
             
         }
 
-        public Tema(string enderecoFesta, Cliente cliente, DateTime data, TimeSpan horaInicio, TimeSpan horaFinal)
+        public Tema(string descricao, decimal valor)
         {
-            this.enderecoFesta = enderecoFesta;
-            this.cliente = cliente;
-            this.data = data;
-            this.horaInicio = horaInicio;
-            this.horaFinal = horaFinal;
+            this.descricao = descricao;
+            this.valor = valor;
             this.listaItens = new List<Tema>();
         }
 
         public override string[] Validar()
         {
-            throw new NotImplementedException();
+            List<String> lista = new List<String>();
+
+            if (descricao == null)
+            {
+                lista.Add("Campo descricao incorreto!");
+
+            }
+
+            return lista.ToArray();
         }
 
         public override void AtualizarInformacoes(Tema registroAtualziado)
         {
-            throw new NotImplementedException();
+            this.descricao = registroAtualziado.descricao;
+            this.listaItens = registroAtualziado.listaItens;
         }
     }
 }

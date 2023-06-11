@@ -30,9 +30,11 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            tbDescricao = new TextBox();
             label3 = new Label();
             listaItensTema = new CheckedListBox();
+            btnGravar = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -55,12 +57,12 @@
             label2.TabIndex = 1;
             label2.Text = "Descrição:";
             // 
-            // textBox1
+            // tbDescricao
             // 
-            textBox1.Location = new Point(322, 148);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(143, 23);
-            textBox1.TabIndex = 2;
+            tbDescricao.Location = new Point(322, 148);
+            tbDescricao.Name = "tbDescricao";
+            tbDescricao.Size = new Size(143, 23);
+            tbDescricao.TabIndex = 2;
             // 
             // label3
             // 
@@ -80,15 +82,38 @@
             listaItensTema.Size = new Size(375, 166);
             listaItensTema.TabIndex = 4;
             // 
+            // btnGravar
+            // 
+            btnGravar.DialogResult = DialogResult.OK;
+            btnGravar.Location = new Point(599, 400);
+            btnGravar.Name = "btnGravar";
+            btnGravar.Size = new Size(108, 38);
+            btnGravar.TabIndex = 5;
+            btnGravar.Text = "Gravar";
+            btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.Click += btnGravar_Click_1;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.DialogResult = DialogResult.Cancel;
+            btnCancelar.Location = new Point(713, 400);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(93, 38);
+            btnCancelar.TabIndex = 6;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // TelaTema
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGravar);
             Controls.Add(listaItensTema);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(tbDescricao);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "TelaTema";
@@ -104,5 +129,8 @@
         private TextBox textBox1;
         private Label label3;
         private CheckedListBox listaItensTema;
+        private TextBox tbDescricao;
+        private Button btnGravar;
+        private Button btnCancelar;
     }
 }
