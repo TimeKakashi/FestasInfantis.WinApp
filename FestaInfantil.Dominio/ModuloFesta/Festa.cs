@@ -23,5 +23,15 @@ namespace FestaInfantil.Dominio.ModuloFesta
             this.horaInicio = horaInicio;
             this.horaFinal = horaFinal;
         }
+
+        public override string[] Validar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void AtualizarInformacoes(Festa registroAtualziado)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

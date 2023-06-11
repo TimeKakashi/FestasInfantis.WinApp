@@ -53,7 +53,23 @@ namespace FestasInfantis.WinApp
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
 
-            
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (controlador == null)
+                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            controlador.Editar();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (controlador == null)
+                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            controlador.Excluir();
         }
     }
 }

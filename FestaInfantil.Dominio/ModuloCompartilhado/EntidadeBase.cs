@@ -2,13 +2,11 @@
 
 namespace FestaInfantil.Dominio.ModuloCompartilhado
 {
-    public class EntidadeBase<T>
+    public abstract class EntidadeBase<T>
     {
         public int id;
 
-        public void AtualizarInformacoes<T>(T itemAtualizado) where T : EntidadeBase<T>
-        {
-            throw new NotImplementedException();
-        }
+        public abstract string[] Validar();
+        public abstract void AtualizarInformacoes(T registroAtualziado);
     }
 }

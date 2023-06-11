@@ -26,5 +26,15 @@ namespace FestaInfantil.Dominio.ModuloTema
             this.horaFinal = horaFinal;
             this.listaItens = new List<Tema>();
         }
+
+        public override string[] Validar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void AtualizarInformacoes(Tema registroAtualziado)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

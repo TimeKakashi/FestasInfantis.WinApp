@@ -21,5 +21,29 @@ namespace FestaInfantil.Dominio.ModuloCliente
             this.telefone = telefone;
             this.endereco = endereco;
         }
+
+        public override string[] Validar()
+        {
+            List<string> erros = new List<string>();
+
+            if (string.IsNullOrEmpty(nome))
+                erros.Add("O campo nome esta vazio!");
+
+            if(string.IsNullOrEmpty(telefone))
+                erros.Add("O campo telefone esta vazio!");
+
+            if (string.IsNullOrEmpty(endereco))
+                erros.Add("O campo endereco esta vazio!");
+
+            return erros.ToArray();
+
+        }
+
+        public override void AtualizarInformacoes(Cliente registroAtualziado)
+        {
+            this.nome = registroAtualziado.nome;
+            this.telefone = registroAtualziado.telefone;
+            this.endereco = registroAtualziado.endereco;
+        }
     }
 }
