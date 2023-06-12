@@ -39,7 +39,16 @@ namespace FestasInfantis.WinApp.ModuloCliente
             string endereco = tbEndereco.Text;
             string telefone = tbNumero.Text;
 
+
+
             cliente = new Cliente(nome, telefone, endereco);
+
+            string[] erros = cliente.Validar();
+
+            if(erros.Length > 0) 
+            {
+                DialogResult = DialogResult.None;
+            }
         }
     }
 }
