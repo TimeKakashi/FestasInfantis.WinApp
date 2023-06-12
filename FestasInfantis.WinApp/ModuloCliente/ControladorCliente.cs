@@ -20,6 +20,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override string ToolTipExcluir { get { return "Excluir Cliente existente"; } }
 
+        private Cliente ObterClienteSelecionado()
+        {
+            int id = listagemCliente.ObterIdSelecionado();
+
+            return repositorioCliente.SelecionarPorId(id);
+        }
         public override void Inserir()
         {
             TelaCliente telaCliente = new TelaCliente();
@@ -29,8 +35,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 Cliente cliente = telaCliente.Cliente;
 
                 repositorioCliente.Inserir(cliente);
-
-                CarregarClientes();
             }
         }
 
@@ -38,47 +42,62 @@ namespace FestasInfantis.WinApp.ModuloCliente
         {
             Cliente cliente = ObterClienteSelecionado();
 
-            if(cliente == null)
+            if (cliente == null)
             {
-                MessageBox.Show("Selecione um cliente primerio!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show($"Selecione um cliente primeiro!",
+                    "Edição de Clientes",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
                 return;
             }
 
-            int id;
-
+            int id = 0;
             TelaCliente telaCliente = new TelaCliente();
             telaCliente.Cliente = cliente;
             id = cliente.id;
 
-            if(telaCliente.ShowDialog() == DialogResult.OK)
+            DialogResult opcaoEscolhida = telaCliente.ShowDialog();
+
+            if (opcaoEscolhida == DialogResult.OK)
             {
                 telaCliente.Cliente.id = id;
                 repositorioCliente.Editar(id, telaCliente.Cliente);
+
+                CarregarClientes();
             }
             else
-                MessageBox.Show("Operção Cancelada!", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-
-            CarregarClientes();
+            {
+                MessageBox.Show("Cancelado!");
+                return;
+            }
         }
+
 
         public override void Excluir()
         {
             Cliente cliente = ObterClienteSelecionado();
 
-            DialogResult verificarExclusao = MessageBox.Show($"Deseja excluir o cliente {cliente.nome}?", "Exclusão de Clientes",
-               MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (cliente == null)
+            {
+                MessageBox.Show($"Selecione um cliente primeiro!",
+                    "Exclusão de Clientes",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
 
-            if (verificarExclusao == DialogResult.OK)
+                return;
+            }
+
+            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir o cliente {cliente.nome}?", "Exclusão de Clientes",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (opcaoEscolhida == DialogResult.OK)
             {
                 repositorioCliente.Excluir(cliente);
 
                 CarregarClientes();
             }
-
-            
         }
-
         public override UserControl ObterListagem()
         {
             if (listagemCliente == null)
@@ -98,13 +117,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
             List<Cliente> clientes = repositorioCliente.SelecionarTodos();
 
             listagemCliente.AtualizarRegistros(clientes);
-        }
-
-        public Cliente ObterClienteSelecionado()
-        {
-            int id = listagemCliente.ObterIdSelecionado();
-
-            return repositorioCliente.SelecionarPorId(id);
         }
 
 

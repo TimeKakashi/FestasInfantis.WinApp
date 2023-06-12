@@ -57,20 +57,8 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
-        }
 
-        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorTema(repositorioTema);
-            ConfigurarTelaPrincipal(controlador);
-        }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (controlador == null)
-                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            controlador.Editar();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -81,9 +69,25 @@ namespace FestasInfantis.WinApp
             controlador.Excluir();
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (controlador == null)
+                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            controlador.Editar();
+        }
+
+        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorTema(repositorioTema);
+            ConfigurarTelaPrincipal(controlador);
+
+        }
+
         private void itensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            controlador = new ControladorItens(repositorioItens);
+            ConfigurarTelaPrincipal(controlador);
         }
     }
 }
