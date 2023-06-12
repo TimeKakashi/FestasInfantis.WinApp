@@ -6,10 +6,10 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     public class ControladorCliente : ControladorBase
     {
-        private RepositorioCliente repositorioCliente;
+        private IRepositorioCliente repositorioCliente;
         private ListagemClienteControl listagemCliente;
 
-        public ControladorCliente(RepositorioCliente repositorioCliente)
+        public ControladorCliente(IRepositorioCliente repositorioCliente)
         {
             this.repositorioCliente = repositorioCliente;
         }

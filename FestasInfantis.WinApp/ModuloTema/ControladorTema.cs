@@ -14,9 +14,9 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public class ControladorTema : ControladorBase
     {
-        private RepositorioTemaArquivo repositorioTema;
+        private IRepositorioTema repositorioTema;
         ListagemTemaControl listagemTema = new ListagemTemaControl();
-        public ControladorTema(RepositorioTemaArquivo repositorioTema)
+        public ControladorTema(IRepositorioTema repositorioTema)
         {
             this.repositorioTema = repositorioTema;
         }

@@ -2,6 +2,8 @@ using FestaAniversario.Infra.Dados.Arquivo.Compartilhado;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloTema;
+using FestaInfantil.Dominio.ModuloCliente;
+using FestaInfantil.Dominio.ModuloTema;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 using FestasInfantis.WinApp.ModuloTema;
@@ -11,10 +13,10 @@ namespace FestasInfantis.WinApp
     public partial class TelaPrincipal : Form
     {
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
-        private RepositorioItens repositorioItens = new RepositorioItens(contextoDados);
+        private IRepositorioItens repositorioItens = new RepositorioItens(contextoDados);
+        private IRepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
+        private IRepositorioTema repositorioTema = new RepositorioTemaArquivo(contextoDados);
         public ControladorBase controlador { get; set; }
-        private RepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
-        private RepositorioTemaArquivo repositorioTema = new RepositorioTemaArquivo(contextoDados);
         private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
         {
