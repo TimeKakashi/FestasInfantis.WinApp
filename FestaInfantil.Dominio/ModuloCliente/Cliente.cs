@@ -22,6 +22,11 @@ namespace FestaInfantil.Dominio.ModuloCliente
             this.endereco = endereco;
         }
 
+        public override string ToString()
+        {
+            return nome;
+        }
+
         public override string[] Validar()
         {
             List<string> erros = new List<string>();

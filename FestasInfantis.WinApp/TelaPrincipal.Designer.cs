@@ -88,7 +88,7 @@
             // itensToolStripMenuItem
             // 
             itensToolStripMenuItem.Name = "itensToolStripMenuItem";
-            itensToolStripMenuItem.Size = new Size(180, 22);
+            itensToolStripMenuItem.Size = new Size(103, 22);
             itensToolStripMenuItem.Text = "Itens";
             itensToolStripMenuItem.Click += itensToolStripMenuItem_Click;
             // 
@@ -98,6 +98,7 @@
             festasToolStripMenuItem.Name = "festasToolStripMenuItem";
             festasToolStripMenuItem.Size = new Size(56, 21);
             festasToolStripMenuItem.Text = "Festas";
+            festasToolStripMenuItem.Click += festasToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 

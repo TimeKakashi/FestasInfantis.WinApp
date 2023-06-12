@@ -7,7 +7,7 @@ namespace FestaInfantil.Dominio.ModuloTema
         
         public string descricao { get; set; }
         public decimal valor { get; set; }
-        public List<Tema> listaItens { get; set; }
+        public List<Itens> listaItens { get; set; }
 
         public Tema()
         {
@@ -18,9 +18,13 @@ namespace FestaInfantil.Dominio.ModuloTema
         {
             this.descricao = descricao;
             this.valor = valor;
-            this.listaItens = new List<Tema>();
+            this.listaItens = new List<Itens>();
         }
 
+        public override string ToString()
+        {
+            return descricao;
+        }
         public override string[] Validar()
         {
             List<String> lista = new List<String>();
