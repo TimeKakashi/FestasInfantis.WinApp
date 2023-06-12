@@ -1,8 +1,11 @@
 using FestaAniversario.Infra.Dados.Arquivo.Compartilhado;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
+using FestaAniversario.Infra.Dados.Arquivo.ModuloTema;
+using FestaInfantil.Dominio.ModuloTema;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp
 {
@@ -10,6 +13,9 @@ namespace FestasInfantis.WinApp
     {
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
         private RepositorioItens repositorioItens = new RepositorioItens(contextoDados);
+        public ControladorTema controladort { get; set; }
+        private RepositorioTemaArquivo repositorioTema = new RepositorioTemaArquivo(contextoDados);
+       
         public ControladorBase controlador { get; set; }
         private RepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
         private static TelaPrincipal telaPrincipal;
@@ -70,6 +76,19 @@ namespace FestasInfantis.WinApp
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             controlador.Editar();
+        }
+
+        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorTema(repositorioTema);
+            ConfigurarTelaPrincipal(controlador);
+
+        }
+
+        private void itensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorItens(repositorioItens);
+            ConfigurarTelaPrincipal(controlador);
         }
     }
 }

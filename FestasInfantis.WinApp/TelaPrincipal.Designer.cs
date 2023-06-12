@@ -33,6 +33,7 @@
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
             temasToolStripMenuItem = new ToolStripMenuItem();
+            itensToolStripMenuItem = new ToolStripMenuItem();
             festasToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             btnInserir = new ToolStripButton();
@@ -43,7 +44,6 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             panelRegistros = new Panel();
-            itensToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -84,6 +84,13 @@
             temasToolStripMenuItem.Size = new Size(180, 22);
             temasToolStripMenuItem.Text = "Temas";
             temasToolStripMenuItem.Click += temasToolStripMenuItem_Click;
+            // 
+            // itensToolStripMenuItem
+            // 
+            itensToolStripMenuItem.Name = "itensToolStripMenuItem";
+            itensToolStripMenuItem.Size = new Size(180, 22);
+            itensToolStripMenuItem.Text = "Itens";
+            itensToolStripMenuItem.Click += itensToolStripMenuItem_Click;
             // 
             // festasToolStripMenuItem
             // 
@@ -175,13 +182,6 @@
             panelRegistros.Name = "panelRegistros";
             panelRegistros.Size = new Size(603, 279);
             panelRegistros.TabIndex = 4;
-            // 
-            // itensToolStripMenuItem
-            // 
-            itensToolStripMenuItem.Name = "itensToolStripMenuItem";
-            itensToolStripMenuItem.Size = new Size(180, 22);
-            itensToolStripMenuItem.Text = "Itens";
-            itensToolStripMenuItem.Click += itensToolStripMenuItem_Click;
             // 
             // TelaPrincipal
             // 
