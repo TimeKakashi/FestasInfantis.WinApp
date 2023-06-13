@@ -15,7 +15,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class TelaTema : Form
     {
-        
+
         public TelaTema(IRepositorioItens repositorio)
         {
             InitializeComponent();
@@ -64,7 +64,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             List<Itens> listaItens = repositorioItens.SelecionarTodos();
 
-            foreach(Itens item in listaItens)
+            foreach (Itens item in listaItens)
             {
                 listaItensTema.Items.Add(item);
             }
