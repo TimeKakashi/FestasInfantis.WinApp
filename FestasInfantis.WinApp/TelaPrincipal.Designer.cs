@@ -42,7 +42,7 @@
             toolStripSeparator1 = new ToolStripSeparator();
             labelTipoCadastro = new ToolStripLabel();
             statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            LBrodape = new ToolStripStatusLabel();
             panelRegistros = new Panel();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -72,7 +72,7 @@
             // 
             clientesToolStripMenuItem.BackColor = SystemColors.Control;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(180, 22);
+            clientesToolStripMenuItem.Size = new Size(121, 22);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
@@ -81,7 +81,7 @@
             temasToolStripMenuItem.BackColor = SystemColors.Control;
             temasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { itensToolStripMenuItem });
             temasToolStripMenuItem.Name = "temasToolStripMenuItem";
-            temasToolStripMenuItem.Size = new Size(180, 22);
+            temasToolStripMenuItem.Size = new Size(121, 22);
             temasToolStripMenuItem.Text = "Temas";
             temasToolStripMenuItem.Click += temasToolStripMenuItem_Click;
             // 
@@ -107,81 +107,82 @@
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
-            toolStrip1.Size = new Size(603, 45);
+            toolStrip1.Size = new Size(603, 27);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnInserir
             // 
+            btnInserir.BackgroundImage = Properties.Resources.add_circle_FILL0_wght400_GRAD0_opsz24__1_;
             btnInserir.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnInserir.Image = Properties.Resources.add_circle_FILL0_wght400_GRAD0_opsz24__1_;
             btnInserir.ImageScaling = ToolStripItemImageScaling.None;
             btnInserir.ImageTransparentColor = Color.Magenta;
             btnInserir.Name = "btnInserir";
-            btnInserir.Padding = new Padding(7);
-            btnInserir.Size = new Size(42, 42);
+            btnInserir.Padding = new Padding(10);
+            btnInserir.Size = new Size(24, 24);
             btnInserir.Text = "toolStripButton1";
             btnInserir.Click += toolStripButton1_Click;
             // 
             // btnEditar
             // 
+            btnEditar.BackgroundImage = Properties.Resources.edit_FILL0_wght400_GRAD0_opsz24__1_;
             btnEditar.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnEditar.Image = Properties.Resources.edit_FILL0_wght400_GRAD0_opsz24__1_;
             btnEditar.ImageScaling = ToolStripItemImageScaling.None;
             btnEditar.ImageTransparentColor = Color.Magenta;
             btnEditar.Name = "btnEditar";
             btnEditar.Padding = new Padding(7);
-            btnEditar.Size = new Size(42, 42);
+            btnEditar.Size = new Size(23, 24);
             btnEditar.Text = "toolStripButton2";
             btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
+            btnExcluir.BackgroundImage = Properties.Resources.delete_FILL0_wght400_GRAD0_opsz24__1_;
             btnExcluir.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnExcluir.Image = Properties.Resources.delete_FILL0_wght400_GRAD0_opsz24__1_;
             btnExcluir.ImageScaling = ToolStripItemImageScaling.None;
             btnExcluir.ImageTransparentColor = Color.Magenta;
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Padding = new Padding(7);
-            btnExcluir.Size = new Size(42, 42);
+            btnExcluir.Size = new Size(23, 24);
             btnExcluir.Text = "toolStripButton3";
             btnExcluir.Click += btnExcluir_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 45);
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // labelTipoCadastro
             // 
             labelTipoCadastro.Name = "labelTipoCadastro";
-            labelTipoCadastro.Size = new Size(181, 42);
+            labelTipoCadastro.Size = new Size(181, 24);
             labelTipoCadastro.Text = "Rafaela Decorações Tela Principal";
             // 
             // statusStrip1
             // 
             statusStrip1.BackColor = SystemColors.ControlLight;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { LBrodape });
             statusStrip1.Location = new Point(0, 349);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(603, 22);
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // LBrodape
             // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(52, 17);
-            toolStripStatusLabel1.Text = "{rodape}";
+            LBrodape.Name = "LBrodape";
+            LBrodape.Size = new Size(52, 17);
+            LBrodape.Text = "{rodape}";
             // 
             // panelRegistros
             // 
             panelRegistros.BackColor = SystemColors.ControlDark;
             panelRegistros.BorderStyle = BorderStyle.FixedSingle;
             panelRegistros.Dock = DockStyle.Fill;
-            panelRegistros.Location = new Point(0, 70);
+            panelRegistros.Location = new Point(0, 52);
             panelRegistros.Name = "panelRegistros";
-            panelRegistros.Size = new Size(603, 279);
+            panelRegistros.Padding = new Padding(7);
+            panelRegistros.Size = new Size(603, 297);
             panelRegistros.TabIndex = 4;
             // 
             // TelaPrincipal
@@ -221,7 +222,7 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripLabel labelTipoCadastro;
         private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel LBrodape;
         private Panel panelRegistros;
         private ToolStripMenuItem itensToolStripMenuItem;
     }

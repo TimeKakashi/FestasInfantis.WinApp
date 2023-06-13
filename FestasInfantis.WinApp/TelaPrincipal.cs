@@ -10,6 +10,7 @@ using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 using FestasInfantis.WinApp.ModuloFesta;
 using FestasInfantis.WinApp.ModuloTema;
+using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp
 {
@@ -45,6 +46,22 @@ namespace FestasInfantis.WinApp
             listagem.Dock = DockStyle.Fill;
             panelRegistros.Controls.Clear();
             panelRegistros.Controls.Add(listagem);
+
+        }
+
+        public static TelaPrincipal Instancia
+        {
+            get
+            {
+                if (telaPrincipal == null)
+                    telaPrincipal = new TelaPrincipal();
+                return telaPrincipal;
+            }
+        }
+
+        public void AtualizarRodape(string mensagem)
+        {
+            LBrodape.Text = mensagem;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
