@@ -6,12 +6,12 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     internal class ControladorItens : ControladorBase
     {
-        private IRepositorioItens repositorioItens;
+        private IRepositorioItens repositorioItem;
         ListagemItensControl listagemItens = new ListagemItensControl();
 
         public ControladorItens(IRepositorioItens repositorioItens)
         {
-            this.repositorioItens = repositorioItens;
+            this.repositorioItem = repositorioItens;
         }
 
         public override string ToolTipInserir => "Inserir Itens";
@@ -37,7 +37,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (telaItens.ShowDialog() == DialogResult.OK)
             {
                 telaItens.itens.id = id;
-                repositorioItens.Editar(id, telaItens.itens);
+                repositorioItem.Editar(id, telaItens.itens);
                 CarregarItens();
             }
         }
@@ -52,7 +52,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             if (verificarExclusao == DialogResult.OK)
             {
-                repositorioItens.Excluir(item);
+                repositorioItem.Excluir(item);
                 CarregarItens();
             }
         }
@@ -65,22 +65,22 @@ namespace FestasInfantis.WinApp.ModuloTema
             {
                 Itens item = telaItens.itens;
 
-                repositorioItens.Inserir(item);
+                repositorioItem.Inserir(item);
 
                 CarregarItens();
             }
         }
         public void CarregarItens()
         {
-            List<Itens> itens = repositorioItens.SelecionarTodos();
+            List<Itens> iten = repositorioItem.SelecionarTodos();
 
-            listagemItens.AtualizarRegistros(itens);
+            listagemItens.AtualizarRegistros(iten);
         }
         public Itens ObterItemSelecionado()
         {
             int id = listagemItens.ObterIdSelecionado();
 
-            return repositorioItens.SelecionarPorId(id);
+            return repositorioItem.SelecionarPorId(id);
         }
 
         public override UserControl ObterListagem()

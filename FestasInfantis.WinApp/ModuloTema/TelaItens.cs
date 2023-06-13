@@ -21,7 +21,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
             get
             {
-                return itens;
+                return item;
             }
         }
 
@@ -37,6 +37,8 @@ namespace FestasInfantis.WinApp.ModuloTema
             {
                 DialogResult = DialogResult.None;
             }
+
+            
         }
 
         private void Atualizar()

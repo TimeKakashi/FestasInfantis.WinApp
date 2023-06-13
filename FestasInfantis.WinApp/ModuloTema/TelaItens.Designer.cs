@@ -102,6 +102,7 @@
             // btnCadastrar
             // 
             btnCadastrar.BackColor = SystemColors.ButtonFace;
+            btnCadastrar.DialogResult = DialogResult.OK;
             btnCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCadastrar.Location = new Point(12, 349);
             btnCadastrar.Name = "btnCadastrar";

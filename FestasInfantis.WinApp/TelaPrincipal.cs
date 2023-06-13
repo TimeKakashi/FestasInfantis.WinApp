@@ -91,7 +91,7 @@ namespace FestasInfantis.WinApp
 
         private void temasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorTema(repositorioTema);
+            controlador = new ControladorTema(repositorioTema, repositorioItens);
             ConfigurarTelaPrincipal(controlador);
 
         }

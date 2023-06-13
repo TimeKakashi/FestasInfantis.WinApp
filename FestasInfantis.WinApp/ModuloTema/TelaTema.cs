@@ -1,4 +1,5 @@
-﻿using FestaInfantil.Dominio.ModuloCliente;
+﻿using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
+using FestaInfantil.Dominio.ModuloCliente;
 using FestaInfantil.Dominio.ModuloTema;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,16 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class TelaTema : Form
     {
-        public TelaTema()
+        
+        public TelaTema(IRepositorioItens repositorio)
         {
             InitializeComponent();
+            this.repositorioItens = repositorio;
+            PopularCBItens();
         }
 
         private Tema tema;
-
+        private IRepositorioItens repositorioItens;
         public Tema Tema
         {
             set
@@ -38,7 +42,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             string descricao = tbDescricao.Text;
             decimal valor = 0;
 
-            foreach (Itens item in listaItensTema.Items)
+            foreach (Itens item in listaItensTema.CheckedItems)
             {
 
                 valor += Convert.ToDecimal(item.valor);
@@ -51,6 +55,16 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (erros.Length > 0)
             {
                 DialogResult = DialogResult.None;
+            }
+        }
+
+        public void PopularCBItens()
+        {
+            List<Itens> listaItens = repositorioItens.SelecionarTodos();
+
+            foreach(Itens item in listaItens)
+            {
+                listaItensTema.Items.Add(item);
             }
         }
 
