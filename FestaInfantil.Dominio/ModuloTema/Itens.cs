@@ -8,6 +8,8 @@ namespace FestaInfantil.Dominio.ModuloTema
         public string nomeDoItem { get; set; }
         public decimal valor { get; set; }
 
+        public bool marcado = false;
+
         public Itens()
         {
 

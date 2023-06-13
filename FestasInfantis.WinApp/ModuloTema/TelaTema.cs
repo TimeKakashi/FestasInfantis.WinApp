@@ -30,15 +30,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             set
             {
                 tbDescricao.Text = value.descricao;
-                foreach (Itens item in listaItensTema.CheckedItems)
-                {
-                    int index = listaItensTema.Items.IndexOf(item);
-                    if (index >= 0)
-                    {
-                        listaItensTema.SetItemChecked(index, true);
-                    }
-                }
-
+                DeixarItensMarcados();
             }
             get
             {
@@ -57,6 +49,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             {
                 listaItens.Add(item);
                 valor += Convert.ToDecimal(item.valor);
+                item.marcado = true;
             }
 
             tema = new Tema(descricao, valor, listaItens);
@@ -66,6 +59,44 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (erros.Length > 0)
             {
                 DialogResult = DialogResult.None;
+            }
+
+            DescamarcarItens();
+        }
+
+        public void DeixarItensMarcados()
+        {
+            List<Itens> listaItensSelecioando = new List<Itens>();
+
+            foreach (Itens item in listaItensTema.Items)
+            {
+                if(item.marcado)
+                    listaItensSelecioando.Add(item);
+            }
+
+            foreach (Itens item in listaItensSelecioando)
+            {
+                if (item.marcado)
+                {
+                    int index = listaItensTema.Items.IndexOf(item);
+
+                    if (index >= 0)
+                    {
+                        listaItensTema.SetItemChecked(index, true);
+                    }
+                }
+            }
+        }
+
+        public void DescamarcarItens()
+        {
+            foreach (Itens item in listaItensTema.Items)
+            {
+                if (item.marcado)
+                    if (!listaItensTema.CheckedItems.Contains(item))
+                    {
+                        item.marcado = false;
+                    }
             }
         }
 
