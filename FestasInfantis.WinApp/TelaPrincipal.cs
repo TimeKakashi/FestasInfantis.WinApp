@@ -7,6 +7,7 @@ using FestaInfantil.Dominio.ModuloTema;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 using FestasInfantis.WinApp.ModuloTema;
+using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp
 {
@@ -42,6 +43,21 @@ namespace FestasInfantis.WinApp
             panelRegistros.Controls.Clear();
             panelRegistros.Controls.Add(listagem);
 
+        }
+
+        public static TelaPrincipal Instancia
+        {
+            get
+            {
+                if (telaPrincipal == null)
+                    telaPrincipal = new TelaPrincipal();
+                return telaPrincipal;
+            }
+        }
+
+        public void AtualizarRodape(string mensagem)
+        {
+            LBrodape.Text = mensagem;
         }
 
 
@@ -89,5 +105,7 @@ namespace FestasInfantis.WinApp
             controlador = new ControladorItens(repositorioItens);
             ConfigurarTelaPrincipal(controlador);
         }
+
+
     }
 }
