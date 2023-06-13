@@ -45,9 +45,7 @@ namespace FestasInfantis.WinApp
             listagem.Dock = DockStyle.Fill;
             panelRegistros.Controls.Clear();
             panelRegistros.Controls.Add(listagem);
-
         }
-
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -75,7 +73,10 @@ namespace FestasInfantis.WinApp
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (controlador == null)
+            {
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             controlador.Excluir();
         }
@@ -83,7 +84,10 @@ namespace FestasInfantis.WinApp
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (controlador == null)
+            {
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             controlador.Editar();
         }
