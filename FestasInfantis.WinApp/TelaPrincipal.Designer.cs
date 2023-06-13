@@ -189,6 +189,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
+            ForeColor = SystemColors.ActiveCaptionText;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaPrincipal";
             Text = "Rafaela Decorações";
