@@ -30,6 +30,15 @@ namespace FestasInfantis.WinApp.ModuloTema
             set
             {
                 tbDescricao.Text = value.descricao;
+                foreach (Itens item in listaItensTema.CheckedItems)
+                {
+                    int index = listaItensTema.Items.IndexOf(item);
+                    if (index >= 0)
+                    {
+                        listaItensTema.SetItemChecked(index, true);
+                    }
+                }
+
             }
             get
             {
