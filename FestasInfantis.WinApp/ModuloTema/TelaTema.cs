@@ -41,14 +41,16 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             string descricao = tbDescricao.Text;
             decimal valor = 0;
+            List<Itens> listaItens = new List<Itens>();
+
 
             foreach (Itens item in listaItensTema.CheckedItems)
             {
-
+                listaItens.Add(item);
                 valor += Convert.ToDecimal(item.valor);
             }
 
-            tema = new Tema(descricao, valor);
+            tema = new Tema(descricao, valor, listaItens);
 
             string[] erros = tema.Validar();
 

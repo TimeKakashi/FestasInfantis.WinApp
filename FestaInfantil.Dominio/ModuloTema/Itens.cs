@@ -6,13 +6,13 @@ namespace FestaInfantil.Dominio.ModuloTema
     public class Itens : EntidadeBase<Itens>
     {
         public string nomeDoItem { get; set; }
-        public string valor { get; set; }
+        public decimal valor { get; set; }
 
         public Itens()
         {
 
         }
-        public Itens(string nomeDoItem, string valor)
+        public Itens(string nomeDoItem, decimal valor)
         {
             this.nomeDoItem = nomeDoItem;
             this.valor = valor;

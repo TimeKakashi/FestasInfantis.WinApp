@@ -72,9 +72,9 @@ namespace FestasInfantis.WinApp.ModuloTema
         }
         public void CarregarItens()
         {
-            List<Itens> iten = repositorioItem.SelecionarTodos();
+            List<Itens> item = repositorioItem.SelecionarTodos();
 
-            listagemItens.AtualizarRegistros(iten);
+            listagemItens.AtualizarRegistros(item);
         }
         public Itens ObterItemSelecionado()
         {

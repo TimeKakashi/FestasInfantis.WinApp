@@ -106,7 +106,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             foreach (Itens item in tema.listaItens)
             {
-                valorTotal += 10;
+                valorTotal += item.valor;
             }
 
             string valorEntrada = (valorTotal / 2).ToString();

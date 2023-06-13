@@ -14,11 +14,11 @@ namespace FestaInfantil.Dominio.ModuloTema
             
         }
 
-        public Tema(string descricao, decimal valor)
+        public Tema(string descricao, decimal valor, List<Itens> listaItens)
         {
             this.descricao = descricao;
             this.valor = valor;
-            this.listaItens = new List<Itens>();
+            this.listaItens = listaItens;
         }
 
         public override string ToString()

@@ -17,7 +17,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             set
             {
                 tbItem.Text = value.nomeDoItem;
-                tbValor.Text = value.valor;
+                tbValor.Text = value.valor.ToString() ;
             }
             get
             {
@@ -28,7 +28,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string nomeDoItem = tbItem.Text;
-            string valor = tbValor.Text;
+            decimal valor = decimal.Parse(tbValor.Text);
             item = new Itens(nomeDoItem, valor);
 
             string[] erros = item.Validar();
@@ -37,8 +37,6 @@ namespace FestasInfantis.WinApp.ModuloTema
             {
                 DialogResult = DialogResult.None;
             }
-
-            
         }
 
         private void Atualizar()
@@ -49,10 +47,11 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             lbItens.Items.Clear();
 
-            System.Collections.IList list = temaSelecionado.listaItens;
+            List<Itens> list = temaSelecionado.listaItens;
+
             for (int i = 0; i < list.Count; i++)
             {
-                Tema item = (Tema)list[i];
+                Itens item = list[i];
                 lbItens.Items.Add(item);
             }
         }
