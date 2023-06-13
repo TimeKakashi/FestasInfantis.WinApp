@@ -35,8 +35,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 Cliente cliente = telaCliente.Cliente;
 
                 repositorioCliente.Inserir(cliente);
-
-                CarregarClientes();
             }
         }
 
