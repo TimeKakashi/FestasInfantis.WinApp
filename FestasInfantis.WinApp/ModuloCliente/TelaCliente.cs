@@ -53,5 +53,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 DialogResult = DialogResult.None;
             }
         }
+
+      
     }
 }
