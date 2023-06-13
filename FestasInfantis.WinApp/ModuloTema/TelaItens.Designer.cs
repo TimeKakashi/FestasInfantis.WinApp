@@ -32,8 +32,8 @@
             label2 = new Label();
             label3 = new Label();
             lbItens = new ListBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tbValor = new TextBox();
+            tbItem = new TextBox();
             btnCadastrar = new Button();
             btnSair = new Button();
             SuspendLayout();
@@ -54,11 +54,11 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(12, 131);
+            label2.Location = new Point(43, 131);
             label2.Name = "label2";
-            label2.Size = new Size(77, 21);
+            label2.Size = new Size(41, 21);
             label2.TabIndex = 1;
-            label2.Text = "Descrição";
+            label2.Text = "Item";
             // 
             // label3
             // 
@@ -81,29 +81,29 @@
             lbItens.Size = new Size(201, 184);
             lbItens.TabIndex = 3;
             // 
-            // textBox1
+            // tbValor
             // 
-            textBox1.BackColor = SystemColors.ButtonFace;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(97, 81);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 29);
-            textBox1.TabIndex = 4;
+            tbValor.BackColor = SystemColors.ButtonFace;
+            tbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbValor.Location = new Point(97, 81);
+            tbValor.Name = "tbValor";
+            tbValor.Size = new Size(100, 29);
+            tbValor.TabIndex = 4;
             // 
-            // textBox2
+            // tbItem
             // 
-            textBox2.BackColor = SystemColors.ButtonFace;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(97, 128);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 29);
-            textBox2.TabIndex = 5;
+            tbItem.BackColor = SystemColors.ButtonFace;
+            tbItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbItem.Location = new Point(97, 128);
+            tbItem.Name = "tbItem";
+            tbItem.Size = new Size(100, 29);
+            tbItem.TabIndex = 5;
             // 
             // btnCadastrar
             // 
             btnCadastrar.BackColor = SystemColors.ButtonFace;
             btnCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadastrar.Location = new Point(327, 131);
+            btnCadastrar.Location = new Point(12, 349);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(86, 28);
             btnCadastrar.TabIndex = 6;
@@ -122,6 +122,7 @@
             btnSair.TabIndex = 7;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = false;
+            btnSair.Click += btnSair_Click;
             // 
             // TelaItens
             // 
@@ -131,8 +132,8 @@
             ClientSize = new Size(458, 379);
             Controls.Add(btnSair);
             Controls.Add(btnCadastrar);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbItem);
+            Controls.Add(tbValor);
             Controls.Add(lbItens);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -149,8 +150,8 @@
         private Label label2;
         private Label label3;
         private ListBox lbItens;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tbValor;
+        private TextBox tbItem;
         private Button btnCadastrar;
         private Button btnSair;
     }

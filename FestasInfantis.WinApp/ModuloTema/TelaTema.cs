@@ -40,7 +40,8 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             foreach (Itens item in listaItensTema.Items)
             {
-                valor += item.valor;
+
+                valor += Convert.ToDecimal(item.valor);
             }
 
             tema = new Tema(descricao, valor);
@@ -51,6 +52,11 @@ namespace FestasInfantis.WinApp.ModuloTema
             {
                 DialogResult = DialogResult.None;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

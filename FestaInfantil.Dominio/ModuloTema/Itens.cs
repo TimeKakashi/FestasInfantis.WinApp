@@ -5,16 +5,40 @@ namespace FestaInfantil.Dominio.ModuloTema
 {
     public class Itens : EntidadeBase<Itens>
     {
-        public decimal valor { get; set; }
+        public string nomeDoItem { get; set; }
+        public string valor { get; set; }
 
+        public Itens()
+        {
+
+        }
+        public Itens(string nomeDoItem, string valor)
+        {
+            this.nomeDoItem = nomeDoItem;
+            this.valor = valor;
+           
+        }
+        public override string ToString()
+        {
+            return nomeDoItem;
+        }
         public override void AtualizarInformacoes(Itens registroAtualziado)
         {
-            throw new NotImplementedException();
+            this.nomeDoItem  = registroAtualziado.nomeDoItem;
+            this.valor = registroAtualziado.valor;
         }
 
         public override string[] Validar()
         {
-            throw new NotImplementedException();
+            List<String> lista = new List<String>();
+
+            if (nomeDoItem == null)
+            {
+                lista.Add("Campo Nome do item incorreto!");
+
+            }
+
+            return lista.ToArray();
         }
     }
 }
