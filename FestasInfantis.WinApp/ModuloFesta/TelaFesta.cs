@@ -88,7 +88,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 valorTotal += Convert.ToDecimal(item.valor);
             }
 
-            if(cliente.temDesconto == true)
+            if (cliente.temDesconto == true)
             {
                 valorTotal -= valorTotal / 10;
             }
@@ -119,6 +119,11 @@ namespace FestasInfantis.WinApp.ModuloFesta
             string valorEntrada = (valorTotal / 2).ToString();
 
             tbValorEntrada.Text = valorEntrada;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
