@@ -17,7 +17,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             set
             {
                 tbItem.Text = value.nomeDoItem;
-                tbValor.Text = value.valor.ToString() ;
+                tbValor.Text = value.valor.ToString();
             }
             get
             {

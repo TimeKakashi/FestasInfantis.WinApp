@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCliente));
             btnGravar = new Button();
             btnCancelar = new Button();
             label1 = new Label();
@@ -138,8 +139,8 @@
             Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnGravar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaCliente";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaCliente";
             ResumeLayout(false);
