@@ -5,7 +5,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class TelaItens : Form
     {
-        
+
         public TelaItens()
         {
             InitializeComponent();
@@ -29,9 +29,6 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             string nomeDoItem = tbItem.Text;
             string valor = tbValor.Text;
-
-            
-
             item = new Itens(nomeDoItem, valor);
 
             string[] erros = item.Validar();
@@ -52,11 +49,15 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             System.Collections.IList list = temaSelecionado.listaItens;
             for (int i = 0; i < list.Count; i++)
-           {
+            {
                 Tema item = (Tema)list[i];
                 lbItens.Items.Add(item);
-           }
+            }
         }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

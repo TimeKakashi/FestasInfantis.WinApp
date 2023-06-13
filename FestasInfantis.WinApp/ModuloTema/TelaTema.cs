@@ -53,5 +53,10 @@ namespace FestasInfantis.WinApp.ModuloTema
                 DialogResult = DialogResult.None;
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
