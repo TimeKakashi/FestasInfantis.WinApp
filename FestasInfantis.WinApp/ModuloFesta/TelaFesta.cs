@@ -88,6 +88,13 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 valorTotal += Convert.ToDecimal(item.valor);
             }
 
+            if(cliente.temDesconto == true)
+            {
+                valorTotal -= valorTotal / 10;
+            }
+
+            cliente.temDesconto = true;
+
             festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
 
             string[] erros = festa.Validar();

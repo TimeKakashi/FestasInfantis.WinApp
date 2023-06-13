@@ -8,6 +8,8 @@ namespace FestaInfantil.Dominio.ModuloCliente
         public string telefone { get; set; }
         public string endereco { get; set; }
 
+        public bool temDesconto = false;
+
         private Cliente cliente;
 
         public Cliente()

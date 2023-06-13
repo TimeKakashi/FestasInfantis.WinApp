@@ -28,7 +28,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             foreach (Itens item in itens)
             {
-                grid.Rows.Add(item.id, item.valor);
+                grid.Rows.Add(item.id, item.nomeDoItem, item.valor);
             }
         }
         public int ObterIdSelecionado()

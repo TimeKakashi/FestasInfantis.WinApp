@@ -41,6 +41,7 @@ namespace FestaInfantil.Dominio.ModuloTema
         public override void AtualizarInformacoes(Tema registroAtualziado)
         {
             this.descricao = registroAtualziado.descricao;
+            this.valor = registroAtualziado.valor;
             this.listaItens = registroAtualziado.listaItens;
         }
     }

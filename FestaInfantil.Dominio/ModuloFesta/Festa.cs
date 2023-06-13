@@ -69,6 +69,8 @@ namespace FestaInfantil.Dominio.ModuloFesta
             this.data = registroAtualziado.data;
             this.horaInicio = registroAtualziado.horaInicio;
             this.horaFinal = registroAtualziado.horaFinal;
+            this.valorTotal = registroAtualziado.valorTotal;
+            this.valorEntrada = registroAtualziado.valorEntrada;
         }
     }
 }
