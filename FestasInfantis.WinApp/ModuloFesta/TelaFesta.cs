@@ -88,8 +88,6 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 valorTotal += item.valor;
             }
 
-            valorTotal = 10;
-
             festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
 
             string[] erros = festa.Validar();
