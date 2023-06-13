@@ -85,7 +85,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             foreach (Itens item in tema.listaItens)
             {
-                valorTotal += item.valor;
+                valorTotal += Convert.ToDecimal(item.valor);
             }
 
             festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
@@ -106,7 +106,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             foreach (Itens item in tema.listaItens)
             {
-                valorTotal += 10;
+                valorTotal += item.valor;
             }
 
             string valorEntrada = (valorTotal / 2).ToString();

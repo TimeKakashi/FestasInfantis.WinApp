@@ -21,6 +21,7 @@ namespace FestasInfantis.WinApp
         private IRepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
         private IRepositorioTema repositorioTema = new RepositorioTemaArquivo(contextoDados);
         private IRepositorioFesta repositorioFesta = new RepositorioFesta(contextoDados);
+        private IRepositorioItens repositorioItens = new RepositorioItens(contextoDados);
         public ControladorBase controlador { get; set; }
         private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
@@ -111,15 +112,15 @@ namespace FestasInfantis.WinApp
 
         private void temasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorTema(repositorioTema);
+            controlador = new ControladorTema(repositorioTema, repositorioItens);
             ConfigurarTelaPrincipal(controlador);
 
         }
 
         private void itensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //controlador = new ControladorItens(repositorioItens);
-            //ConfigurarTelaPrincipal(controlador);
+            controlador = new ControladorItens(repositorioItens);
+            ConfigurarTelaPrincipal(controlador);
         }
 
 

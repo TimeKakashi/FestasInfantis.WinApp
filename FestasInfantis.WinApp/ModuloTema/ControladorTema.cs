@@ -1,4 +1,5 @@
 ﻿using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
+using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloTema;
 using FestaInfantil.Dominio.ModuloCliente;
 using FestaInfantil.Dominio.ModuloTema;
@@ -15,10 +16,13 @@ namespace FestasInfantis.WinApp.ModuloTema
     public class ControladorTema : ControladorBase
     {
         private IRepositorioTema repositorioTema;
+        private IRepositorioItens repositorioItens;
+
         ListagemTemaControl listagemTema = new ListagemTemaControl();
-        public ControladorTema(IRepositorioTema repositorioTema)
+        public ControladorTema(IRepositorioTema repositorioTema, IRepositorioItens repositorioItens)
         {
             this.repositorioTema = repositorioTema;
+            this.repositorioItens = repositorioItens;
         }
 
         public override string ToolTipInserir => "Inserir Tema";
@@ -37,7 +41,7 @@ namespace FestasInfantis.WinApp.ModuloTema
                 return;
             }
 
-            TelaTema telaTema = new TelaTema();
+            TelaTema telaTema = new TelaTema(repositorioItens);
             int id = tema.id;
             telaTema.Tema = tema;
 
@@ -65,7 +69,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Inserir()
         {
-            TelaTema telaTema = new TelaTema();
+            TelaTema telaTema = new TelaTema(repositorioItens);
 
             if(telaTema.ShowDialog() == DialogResult.OK)
             {

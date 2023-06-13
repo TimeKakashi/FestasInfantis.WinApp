@@ -58,6 +58,7 @@ namespace FestaAniversario.Infra.Dados.Arquivo.Compartilhado
                     this.clientes = ctx.clientes;
                     this.festas = ctx.festas;
                     this.temas = ctx.temas;
+                    this.itens = ctx.itens;
                 }
             }
         }

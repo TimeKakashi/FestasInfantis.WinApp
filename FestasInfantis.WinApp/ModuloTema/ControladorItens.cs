@@ -6,42 +6,95 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     internal class ControladorItens : ControladorBase
     {
-        private IRepositorioItens repositorioItens;
+        private IRepositorioItens repositorioItem;
+        ListagemItensControl listagemItens = new ListagemItensControl();
 
         public ControladorItens(IRepositorioItens repositorioItens)
         {
-            this.repositorioItens = repositorioItens;
+            this.repositorioItem = repositorioItens;
         }
 
-        public override string ToolTipInserir => throw new NotImplementedException();
+        public override string ToolTipInserir => "Inserir Itens";
 
-        public override string ToolTipEditar => throw new NotImplementedException();
+        public override string ToolTipEditar => "Editar Itens";
 
-        public override string ToolTipExcluir => throw new NotImplementedException();
+        public override string ToolTipExcluir => "Excluir Itens";
 
         public override void Editar()
         {
-            throw new NotImplementedException();
+            Itens item = ObterItemSelecionado();
+
+            if (item == null)
+            {
+                MessageBox.Show("Selecione um item primerio!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            TelaItens telaItens = new TelaItens();
+            int id = item.id;
+            telaItens.itens = item;
+
+            if (telaItens.ShowDialog() == DialogResult.OK)
+            {
+                telaItens.itens.id = id;
+                repositorioItem.Editar(id, telaItens.itens);
+                CarregarItens();
+            }
         }
+
 
         public override void Excluir()
         {
-            throw new NotImplementedException();
+            Itens item = ObterItemSelecionado();
+
+            DialogResult verificarExclusao = MessageBox.Show($"Deseja excluir o tema {item.nomeDoItem}?", "Exclusão de Item",
+              MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (verificarExclusao == DialogResult.OK)
+            {
+                repositorioItem.Excluir(item);
+                CarregarItens();
+            }
         }
 
         public override void Inserir()
         {
-            throw new NotImplementedException();
+            TelaItens telaItens = new TelaItens();
+
+            if (telaItens.ShowDialog() == DialogResult.OK)
+            {
+                Itens item = telaItens.itens;
+
+                repositorioItem.Inserir(item);
+
+                CarregarItens();
+            }
+        }
+        public void CarregarItens()
+        {
+            List<Itens> item = repositorioItem.SelecionarTodos();
+
+            listagemItens.AtualizarRegistros(item);
+        }
+        public Itens ObterItemSelecionado()
+        {
+            int id = listagemItens.ObterIdSelecionado();
+
+            return repositorioItem.SelecionarPorId(id);
         }
 
         public override UserControl ObterListagem()
         {
-            throw new NotImplementedException();
+            if (listagemItens == null)
+                listagemItens = new ListagemItensControl();
+
+            CarregarItens();
+            return listagemItens;
         }
 
         public override string ObterTipoCadastro()
         {
-            throw new NotImplementedException();
+            return "Cadastro de Itens";
         }
     }
 }
