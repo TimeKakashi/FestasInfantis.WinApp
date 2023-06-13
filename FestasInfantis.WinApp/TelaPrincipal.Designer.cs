@@ -98,6 +98,7 @@
             festasToolStripMenuItem.Name = "festasToolStripMenuItem";
             festasToolStripMenuItem.Size = new Size(56, 21);
             festasToolStripMenuItem.Text = "Festas";
+            festasToolStripMenuItem.Click += festasToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 

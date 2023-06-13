@@ -1,11 +1,14 @@
 using FestaAniversario.Infra.Dados.Arquivo.Compartilhado;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
+using FestaAniversario.Infra.Dados.Arquivo.ModuloFesta;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
 using FestaAniversario.Infra.Dados.Arquivo.ModuloTema;
 using FestaInfantil.Dominio.ModuloCliente;
+using FestaInfantil.Dominio.ModuloFesta;
 using FestaInfantil.Dominio.ModuloTema;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloFesta;
 using FestasInfantis.WinApp.ModuloTema;
 using System.Windows.Forms;
 
@@ -14,9 +17,10 @@ namespace FestasInfantis.WinApp
     public partial class TelaPrincipal : Form
     {
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
-        private IRepositorioItens repositorioItens = new RepositorioItens(contextoDados);
+        //private IRepositorioItens repositorioItens = new RepositorioItens(contextoDados);
         private IRepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
         private IRepositorioTema repositorioTema = new RepositorioTemaArquivo(contextoDados);
+        private IRepositorioFesta repositorioFesta = new RepositorioFesta(contextoDados);
         public ControladorBase controlador { get; set; }
         private static TelaPrincipal telaPrincipal;
         public TelaPrincipal()
@@ -64,7 +68,10 @@ namespace FestasInfantis.WinApp
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             if (controlador == null)
+            {
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             controlador.Inserir();
         }
@@ -73,8 +80,12 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
+        }
 
-
+        private void festasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorFesta(repositorioFesta, repositorioCliente, repositorioTema);
+            ConfigurarTelaPrincipal(controlador);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -102,8 +113,8 @@ namespace FestasInfantis.WinApp
 
         private void itensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador = new ControladorItens(repositorioItens);
-            ConfigurarTelaPrincipal(controlador);
+            //controlador = new ControladorItens(repositorioItens);
+            //ConfigurarTelaPrincipal(controlador);
         }
 
 

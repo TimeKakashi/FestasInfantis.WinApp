@@ -13,6 +13,11 @@ namespace FestasInfantis.WinApp.ModuloCliente
 {
     public partial class TelaCliente : Form
     {
+        public TelaCliente()
+        {
+            InitializeComponent();
+        }
+
         private Cliente cliente;
 
         public Cliente Cliente
@@ -27,10 +32,6 @@ namespace FestasInfantis.WinApp.ModuloCliente
             {
                 return cliente;
             }
-        }
-        public TelaCliente()
-        {
-            InitializeComponent();
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
