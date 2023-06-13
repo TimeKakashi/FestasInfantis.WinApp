@@ -107,52 +107,55 @@
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
-            toolStrip1.Size = new Size(603, 25);
+            toolStrip1.Size = new Size(603, 27);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnInserir
             // 
+            btnInserir.BackgroundImage = Properties.Resources.add_circle_FILL0_wght400_GRAD0_opsz24__1_;
             btnInserir.DisplayStyle = ToolStripItemDisplayStyle.Image;
             btnInserir.ImageScaling = ToolStripItemImageScaling.None;
             btnInserir.ImageTransparentColor = Color.Magenta;
             btnInserir.Name = "btnInserir";
-            btnInserir.Padding = new Padding(7);
-            btnInserir.Size = new Size(23, 22);
+            btnInserir.Padding = new Padding(10);
+            btnInserir.Size = new Size(24, 24);
             btnInserir.Text = "toolStripButton1";
             btnInserir.Click += toolStripButton1_Click;
             // 
             // btnEditar
             // 
+            btnEditar.BackgroundImage = Properties.Resources.edit_FILL0_wght400_GRAD0_opsz24__1_;
             btnEditar.DisplayStyle = ToolStripItemDisplayStyle.Image;
             btnEditar.ImageScaling = ToolStripItemImageScaling.None;
             btnEditar.ImageTransparentColor = Color.Magenta;
             btnEditar.Name = "btnEditar";
             btnEditar.Padding = new Padding(7);
-            btnEditar.Size = new Size(23, 22);
+            btnEditar.Size = new Size(23, 24);
             btnEditar.Text = "toolStripButton2";
             btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
+            btnExcluir.BackgroundImage = Properties.Resources.delete_FILL0_wght400_GRAD0_opsz24__1_;
             btnExcluir.DisplayStyle = ToolStripItemDisplayStyle.Image;
             btnExcluir.ImageScaling = ToolStripItemImageScaling.None;
             btnExcluir.ImageTransparentColor = Color.Magenta;
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Padding = new Padding(7);
-            btnExcluir.Size = new Size(23, 22);
+            btnExcluir.Size = new Size(23, 24);
             btnExcluir.Text = "toolStripButton3";
             btnExcluir.Click += btnExcluir_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // labelTipoCadastro
             // 
             labelTipoCadastro.Name = "labelTipoCadastro";
-            labelTipoCadastro.Size = new Size(181, 22);
+            labelTipoCadastro.Size = new Size(181, 24);
             labelTipoCadastro.Text = "Rafaela Decorações Tela Principal";
             // 
             // statusStrip1
@@ -176,9 +179,10 @@
             panelRegistros.BackColor = SystemColors.ControlDark;
             panelRegistros.BorderStyle = BorderStyle.FixedSingle;
             panelRegistros.Dock = DockStyle.Fill;
-            panelRegistros.Location = new Point(0, 50);
+            panelRegistros.Location = new Point(0, 52);
             panelRegistros.Name = "panelRegistros";
-            panelRegistros.Size = new Size(603, 299);
+            panelRegistros.Padding = new Padding(7);
+            panelRegistros.Size = new Size(603, 297);
             panelRegistros.TabIndex = 4;
             // 
             // TelaPrincipal
