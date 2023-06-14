@@ -9,6 +9,7 @@ using FestaInfantil.Dominio.ModuloTema;
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloCliente;
 using FestasInfantis.WinApp.ModuloFesta;
+using FestasInfantis.WinApp.ModuloItens;
 using FestasInfantis.WinApp.ModuloTema;
 using System.Windows.Forms;
 

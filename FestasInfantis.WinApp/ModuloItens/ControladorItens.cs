@@ -1,8 +1,9 @@
 ﻿using FestaAniversario.Infra.Dados.Arquivo.ModuloItens;
 using FestaInfantil.Dominio.ModuloTema;
 using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloTema;
 
-namespace FestasInfantis.WinApp.ModuloTema
+namespace FestasInfantis.WinApp.ModuloItens
 {
     internal class ControladorItens : ControladorBase
     {
@@ -11,7 +12,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public ControladorItens(IRepositorioItens repositorioItens)
         {
-            this.repositorioItem = repositorioItens;
+            repositorioItem = repositorioItens;
         }
 
         public override string ToolTipInserir => "Inserir Itens";
