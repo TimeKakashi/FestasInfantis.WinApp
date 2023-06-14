@@ -31,11 +31,19 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 grid.Rows.Add(cli.id, cli.nome, cli.endereco, cli.telefone );
             }
         }
-        public int ObterIdSelecionado()
+        
+       public int ObterIdSelecionado()
         {
-            int id = Convert.ToInt32(grid.SelectedRows[0].Cells["id"].Value);
-
-            return id;
+            if (grid.SelectedRows.Count > 0 && grid.SelectedRows[0].Cells["id"].Value != null)
+            {
+                int id = Convert.ToInt32(grid.SelectedRows[0].Cells["id"].Value);
+                return id;
+            }
+            else
+            {
+              
+                return -1;
+            }
         }
         private void popularGrid()
         {

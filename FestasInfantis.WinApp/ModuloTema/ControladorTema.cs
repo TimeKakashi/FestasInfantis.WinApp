@@ -37,7 +37,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             if (tema == null)
             {
-                MessageBox.Show("Selecione um tema primerio!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Selecione um tema primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -57,7 +57,13 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Excluir()
         {
+           
             Tema tema = ObterTemaSelecionado();
+            if (tema == null)
+            {
+                MessageBox.Show("Selecione um tema primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             DialogResult verificarExclusao = MessageBox.Show($"Deseja excluir o tema {tema.descricao}?", "Exclusão de Temas",
               MessageBoxButtons.OKCancel, MessageBoxIcon.Question);

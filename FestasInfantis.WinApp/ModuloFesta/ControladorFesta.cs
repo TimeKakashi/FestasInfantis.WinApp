@@ -33,6 +33,11 @@ namespace FestasInfantis.WinApp.ModuloFesta
         public override void Editar()
         {
             Festa festa = ObterFestaSelecionada();
+            if (festa == null)
+            {
+                MessageBox.Show("Selecione uma festa primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             int id = festa.id;
             
@@ -54,9 +59,9 @@ namespace FestasInfantis.WinApp.ModuloFesta
         {
             Festa festa = ObterFestaSelecionada();
 
-            if(festa == null)
+            if (festa == null)
             {
-                MessageBox.Show("Selecione um tema primeiro!");
+                MessageBox.Show("Selecione uma festa primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -87,6 +92,8 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         private Festa ObterFestaSelecionada()
         {
+
+            
             int id = listagemFesta.ObterIdSelecionado();
 
             return repositorioFesta.SelecionarPorId(id);
