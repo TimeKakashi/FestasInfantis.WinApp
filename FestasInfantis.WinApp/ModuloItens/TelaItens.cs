@@ -29,7 +29,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             string nomeDoItem = tbItem.Text;
 
-            if (tbValor.Text == string.Empty) 
+            if (tbValor.Text == string.Empty)
             {
                 MessageBox.Show("Adicione o preco do item!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 DialogResult = DialogResult.None;
@@ -38,7 +38,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             decimal valor = decimal.Parse(tbValor.Text);
             item = new Itens(nomeDoItem, valor);
-             
+
             string[] erros = item.Validar();
 
             if (erros.Length > 0)

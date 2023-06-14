@@ -62,11 +62,11 @@
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
-          
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.ControlLightLight;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(113, 114);
             label1.Name = "label1";
@@ -77,6 +77,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.ControlLightLight;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(346, 114);
             label2.Name = "label2";
@@ -87,6 +88,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.ControlLightLight;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(224, 220);
             label3.Name = "label3";
@@ -121,6 +123,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.ControlLight;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(184, 41);
             label4.Name = "label4";
@@ -132,6 +135,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(560, 371);
             Controls.Add(label4);
             Controls.Add(tbNumero);
