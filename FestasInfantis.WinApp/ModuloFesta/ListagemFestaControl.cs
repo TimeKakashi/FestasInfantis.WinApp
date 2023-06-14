@@ -29,7 +29,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             foreach (Festa festa in festas)
             {
-                grid.Rows.Add(festa.id, festa.cliente, festa.tema ,festa.data, festa.horaInicio, festa.horaFinal.Hours, festa.enderecoFesta, festa.valorEntrada, festa.valorTotal);
+                grid.Rows.Add(festa.id, festa.cliente, festa.tema ,festa.data, festa.horaInicio, festa.horaFinal.Hours, festa.enderecoFesta, festa.valorEntrada, festa.valorTotal, festa.estaPago);
             }
         }
         public int ObterIdSelecionado()
@@ -90,6 +90,11 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 {
                     Name = "valorFinal",
                     HeaderText = "Valor Total"
+                },
+                   new DataGridViewTextBoxColumn()
+                {
+                    Name = "pgamento",
+                    HeaderText = "Status Pagamento"
                 }
             };
 

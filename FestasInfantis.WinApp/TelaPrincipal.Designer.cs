@@ -39,7 +39,7 @@
             btnInserir = new ToolStripButton();
             btnEditar = new ToolStripButton();
             btnExcluir = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
+            btnPagar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             labelTipoCadastro = new ToolStripLabel();
             statusStrip1 = new StatusStrip();
@@ -104,7 +104,7 @@
             // toolStrip1
             // 
             toolStrip1.BackColor = SystemColors.Control;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripButton1, toolStripSeparator1, labelTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, btnPagar, toolStripSeparator1, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
@@ -142,15 +142,15 @@
             btnExcluir.Text = "Excluir";
             btnExcluir.Click += btnExcluir_Click;
             // 
-            // toolStripButton1
+            // btnPagar
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(115, 22);
-            toolStripButton1.Text = "Realizar Pagamento";
-            toolStripButton1.Click += toolStripButton1_Click_1;
+            btnPagar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnPagar.Image = (Image)resources.GetObject("btnPagar.Image");
+            btnPagar.ImageTransparentColor = Color.Magenta;
+            btnPagar.Name = "btnPagar";
+            btnPagar.Size = new Size(115, 22);
+            btnPagar.Text = "Realizar Pagamento";
+            btnPagar.Click += btnPagar_Click_1;
             // 
             // toolStripSeparator1
             // 
@@ -232,6 +232,6 @@
         private ToolStripButton btnInserir;
         private ToolStripButton btnEditar;
         private ToolStripButton btnExcluir;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton btnPagar;
     }
 }

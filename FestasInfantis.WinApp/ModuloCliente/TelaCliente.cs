@@ -16,6 +16,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         public TelaCliente()
         {
             InitializeComponent();
+
         }
 
         private Cliente cliente;
