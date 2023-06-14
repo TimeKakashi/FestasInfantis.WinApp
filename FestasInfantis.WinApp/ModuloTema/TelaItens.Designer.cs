@@ -42,6 +42,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.ControlLightLight;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
             label1.Location = new Point(110, 76);
@@ -53,6 +54,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.ControlLightLight;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Desktop;
             label2.Location = new Point(110, 125);
@@ -65,6 +67,7 @@
             // 
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.ControlLightLight;
             label3.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(169, 9);
             label3.Name = "label3";
@@ -105,7 +108,7 @@
             btnCadastrar.BackColor = SystemColors.ButtonFace;
             btnCadastrar.DialogResult = DialogResult.OK;
             btnCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadastrar.Location = new Point(42, 334);
+            btnCadastrar.Location = new Point(413, 272);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(86, 28);
             btnCadastrar.TabIndex = 6;
@@ -119,7 +122,7 @@
             btnSair.BackColor = SystemColors.ButtonFace;
             btnSair.DialogResult = DialogResult.Cancel;
             btnSair.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSair.Location = new Point(414, 334);
+            btnSair.Location = new Point(413, 324);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(70, 35);
             btnSair.TabIndex = 7;

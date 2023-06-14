@@ -90,25 +90,27 @@
             // btnGravar
             // 
             btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnGravar.BackColor = SystemColors.ControlLightLight;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(409, 262);
+            btnGravar.Location = new Point(396, 249);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(93, 38);
             btnGravar.TabIndex = 5;
             btnGravar.Text = "Gravar";
-            btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.UseVisualStyleBackColor = false;
             btnGravar.Click += btnGravar_Click_1;
             // 
             // btnCancelar
             // 
             btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCancelar.BackColor = SystemColors.ControlLightLight;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(409, 321);
+            btnCancelar.Location = new Point(396, 306);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(93, 38);
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // TelaTema
