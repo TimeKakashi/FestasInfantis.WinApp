@@ -34,11 +34,11 @@ namespace FestaInfantil.Dominio.ModuloTema
         {
             List<String> lista = new List<String>();
 
-            if (nomeDoItem == null)
-            {
+            if (string.IsNullOrEmpty(nomeDoItem))
                 lista.Add("Campo Nome do item incorreto!");
 
-            }
+            if(valor == null || valor == 0)
+                lista.Add("Campo Nome do item incorreto!");
 
             return lista.ToArray();
         }

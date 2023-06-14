@@ -83,26 +83,45 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             decimal valorTotal = 0;
 
-            foreach (Itens item in tema.itensCheck)
+            if(tema == null)
             {
-                valorTotal += Convert.ToDecimal(item.valor);
-            }
-
-            if (cliente.temDesconto == true)
-            {
-                valorTotal -= valorTotal / 10;
-            }
-
-            cliente.temDesconto = true;
-
-            festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
-
-            string[] erros = festa.Validar();
-
-            if (erros.Length > 0)
-            {
+                MessageBox.Show("O campo tema é obrigatorio!");
                 DialogResult = DialogResult.None;
             }
+
+
+            else if (cliente == null)
+            {
+                MessageBox.Show("O campo cliente é obrigatorio!");
+                DialogResult = DialogResult.None;
+            }
+
+            else
+            {
+                foreach (Itens item in tema.itensCheck)
+                {
+                    valorTotal += Convert.ToDecimal(item.valor);
+                }
+
+                if (cliente.temDesconto == true)
+                {
+                    valorTotal -= valorTotal / 10;
+                }
+
+                cliente.temDesconto = true;
+
+                festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
+
+                string[] erros = festa.Validar();
+
+                if (erros.Length > 0)
+                {
+                    TelaPrincipal.Instancia.AtualizarRodape(erros[0]);
+                    DialogResult = DialogResult.None;
+                }
+            }
+
+            
         }
 
         private void cbTema_SelectedIndexChanged(object sender, EventArgs e)
