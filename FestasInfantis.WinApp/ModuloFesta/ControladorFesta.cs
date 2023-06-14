@@ -131,7 +131,10 @@ namespace FestasInfantis.WinApp.ModuloFesta
             if(MessageBox.Show("Deseja confirmar o pagamento?") == DialogResult.OK)
             {
                 festa.pagamento = true;
+                festa.estaPago = "Pago";
             }
+
+            CarregarFestas();
         }
     }
 }

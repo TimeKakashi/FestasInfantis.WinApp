@@ -15,7 +15,7 @@ namespace FestaInfantil.Dominio.ModuloFesta
         public TimeSpan horaInicio { get; set; }
         public TimeSpan horaFinal { get; set; }
         public decimal valorEntrada { get; set; }
-
+        public string estaPago { get; set; }
         public decimal valorTotal { get; set; }
 
         public Festa()
@@ -32,6 +32,7 @@ namespace FestaInfantil.Dominio.ModuloFesta
             this.horaFinal = horaFinal;
             this.valorTotal = valorTotal;
             this.valorEntrada = valorTotal / 2;
+            this.estaPago = "Em aberto";
         }
 
         public override string[] Validar()
