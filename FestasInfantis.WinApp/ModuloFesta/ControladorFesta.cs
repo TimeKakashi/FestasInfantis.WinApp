@@ -54,9 +54,21 @@ namespace FestasInfantis.WinApp.ModuloFesta
         {
             Festa festa = ObterFestaSelecionada();
 
-            repositorioFesta.Excluir(festa);
+            if(festa == null)
+            {
+                MessageBox.Show("Selecione um tema primeiro!");
+                return;
+            }
 
-            CarregarFestas();
+            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir do cliente {festa.cliente}?", "Exclusão de Festas",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                repositorioFesta.Excluir(festa);
+
+                CarregarFestas();
+            }
         }
 
         public override void Inserir()
