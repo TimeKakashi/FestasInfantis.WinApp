@@ -62,7 +62,6 @@
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
-          
             // 
             // label1
             // 
@@ -121,6 +120,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.ControlLight;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(184, 41);
             label4.Name = "label4";
@@ -132,6 +132,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(560, 371);
             Controls.Add(label4);
             Controls.Add(tbNumero);

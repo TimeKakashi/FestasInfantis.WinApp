@@ -83,7 +83,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             decimal valorTotal = 0;
 
-            if(tema == null)
+            if (tema == null)
             {
                 MessageBox.Show("O campo tema é obrigatorio!");
                 DialogResult = DialogResult.None;
@@ -121,7 +121,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 }
             }
 
-            
+
         }
 
         private void cbTema_SelectedIndexChanged(object sender, EventArgs e)
