@@ -146,7 +146,11 @@
             Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnGravar);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
             Name = "TelaCliente";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaCliente";

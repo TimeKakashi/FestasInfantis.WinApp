@@ -127,7 +127,11 @@
             Controls.Add(tbDescricao);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
             Name = "TelaTema";
             Text = "TelaTema";
             ResumeLayout(false);
