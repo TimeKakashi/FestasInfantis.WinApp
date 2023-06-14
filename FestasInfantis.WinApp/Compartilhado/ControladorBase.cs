@@ -11,6 +11,8 @@ namespace FestasInfantis.WinApp.Compartilhado
         public abstract string ToolTipInserir { get; }
         public abstract string ToolTipEditar { get; }
         public abstract string ToolTipExcluir { get; }
+        public virtual string ToolTipPagar { get; }
+
         public abstract void Inserir();
         public abstract void Editar();
         public abstract void Excluir();

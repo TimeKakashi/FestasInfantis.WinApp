@@ -41,6 +41,7 @@ namespace FestasInfantis.WinApp
             btnInserir.ToolTipText = controlador.ToolTipInserir;
             btnEditar.ToolTipText = controlador.ToolTipEditar;
             btnExcluir.ToolTipText = controlador.ToolTipExcluir;
+            btnPagar.ToolTipText = controlador.TooTipPagar;
         }
         private void ConfigurarListagem(ControladorBase controladorBase)
         {

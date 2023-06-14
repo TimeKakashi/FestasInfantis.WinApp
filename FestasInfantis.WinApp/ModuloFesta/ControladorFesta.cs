@@ -30,6 +30,8 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         public override string ToolTipExcluir => "Excluir Festa";
 
+        public override string ToolTipPagar => "Realizar Pagamento Festa";
+
         public override void Editar()
         {
             Festa festa = ObterFestaSelecionada();
