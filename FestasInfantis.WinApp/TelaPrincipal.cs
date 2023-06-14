@@ -17,7 +17,6 @@ namespace FestasInfantis.WinApp
     public partial class TelaPrincipal : Form
     {
         static ContextoDados contextoDados = new ContextoDados(carregarDados: true);
-        //private IRepositorioItens repositorioItens = new RepositorioItens(contextoDados);
         private IRepositorioCliente repositorioCliente = new RepositorioCliente(contextoDados);
         private IRepositorioTema repositorioTema = new RepositorioTemaArquivo(contextoDados);
         private IRepositorioFesta repositorioFesta = new RepositorioFesta(contextoDados);
@@ -27,6 +26,7 @@ namespace FestasInfantis.WinApp
         public TelaPrincipal()
         {
             InitializeComponent();
+            telaPrincipal = this;
         }
         private void ConfigurarTelaPrincipal(ControladorBase controladorBase)
         {

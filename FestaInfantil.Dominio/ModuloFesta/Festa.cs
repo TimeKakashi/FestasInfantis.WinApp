@@ -36,26 +36,26 @@ namespace FestaInfantil.Dominio.ModuloFesta
         {
             List<String> erros = new List<string>();
 
-            //if (tema == null)
-            //    erros.Add("Campo tema invalido!");
+            if (tema == null)
+                erros.Add("Campo tema invalido!");
 
-            //if (cliente == null)
-            //    erros.Add("Campo cliente invalido!");
+            if (cliente == null)
+                erros.Add("Campo cliente invalido!");
 
-            //if (enderecoFesta == null)
-            //    erros.Add("Campo endereco invalido!");
+            if(string.IsNullOrEmpty(enderecoFesta))
+                erros.Add("Campo endereco invalido!");
 
-            //if (data < DateTime.Now)
-            //    erros.Add("A festa nao pode ser feita no passado!");
+            if (data < DateTime.Now)
+                erros.Add("A festa nao pode ser feita no passado!");
 
-            //else if (horaFinal < horaInicio)
-            //    erros.Add("A festa nao pode terminar antes de comecar!");
+            else if (horaFinal < horaInicio)
+                erros.Add("A festa nao pode terminar antes de comecar!");
 
-            //if (enderecoFesta == null)
-            //    erros.Add("Campo endereco invalido!");
+            if (enderecoFesta == null)
+                erros.Add("Campo endereco invalido!");
 
-            //if (enderecoFesta == null)
-            //    erros.Add("Campo endereco invalido!");
+            if (enderecoFesta == null)
+                erros.Add("Campo endereco invalido!");
 
             return erros.ToArray();
 

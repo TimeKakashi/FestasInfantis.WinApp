@@ -32,11 +32,8 @@ namespace FestaInfantil.Dominio.ModuloTema
         {
             List<String> lista = new List<String>();
 
-            if (descricao == null)
-            {
-                lista.Add("Campo descricao incorreto!");
-
-            }
+            if (string.IsNullOrEmpty(descricao))
+                lista.Add("O campo descricao esta incorreto!");
 
             return lista.ToArray();
         }
