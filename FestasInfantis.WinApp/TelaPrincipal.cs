@@ -96,7 +96,7 @@ namespace FestasInfantis.WinApp
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+           
             controlador.Excluir();
         }
 
