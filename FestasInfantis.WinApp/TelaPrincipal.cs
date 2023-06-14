@@ -89,7 +89,7 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorFesta(repositorioFesta, repositorioCliente, repositorioTema);
             ConfigurarTelaPrincipal(controlador);
-            toolStripButton1.Visible = true;
+            btnPagar.Visible = true;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

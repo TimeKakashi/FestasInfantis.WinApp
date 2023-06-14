@@ -151,6 +151,7 @@
             btnPagar.Size = new Size(115, 22);
             btnPagar.Text = "Realizar Pagamento";
             btnPagar.Click += btnPagar_Click_1;
+            btnPagar.Visible = false;
             // 
             // toolStripSeparator1
             // 
