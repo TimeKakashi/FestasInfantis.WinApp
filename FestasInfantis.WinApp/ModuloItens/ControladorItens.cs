@@ -44,7 +44,7 @@ namespace FestasInfantis.WinApp.ModuloItens
         }
 
 
-        public override void RealizarPagamento()
+        public override void Excluir()
         {
             Itens item = ObterItemSelecionado();
             if (item == null)
@@ -101,6 +101,11 @@ namespace FestasInfantis.WinApp.ModuloItens
         public override string ObterTipoCadastro()
         {
             return "Cadastro de Itens";
+        }
+
+        public override void RealizarPagamento()
+        {
+            throw new NotImplementedException();
         }
     }
 }

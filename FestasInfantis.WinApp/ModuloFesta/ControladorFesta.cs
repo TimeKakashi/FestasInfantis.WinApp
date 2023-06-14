@@ -55,7 +55,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
             }
         }
 
-        public override void RealizarPagamento()
+        public override void Excluir()
         {
             Festa festa = ObterFestaSelecionada();
 
@@ -92,8 +92,6 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         private Festa ObterFestaSelecionada()
         {
-
-            
             int id = listagemFesta.ObterIdSelecionado();
 
             return repositorioFesta.SelecionarPorId(id);
@@ -118,6 +116,22 @@ namespace FestasInfantis.WinApp.ModuloFesta
         public override string ObterTipoCadastro()
         {
             return "Cadastro de Festas!";
+        }
+
+        public override void RealizarPagamento()
+        {
+            Festa festa = ObterFestaSelecionada();
+
+            if (festa == null)
+            {
+                MessageBox.Show("Selecione uma festa primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if(MessageBox.Show("Deseja confirmar o pagamento?") == DialogResult.OK)
+            {
+                festa.pagamento = true;
+            }
         }
     }
 }

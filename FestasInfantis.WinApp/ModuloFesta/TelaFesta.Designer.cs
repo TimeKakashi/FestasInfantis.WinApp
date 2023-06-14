@@ -46,7 +46,6 @@
             dtHoraInicio = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
-            btnPagamento = new Button();
             SuspendLayout();
             // 
             // label1
@@ -219,16 +218,6 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // btnPagamento
-            // 
-            btnPagamento.Location = new Point(37, 319);
-            btnPagamento.Name = "btnPagamento";
-            btnPagamento.Size = new Size(115, 40);
-            btnPagamento.TabIndex = 17;
-            btnPagamento.Text = "Confirmar Pagamento";
-            btnPagamento.UseVisualStyleBackColor = true;
-            btnPagamento.Click += btnPagamento_Click;
-            // 
             // TelaFesta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -236,7 +225,6 @@
             BackColor = SystemColors.ControlLight;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 371);
-            Controls.Add(btnPagamento);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label8);
@@ -280,6 +268,5 @@
         private DateTimePicker dtHoraInicio;
         private Button button1;
         private Button button2;
-        private Button btnPagamento;
     }
 }

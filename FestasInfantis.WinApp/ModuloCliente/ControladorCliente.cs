@@ -75,7 +75,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         }
 
 
-        public override void RealizarPagamento()
+        public override void Excluir()
         {
             Cliente cliente = ObterClienteSelecionado();
 
@@ -120,6 +120,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
             listagemCliente.AtualizarRegistros(clientes);
         }
 
-
+        public override void RealizarPagamento()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
         }
 
-        public override void RealizarPagamento()
+        public override void Excluir()
         {
            
             Tema tema = ObterTemaSelecionado();
@@ -115,6 +115,11 @@ namespace FestasInfantis.WinApp.ModuloTema
         public override string ObterTipoCadastro()
         {
             return "Cadastro de Temas";
+        }
+
+        public override void RealizarPagamento()
+        {
+            throw new NotImplementedException();
         }
     }
 }
