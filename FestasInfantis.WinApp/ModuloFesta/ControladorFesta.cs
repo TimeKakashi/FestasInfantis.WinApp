@@ -30,7 +30,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         public override string ToolTipExcluir => "Excluir Festa";
 
-        public override string ToolTipPagar => "Realizar Pagamento Festa";
+        public override string ToolTipPagar => "Realizar Pagamento de uma Festa";
 
         public override void Editar()
         {
@@ -117,7 +117,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         public override string ObterTipoCadastro()
         {
-            return "Cadastro de Festas!";
+            return "Cadastro de Festas";
         }
 
         public override void RealizarPagamento()

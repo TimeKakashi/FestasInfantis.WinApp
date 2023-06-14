@@ -82,7 +82,8 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
-            
+            btnPagar.Visible = false;
+
 
         }
 
@@ -119,6 +120,7 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorTema(repositorioTema, repositorioItens);
             ConfigurarTelaPrincipal(controlador);
+            btnPagar.Visible = false;
 
         }
 
@@ -126,11 +128,7 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorItens(repositorioItens);
             ConfigurarTelaPrincipal(controlador);
-        }
-
-        private void labelTipoCadastro_Click(object sender, EventArgs e)
-        {
-
+            btnPagar.Visible = false;
         }
 
         private void btnPagar_Click_1(object sender, EventArgs e)

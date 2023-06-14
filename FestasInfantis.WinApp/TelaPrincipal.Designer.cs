@@ -163,7 +163,7 @@
             labelTipoCadastro.Name = "labelTipoCadastro";
             labelTipoCadastro.Size = new Size(181, 22);
             labelTipoCadastro.Text = "Rafaela Decorações Tela Principal";
-            labelTipoCadastro.Click += labelTipoCadastro_Click;
+            
             // 
             // statusStrip1
             // 
