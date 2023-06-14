@@ -33,21 +33,15 @@ namespace FestasInfantis.WinApp.ModuloFesta
         public override void Editar()
         {
             Festa festa = ObterFestaSelecionada();
+
             if (festa == null)
             {
                 MessageBox.Show("Selecione uma festa primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            if(festa == null)
-            {
-                MessageBox.Show("Selecione uma festa primeiro!");
-                return;
-            }
-
             int id = festa.id;
             
-
             TelaFesta telaFesta = new TelaFesta(repositorioCliente.SelecionarTodos(), repositorioTema.SelecionarTodos());
 
             telaFesta.Festa = festa;
