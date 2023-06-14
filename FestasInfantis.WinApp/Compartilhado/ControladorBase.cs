@@ -13,8 +13,7 @@ namespace FestasInfantis.WinApp.Compartilhado
         public abstract string ToolTipExcluir { get; }
         public abstract void Inserir();
         public abstract void Editar();
-        public abstract void Excluir();
-
+        public abstract void RealizarPagamento();
         public abstract UserControl ObterListagem();
         public abstract string ObterTipoCadastro();
 

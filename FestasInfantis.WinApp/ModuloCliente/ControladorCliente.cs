@@ -75,7 +75,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         }
 
 
-        public override void Excluir()
+        public override void RealizarPagamento()
         {
             Cliente cliente = ObterClienteSelecionado();
 

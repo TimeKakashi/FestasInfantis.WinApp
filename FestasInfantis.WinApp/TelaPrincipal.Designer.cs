@@ -44,6 +44,7 @@
             statusStrip1 = new StatusStrip();
             LBrodape = new ToolStripStatusLabel();
             panelRegistros = new Panel();
+            toolStripButton1 = new ToolStripButton();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -103,7 +104,7 @@
             // toolStrip1
             // 
             toolStrip1.BackColor = SystemColors.Control;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, labelTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripButton1, toolStripSeparator1, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
@@ -151,6 +152,7 @@
             labelTipoCadastro.Name = "labelTipoCadastro";
             labelTipoCadastro.Size = new Size(181, 22);
             labelTipoCadastro.Text = "Rafaela Decorações Tela Principal";
+            labelTipoCadastro.Click += labelTipoCadastro_Click;
             // 
             // statusStrip1
             // 
@@ -178,6 +180,15 @@
             panelRegistros.Padding = new Padding(7);
             panelRegistros.Size = new Size(603, 299);
             panelRegistros.TabIndex = 4;
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(115, 22);
+            toolStripButton1.Text = "Realizar Pagamento";
             // 
             // TelaPrincipal
             // 
@@ -220,5 +231,6 @@
         private ToolStripButton btnInserir;
         private ToolStripButton btnEditar;
         private ToolStripButton btnExcluir;
+        private ToolStripButton toolStripButton1;
     }
 }

@@ -55,7 +55,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
             }
         }
 
-        public override void Excluir()
+        public override void RealizarPagamento()
         {
             Festa festa = ObterFestaSelecionada();
 

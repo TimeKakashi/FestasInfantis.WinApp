@@ -55,7 +55,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
         }
 
-        public override void Excluir()
+        public override void RealizarPagamento()
         {
            
             Tema tema = ObterTemaSelecionado();

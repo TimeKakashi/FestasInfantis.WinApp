@@ -144,5 +144,10 @@ namespace FestasInfantis.WinApp.ModuloFesta
         {
 
         }
+
+        private void btnPagamento_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

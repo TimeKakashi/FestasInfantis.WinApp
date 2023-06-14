@@ -44,7 +44,7 @@ namespace FestasInfantis.WinApp.ModuloItens
         }
 
 
-        public override void Excluir()
+        public override void RealizarPagamento()
         {
             Itens item = ObterItemSelecionado();
             if (item == null)

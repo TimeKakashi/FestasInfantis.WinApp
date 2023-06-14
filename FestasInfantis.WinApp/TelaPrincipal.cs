@@ -96,8 +96,8 @@ namespace FestasInfantis.WinApp
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-           
-            controlador.Excluir();
+
+            controlador.RealizarPagamento();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -124,6 +124,15 @@ namespace FestasInfantis.WinApp
             ConfigurarTelaPrincipal(controlador);
         }
 
+        private void labelTipoCadastro_Click(object sender, EventArgs e)
+        {
+            if (controlador == null)
+            {
+                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            controlador.RealizarPagamento();
+        }
     }
 }

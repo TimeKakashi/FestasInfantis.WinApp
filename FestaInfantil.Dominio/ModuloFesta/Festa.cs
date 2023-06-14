@@ -6,6 +6,8 @@ namespace FestaInfantil.Dominio.ModuloFesta
 {
     public class Festa : EntidadeBase<Festa>
     {
+
+        public bool pagamento;
         public Tema tema { get; set; }
         public Cliente cliente { get; set; }
         public string enderecoFesta { get; set; }
