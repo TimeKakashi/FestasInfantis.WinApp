@@ -83,7 +83,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             decimal valorTotal = 0;
 
-            foreach (Itens item in tema.listaItens)
+            foreach (Itens item in tema.itensCheck)
             {
                 valorTotal += Convert.ToDecimal(item.valor);
             }
@@ -111,7 +111,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             Tema tema = cbTema.SelectedItem as Tema;
 
-            foreach (Itens item in tema.listaItens)
+            foreach (Itens item in tema.itensCheck)
             {
                 valorTotal += item.valor;
             }
