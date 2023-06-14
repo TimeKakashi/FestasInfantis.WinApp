@@ -81,12 +81,15 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
+            
+
         }
 
         private void festasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorFesta(repositorioFesta, repositorioCliente, repositorioTema);
             ConfigurarTelaPrincipal(controlador);
+            toolStripButton1.Visible = true;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -136,7 +139,6 @@ namespace FestasInfantis.WinApp
                 MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
             controlador.RealizarPagamento();
         }
     }

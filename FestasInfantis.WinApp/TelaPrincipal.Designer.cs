@@ -1,4 +1,7 @@
-﻿namespace FestasInfantis.WinApp
+﻿using FestasInfantis.WinApp.ModuloFesta;
+using System.Windows.Forms;
+
+namespace FestasInfantis.WinApp
 {
     partial class TelaPrincipal
     {
@@ -151,6 +154,8 @@
             toolStripButton1.Size = new Size(115, 22);
             toolStripButton1.Text = "Realizar Pagamento";
             toolStripButton1.Click += toolStripButton1_Click_1;
+            toolStripButton1.Visible = false;
+            
             // 
             // toolStripSeparator1
             // 
