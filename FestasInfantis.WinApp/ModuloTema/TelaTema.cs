@@ -23,6 +23,14 @@ namespace FestasInfantis.WinApp.ModuloTema
             PopularCBItens();
         }
 
+        public TelaTema(IRepositorioItens repositorio, Tema tema)
+        {
+            InitializeComponent();
+            this.repositorioItens = repositorio;
+            this.tema = tema;
+            PopularCBItens(tema);
+        }
+
         private Tema tema;
         private IRepositorioItens repositorioItens;
         public Tema Tema
@@ -30,7 +38,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             set
             {
                 tbDescricao.Text = value.descricao;
-                DeixarItensMarcados();
+                DeixarItensMarcados(Tema);
             }
             get
             {
@@ -43,16 +51,15 @@ namespace FestasInfantis.WinApp.ModuloTema
             string descricao = tbDescricao.Text;
             decimal valor = 0;
             List<Itens> listaItens = new List<Itens>();
-
+            List<Itens> listaCheck = new List<Itens>();
 
             foreach (Itens item in listaItensTema.CheckedItems)
             {
-                listaItens.Add(item);
-                valor += Convert.ToDecimal(item.valor);
-                item.marcado = true;
+                valor += item.valor;
+                listaCheck.Add(item);
             }
 
-            tema = new Tema(descricao, valor, listaItens);
+            tema = new Tema(descricao, valor, listaItens, listaCheck);
 
             string[] erros = tema.Validar();
 
@@ -61,42 +68,45 @@ namespace FestasInfantis.WinApp.ModuloTema
                 DialogResult = DialogResult.None;
             }
 
-            DescamarcarItens();
+            DescamarcarItens(tema);
         }
 
-        public void DeixarItensMarcados()
+        public void DeixarItensMarcados(Tema tema)
         {
-            List<Itens> listaItensSelecioando = new List<Itens>();
-
-            foreach (Itens item in listaItensTema.Items)
+            foreach (Itens item in tema.itensCheck)
             {
-                if(item.marcado)
-                    listaItensSelecioando.Add(item);
+                int index = listaItensTema.Items.IndexOf(item);
+
+                listaItensTema.SetItemChecked(index, true);
+            }
+        }
+
+        public void DescamarcarItens(Tema tema)
+        {
+            foreach (Itens item in tema.itensCheck)
+            {
+                if (!listaItensTema.CheckedItems.Contains(item))
+                    tema.itensCheck.Remove(item);
+            }
+        }
+
+        public void PopularCBItens(Tema tema)
+        {
+            List<Itens> listaItens = repositorioItens.SelecionarTodos();
+
+            foreach (Itens item in listaItens)
+            {
+                listaItensTema.Items.Add(item);
             }
 
-            foreach (Itens item in listaItensSelecioando)
+            foreach (Itens item in tema.itensCheck)
             {
-                if (item.marcado)
+                int index = listaItensTema.Items.IndexOf(item);
+
+                if (index >= 0)
                 {
-                    int index = listaItensTema.Items.IndexOf(item);
-
-                    if (index >= 0)
-                    {
-                        listaItensTema.SetItemChecked(index, true);
-                    }
+                    listaItensTema.SetItemChecked(index, true);
                 }
-            }
-        }
-
-        public void DescamarcarItens()
-        {
-            foreach (Itens item in listaItensTema.Items)
-            {
-                if (item.marcado)
-                    if (!listaItensTema.CheckedItems.Contains(item))
-                    {
-                        item.marcado = false;
-                    }
             }
         }
 
@@ -108,9 +118,15 @@ namespace FestasInfantis.WinApp.ModuloTema
             {
                 listaItensTema.Items.Add(item);
             }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaItensTema_ItemCheck(object sender, ItemCheckEventArgs e)
         {
 
         }

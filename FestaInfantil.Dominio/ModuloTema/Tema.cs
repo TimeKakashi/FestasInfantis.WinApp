@@ -8,17 +8,20 @@ namespace FestaInfantil.Dominio.ModuloTema
         public string descricao { get; set; }
         public decimal valor { get; set; }
         public List<Itens> listaItens { get; set; }
+        public List<Itens> itensCheck { get; set; }
 
         public Tema()
         {
-            
+            this.listaItens = new List<Itens>();
+            this.itensCheck = new List<Itens>();
         }
 
-        public Tema(string descricao, decimal valor, List<Itens> listaItens)
+        public Tema(string descricao, decimal valor, List<Itens> listaItens, List<Itens> itensCheck) : this()
         {
             this.descricao = descricao;
             this.valor = valor;
             this.listaItens = listaItens;
+            this.itensCheck = itensCheck;
         }
 
         public override string ToString()
@@ -43,6 +46,7 @@ namespace FestaInfantil.Dominio.ModuloTema
             this.descricao = registroAtualziado.descricao;
             this.valor = registroAtualziado.valor;
             this.listaItens = registroAtualziado.listaItens;
+            this.itensCheck = registroAtualziado.itensCheck;
         }
     }
 }

@@ -82,6 +82,7 @@
             listaItensTema.Name = "listaItensTema";
             listaItensTema.Size = new Size(229, 184);
             listaItensTema.TabIndex = 4;
+            listaItensTema.ItemCheck += listaItensTema_ItemCheck;
             // 
             // btnGravar
             // 

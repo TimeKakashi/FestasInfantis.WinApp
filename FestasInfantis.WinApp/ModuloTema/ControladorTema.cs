@@ -42,8 +42,9 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
 
             
-            TelaTema telaTema = new TelaTema(repositorioItens);
+            TelaTema telaTema = new TelaTema(repositorioItens, tema);
             int id = tema.id;
+
             telaTema.Tema = tema;
 
             if(telaTema.ShowDialog() == DialogResult.OK)
