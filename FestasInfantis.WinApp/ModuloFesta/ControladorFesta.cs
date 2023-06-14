@@ -34,6 +34,12 @@ namespace FestasInfantis.WinApp.ModuloFesta
         {
             Festa festa = ObterFestaSelecionada();
 
+            if(festa == null)
+            {
+                MessageBox.Show("Selecione uma festa primeiro!");
+                return;
+            }
+
             int id = festa.id;
             
 

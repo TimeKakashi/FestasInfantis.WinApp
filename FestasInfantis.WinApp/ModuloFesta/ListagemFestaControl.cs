@@ -34,9 +34,13 @@ namespace FestasInfantis.WinApp.ModuloFesta
         }
         public int ObterIdSelecionado()
         {
-            int id = Convert.ToInt32(grid.SelectedRows[0].Cells["id"].Value);
 
-            return id;
+            if (grid.Rows.Count > 0)
+            {
+                int id = Convert.ToInt32(grid.SelectedRows[0].Cells["id"].Value);
+                return id;
+            }
+            return -1;
         }
         private void popularGrid()
         {
