@@ -212,6 +212,7 @@
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             ForeColor = SystemColors.ActiveCaptionText;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
