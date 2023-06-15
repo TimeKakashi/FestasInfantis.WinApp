@@ -9,7 +9,15 @@ namespace FestasInfantis.WinApp.ModuloTema
         public TelaItens()
         {
             InitializeComponent();
+            Shown += TelaItens_Shown;
         }
+
+
+        private void TelaItens_Shown(object sender, EventArgs e)
+        {
+            tbItem.Focus();
+        }
+
         private Itens item;
 
         public Itens itens
@@ -29,6 +37,15 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             string nomeDoItem = tbItem.Text;
             decimal valor;
+
+          
+            if (string.IsNullOrEmpty(nomeDoItem))
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("O campo Item não pode estar vazio.");
+                tbItem.Focus();
+                DialogResult = DialogResult.None;
+                return;
+            }
 
             if (decimal.TryParse(tbValor.Text, out valor))
             {
@@ -50,22 +67,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         }
 
 
-        private void Atualizar()
-        {
 
-        }
-        private void popularListBoxItens(Tema temaSelecionado)
-        {
-            lbItens.Items.Clear();
-
-            List<Itens> list = temaSelecionado.listaItens;
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                Itens item = list[i];
-                lbItens.Items.Add(item);
-            }
-        }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
