@@ -43,7 +43,7 @@ namespace FestaInfantil.Dominio.ModuloCliente
             if (string.IsNullOrEmpty(nome) || nome.Length < 5)
                 erros.Add("O campo nome esta invalido!");
 
-            if(!VerificarNumeroTelefone(telefone))
+            if (!VerificarNumeroTelefone(telefone))
                 erros.Add("O campo telefone está inválido, insira o número no modelo DDD + 123456789!");
 
             if (string.IsNullOrEmpty(endereco) || endereco.Length < 7)

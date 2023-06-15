@@ -89,7 +89,6 @@ namespace FestasInfantis.WinApp.ModuloFesta
             if (opcaoEscolhida == DialogResult.OK)
             {
                 repositorioFesta.Excluir(festa);
-
                 CarregarFestas();
             }
         }

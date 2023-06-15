@@ -54,7 +54,7 @@ namespace FestasInfantis.WinApp.ModuloItens
                 return;
             }
 
-            if(item.contador > 0)
+            if (item.contador > 0)
             {
                 TelaPrincipal.Instancia.AtualizarRodape("Esse item está inserido em um tema, não é possivel excluí-lo");
                 return;

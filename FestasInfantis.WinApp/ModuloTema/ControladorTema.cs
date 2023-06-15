@@ -76,7 +76,12 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             if(verificarExclusao == DialogResult.OK)
             {
-                 repositorioTema.Excluir(tema);
+                foreach(Itens item in tema.itensCheck)
+                {
+                    item.contador--;
+                }
+
+                repositorioTema.Excluir(tema);
                 CarregarTemas();
             }
         }
