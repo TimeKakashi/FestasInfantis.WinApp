@@ -37,6 +37,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
                 dtHoraInicio.CustomFormat = "HH:mm";
                 dtHoraTermino.CustomFormat = "HH:mm";
+                tbSinal.Text = value.sinal.ToString();
 
                 tbEndereco.Text = value.enderecoFesta;
                 tbValorEntrada.Text = value.valorEntrada.ToString();
@@ -77,79 +78,89 @@ namespace FestasInfantis.WinApp.ModuloFesta
             TimeSpan horaComeco = dtHoraInicio.Value.TimeOfDay;
             TimeSpan horaFinal = dtHoraTermino.Value.TimeOfDay;
             DateTime data = dtData.Value;
+            decimal sinal;
 
-            Tema tema = (Tema)cbTema.SelectedItem;
-            Cliente cliente = (Cliente)cbCliente.SelectedItem;
-
-            decimal valorTotal = 0;
-
-            if (tema == null)
+            if(decimal.TryParse(tbSinal.Text, out sinal))
             {
-                TelaPrincipal.Instancia.AtualizarRodape("O Campo tema é obrigatorio!");
-                DialogResult = DialogResult.None;
-            }
+                Tema tema = (Tema)cbTema.SelectedItem;
+                Cliente cliente = (Cliente)cbCliente.SelectedItem;
 
+                decimal valorTotal = 0;
 
-            else if (cliente == null)
-            {
-                TelaPrincipal.Instancia.AtualizarRodape("O Campo cliente é obrigatorio!");
-                DialogResult = DialogResult.None;
-            }
-
-            else
-            {
-                foreach (Itens item in tema.itensCheck)
+                if (tema == null)
                 {
-                    valorTotal += Convert.ToDecimal(item.valor);
-                }
-
-                int numeroAlugueisCliente = cliente.festas.Count;
-                decimal valorDesconto = 0.99m;
-
-                switch (numeroAlugueisCliente)
-                {
-                    case 0:
-                        valorDesconto = 0.99m;
-                        break;
-
-                    case 1:
-                        valorDesconto = 0.95m;
-                        break;
-
-                    case 2:
-                        valorDesconto = 0.9m;
-                        break;
-
-                    case 3:
-                        valorDesconto = 0.85m;
-                        break;
-
-                    default:
-                        valorDesconto = 0.85m;
-                        break;
-                }
-
-                //valorTotal -= valorTotal / valorDesconto;
-                valorTotal *= valorDesconto;
-
-                festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
-
-                festa.cliente.festas.Add(festa);
-                festa.cliente.contador++;
-                festa.tema.contador++;
-
-                foreach (Itens item in festa.tema.itensCheck)
-                {
-                    item.contador++;
-                }
-
-                string[] erros = festa.Validar();
-
-                if (erros.Length > 0)
-                {
-                    TelaPrincipal.Instancia.AtualizarRodape(erros[0]);
+                    TelaPrincipal.Instancia.AtualizarRodape("O Campo tema é obrigatorio!");
                     DialogResult = DialogResult.None;
                 }
+
+
+                else if (cliente == null)
+                {
+                    TelaPrincipal.Instancia.AtualizarRodape("O Campo cliente é obrigatorio!");
+                    DialogResult = DialogResult.None;
+                }
+
+                else
+                {
+                    foreach (Itens item in tema.itensCheck)
+                    {
+                        valorTotal += Convert.ToDecimal(item.valor);
+                    }
+
+                    int numeroAlugueisCliente = cliente.festas.Count;
+                    decimal valorDesconto = 0.99m;
+
+                    switch (numeroAlugueisCliente)
+                    {
+                        case 0:
+                            valorDesconto = 0.99m;
+                            break;
+
+                        case 1:
+                            valorDesconto = 0.95m;
+                            break;
+
+                        case 2:
+                            valorDesconto = 0.9m;
+                            break;
+
+                        case 3:
+                            valorDesconto = 0.85m;
+                            break;
+
+                        default:
+                            valorDesconto = 0.85m;
+                            break;
+                    }
+
+                    //valorTotal -= valorTotal / valorDesconto;
+                    valorTotal *= valorDesconto;
+
+                    festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal, sinal);
+
+                    festa.cliente.festas.Add(festa);
+                    festa.cliente.contador++;
+                    festa.tema.contador++;
+
+                    foreach (Itens item in festa.tema.itensCheck)
+                    {
+                        item.contador++;
+                    }
+
+                    string[] erros = festa.Validar();
+
+                    if (erros.Length > 0)
+                    {
+                        TelaPrincipal.Instancia.AtualizarRodape(erros[0]);
+                        DialogResult = DialogResult.None;
+                    }
+                }
+            }
+            else
+            {
+
+                TelaPrincipal.Instancia.AtualizarRodape("Valor inválido para o campo sinal.");
+                DialogResult = DialogResult.None;
             }
 
 

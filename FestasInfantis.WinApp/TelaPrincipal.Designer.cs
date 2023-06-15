@@ -57,7 +57,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, festasToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(603, 25);
+            menuStrip1.Size = new Size(653, 25);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +109,7 @@
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
-            toolStrip1.Size = new Size(603, 25);
+            toolStrip1.Size = new Size(653, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -180,7 +180,7 @@
             statusStrip1.Items.AddRange(new ToolStripItem[] { LBrodape });
             statusStrip1.Location = new Point(0, 349);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(603, 22);
+            statusStrip1.Size = new Size(653, 22);
             statusStrip1.TabIndex = 3;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -198,7 +198,7 @@
             panelRegistros.Location = new Point(0, 50);
             panelRegistros.Name = "panelRegistros";
             panelRegistros.Padding = new Padding(7);
-            panelRegistros.Size = new Size(603, 299);
+            panelRegistros.Size = new Size(653, 299);
             panelRegistros.TabIndex = 4;
             // 
             // TelaPrincipal
@@ -206,7 +206,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(603, 371);
+            ClientSize = new Size(653, 371);
             Controls.Add(panelRegistros);
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);

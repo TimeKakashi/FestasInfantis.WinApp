@@ -45,6 +45,8 @@
             dtHoraInicio = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
+            label1 = new Label();
+            tbSinal = new TextBox();
             SuspendLayout();
             // 
             // label2
@@ -208,12 +210,32 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightGray;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(281, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 21);
+            label1.TabIndex = 18;
+            label1.Text = "Sinal";
+            // 
+            // tbSinal
+            // 
+            tbSinal.Location = new Point(331, 32);
+            tbSinal.Name = "tbSinal";
+            tbSinal.Size = new Size(72, 23);
+            tbSinal.TabIndex = 17;
+            // 
             // TelaFesta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(423, 336);
+            Controls.Add(label1);
+            Controls.Add(tbSinal);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label8);
@@ -259,5 +281,7 @@
         private DateTimePicker dtHoraInicio;
         private Button button1;
         private Button button2;
+        private Label label1;
+        private TextBox tbSinal;
     }
 }
