@@ -67,7 +67,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 return;
             }
 
-            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir do cliente {festa.cliente}?", "Exclusão de Festas",
+            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja esssa festa?", "Exclusão de Festas",
             MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (opcaoEscolhida == DialogResult.OK)
