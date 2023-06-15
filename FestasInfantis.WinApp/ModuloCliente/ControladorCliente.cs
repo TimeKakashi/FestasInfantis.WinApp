@@ -128,8 +128,17 @@ namespace FestasInfantis.WinApp.ModuloCliente
         public override void Filtrar()
         {
             Cliente cliente = ObterClienteSelecionado();
+            if (cliente == null)
+            {
+                MessageBox.Show($"Não existem Clientes Cadastrados",
+                    "Filtro de Clientes",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
 
-            if(cliente.festas.Count == 0) 
+                return;
+            }
+
+            if (cliente.festas.Count == 0) 
             {
                 TelaPrincipal.Instancia.AtualizarRodape("Esse cliente não possui nenhuma festa em seu nome!");
                 return;
