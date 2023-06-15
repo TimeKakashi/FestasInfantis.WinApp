@@ -62,15 +62,6 @@
             label2.Text = "Item :";
             label2.Click += label2_Click;
             // 
-            // tbValor
-            // 
-            tbValor.BackColor = SystemColors.ButtonFace;
-            tbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbValor.Location = new Point(71, 97);
-            tbValor.Name = "tbValor";
-            tbValor.Size = new Size(61, 29);
-            tbValor.TabIndex = 4;
-            // 
             // tbItem
             // 
             tbItem.BackColor = SystemColors.ButtonFace;
@@ -79,6 +70,15 @@
             tbItem.Name = "tbItem";
             tbItem.Size = new Size(207, 29);
             tbItem.TabIndex = 5;
+            // 
+            // tbValor
+            // 
+            tbValor.BackColor = SystemColors.ButtonFace;
+            tbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbValor.Location = new Point(71, 97);
+            tbValor.Name = "tbValor";
+            tbValor.Size = new Size(61, 29);
+            tbValor.TabIndex = 4;
             // 
             // btnCadastrar
             // 
@@ -116,8 +116,8 @@
             ClientSize = new Size(344, 203);
             Controls.Add(btnSair);
             Controls.Add(btnCadastrar);
-            Controls.Add(tbItem);
             Controls.Add(tbValor);
+            Controls.Add(tbItem);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -136,9 +136,8 @@
 
         private Label label1;
         private Label label2;
-        private ListBox lbItens;
-        private TextBox tbValor;
         private TextBox tbItem;
+        private TextBox tbValor;
         private Button btnCadastrar;
         private Button btnSair;
     }
