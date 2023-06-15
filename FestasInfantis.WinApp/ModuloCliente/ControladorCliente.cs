@@ -68,30 +68,47 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             if (cliente == null)
             {
-                MessageBox.Show($"Selecione um cliente primeiro!",
-                    "Edição de Clientes",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
-
+                MessageBox.Show("Selecione um cliente primeiro!", "Edição de Clientes", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            int id = 0;
+            int id = cliente.id;
+
             TelaCliente telaCliente = new TelaCliente();
             telaCliente.Cliente = cliente;
-            id = cliente.id;
 
-            DialogResult opcaoEscolhida = telaCliente.ShowDialog();
+            bool nomeRepetido = false;
 
-            if (opcaoEscolhida == DialogResult.OK)
+            do
             {
-                telaCliente.Cliente.id = id;
-                repositorioCliente.Editar(id, telaCliente.Cliente);
+                DialogResult opcaoEscolhida = telaCliente.ShowDialog();
 
-                CarregarClientes();
-            }
-            
+                if (opcaoEscolhida == DialogResult.OK)
+                {
+                    Cliente clienteEditado = telaCliente.Cliente;
+
+                    List<Cliente> listaClientes = repositorioCliente.SelecionarTodos();
+
+                    if (listaClientes.Any(n => n.nome.ToLower() == clienteEditado.nome.ToLower() && n.id != id))
+                    {
+                        TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
+                        nomeRepetido = true;
+                    }
+                    else
+                    {
+                        repositorioCliente.Editar(id, clienteEditado);
+                        CarregarClientes();
+                        nomeRepetido = false;
+                    }
+                }
+                else
+                {
+                    nomeRepetido = false;
+                }
+            } while (nomeRepetido);
         }
+
+
 
 
         public override void Excluir()

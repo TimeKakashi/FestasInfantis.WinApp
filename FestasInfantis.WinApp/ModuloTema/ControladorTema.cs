@@ -41,19 +41,41 @@ namespace FestasInfantis.WinApp.ModuloTema
                 return;
             }
 
-            
             TelaTema telaTema = new TelaTema(repositorioItens, tema);
             int id = tema.id;
 
             telaTema.Tema = tema;
 
-            if(telaTema.ShowDialog() == DialogResult.OK)
+            bool nomeRepetido = false;
+
+            do
             {
-                telaTema.Tema.id = id;
-                repositorioTema.Editar(id, telaTema.Tema);
-                CarregarTemas();
-            }
+                if (telaTema.ShowDialog() == DialogResult.OK)
+                {
+                    Tema temaEditado = telaTema.Tema;
+
+                    List<Tema> listaTemas = repositorioTema.SelecionarTodos();
+
+                    if (listaTemas.Any(t => t.descricao.ToLower() == temaEditado.descricao.ToLower() && t.id != id))
+                    {
+                        TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
+                        nomeRepetido = true;
+                    }
+                    else
+                    {
+                        temaEditado.id = id;
+                        repositorioTema.Editar(id, temaEditado);
+                        CarregarTemas();
+                        nomeRepetido = false;
+                    }
+                }
+                else
+                {
+                    nomeRepetido = false;
+                }
+            } while (nomeRepetido);
         }
+
 
         public override void Excluir()
         {

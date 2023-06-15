@@ -35,13 +35,36 @@ namespace FestasInfantis.WinApp.ModuloItens
             int id = item.id;
             telaItens.itens = item;
 
-            if (telaItens.ShowDialog() == DialogResult.OK)
+            bool nomeRepetido = false;
+
+            do
             {
-                telaItens.itens.id = id;
-                repositorioItem.Editar(id, telaItens.itens);
-                CarregarItens();
-            }
+                if (telaItens.ShowDialog() == DialogResult.OK)
+                {
+                    Itens itemEditado = telaItens.itens;
+
+                    List<Itens> listaItens = repositorioItem.SelecionarTodos();
+
+                    if (listaItens.Any(i => i.nomeDoItem.ToLower() == itemEditado.nomeDoItem.ToLower() && i.id != id))
+                    {
+                        TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
+                        nomeRepetido = true;
+                    }
+                    else
+                    {
+                        itemEditado.id = id;
+                        repositorioItem.Editar(id, itemEditado);
+                        CarregarItens();
+                        nomeRepetido = false;
+                    }
+                }
+                else
+                {
+                    nomeRepetido = false;
+                }
+            } while (nomeRepetido);
         }
+
 
 
         public override void Excluir()
