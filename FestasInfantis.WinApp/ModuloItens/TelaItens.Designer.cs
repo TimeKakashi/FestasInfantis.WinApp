@@ -40,43 +40,44 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.GradientActiveCaption;
+            label1.BackColor = Color.LightGray;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(79, 167);
+            label1.Location = new Point(12, 105);
             label1.Name = "label1";
-            label1.Size = new Size(46, 21);
+            label1.Size = new Size(53, 21);
             label1.TabIndex = 0;
-            label1.Text = "Valor";
+            label1.Text = "Valor :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BackColor = Color.LightGray;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Desktop;
-            label2.Location = new Point(79, 101);
+            label2.Location = new Point(12, 46);
             label2.Name = "label2";
-            label2.Size = new Size(41, 21);
+            label2.Size = new Size(48, 21);
             label2.TabIndex = 1;
-            label2.Text = "Item";
+            label2.Text = "Item :";
+            label2.Click += label2_Click;
             // 
             // tbValor
             // 
             tbValor.BackColor = SystemColors.ButtonFace;
             tbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbValor.Location = new Point(151, 164);
+            tbValor.Location = new Point(71, 97);
             tbValor.Name = "tbValor";
-            tbValor.Size = new Size(170, 29);
+            tbValor.Size = new Size(61, 29);
             tbValor.TabIndex = 4;
             // 
             // tbItem
             // 
             tbItem.BackColor = SystemColors.ButtonFace;
             tbItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbItem.Location = new Point(151, 101);
+            tbItem.Location = new Point(71, 38);
             tbItem.Name = "tbItem";
-            tbItem.Size = new Size(170, 29);
+            tbItem.Size = new Size(207, 29);
             tbItem.TabIndex = 5;
             // 
             // btnCadastrar
@@ -85,7 +86,7 @@
             btnCadastrar.BackColor = SystemColors.ButtonFace;
             btnCadastrar.DialogResult = DialogResult.OK;
             btnCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadastrar.Location = new Point(345, 259);
+            btnCadastrar.Location = new Point(152, 147);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(86, 43);
             btnCadastrar.TabIndex = 6;
@@ -99,7 +100,7 @@
             btnSair.BackColor = SystemColors.ButtonFace;
             btnSair.DialogResult = DialogResult.Cancel;
             btnSair.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSair.Location = new Point(345, 319);
+            btnSair.Location = new Point(244, 147);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(86, 43);
             btnSair.TabIndex = 7;
@@ -111,8 +112,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(443, 371);
+            BackColor = Color.LightGray;
+            ClientSize = new Size(344, 203);
             Controls.Add(btnSair);
             Controls.Add(btnCadastrar);
             Controls.Add(tbItem);

@@ -40,9 +40,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BackColor = Color.LightGray;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(12, 31);
+            label2.Location = new Point(12, 28);
             label2.Name = "label2";
             label2.Size = new Size(98, 25);
             label2.TabIndex = 1;
@@ -58,9 +58,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = SystemColors.GradientActiveCaption;
+            label3.BackColor = Color.LightGray;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(12, 129);
+            label3.Location = new Point(12, 105);
             label3.Name = "label3";
             label3.Size = new Size(298, 25);
             label3.TabIndex = 3;
@@ -69,7 +69,7 @@
             // listaItensTema
             // 
             listaItensTema.FormattingEnabled = true;
-            listaItensTema.Location = new Point(12, 175);
+            listaItensTema.Location = new Point(12, 152);
             listaItensTema.Name = "listaItensTema";
             listaItensTema.Size = new Size(312, 184);
             listaItensTema.TabIndex = 4;
@@ -80,7 +80,7 @@
             btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnGravar.BackColor = SystemColors.ControlLightLight;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(354, 256);
+            btnGravar.Location = new Point(345, 246);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(86, 43);
             btnGravar.TabIndex = 5;
@@ -93,7 +93,7 @@
             btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.BackColor = SystemColors.ControlLightLight;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(354, 318);
+            btnCancelar.Location = new Point(345, 295);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(86, 43);
             btnCancelar.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
+            BackColor = Color.LightGray;
             ClientSize = new Size(443, 371);
             Controls.Add(btnCancelar);
             Controls.Add(btnGravar);

@@ -43,7 +43,7 @@
             // 
             btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(220, 242);
+            btnGravar.Location = new Point(197, 242);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(94, 46);
             btnGravar.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(320, 242);
+            btnCancelar.Location = new Point(297, 242);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 46);
             btnCancelar.TabIndex = 1;
@@ -65,42 +65,42 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.GradientActiveCaption;
+            label1.BackColor = Color.LightGray;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 51);
             label1.Name = "label1";
-            label1.Size = new Size(63, 25);
+            label1.Size = new Size(72, 25);
             label1.TabIndex = 2;
-            label1.Text = "Nome";
+            label1.Text = "Nome :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BackColor = Color.LightGray;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(12, 110);
             label2.Name = "label2";
-            label2.Size = new Size(83, 25);
+            label2.Size = new Size(92, 25);
             label2.TabIndex = 3;
-            label2.Text = "Telefone";
+            label2.Text = "Telefone :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = SystemColors.GradientActiveCaption;
+            label3.BackColor = Color.LightGray;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(12, 173);
             label3.Name = "label3";
-            label3.Size = new Size(91, 25);
+            label3.Size = new Size(100, 25);
             label3.TabIndex = 4;
-            label3.Text = "Endereço";
+            label3.Text = "Endereço :";
             // 
             // tbNome
             // 
             tbNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             tbNome.Location = new Point(109, 48);
             tbNome.Name = "tbNome";
-            tbNome.Size = new Size(130, 33);
+            tbNome.Size = new Size(166, 33);
             tbNome.TabIndex = 5;
             // 
             // tbEndereco
@@ -116,14 +116,14 @@
             tbNumero.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             tbNumero.Location = new Point(109, 107);
             tbNumero.Name = "tbNumero";
-            tbNumero.Size = new Size(130, 33);
+            tbNumero.Size = new Size(166, 33);
             tbNumero.TabIndex = 7;
             // 
             // TelaCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
+            BackColor = Color.LightGray;
             ClientSize = new Size(424, 300);
             Controls.Add(tbNumero);
             Controls.Add(tbEndereco);

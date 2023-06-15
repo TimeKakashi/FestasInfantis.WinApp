@@ -53,7 +53,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = SystemColors.InactiveCaption;
+            menuStrip1.BackColor = Color.LightGray;
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, festasToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -63,7 +63,7 @@
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.BackColor = SystemColors.InactiveCaption;
+            cadastroToolStripMenuItem.BackColor = Color.LightGray;
             cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesToolStripMenuItem, temasToolStripMenuItem });
             cadastroToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
@@ -74,7 +74,7 @@
             // 
             clientesToolStripMenuItem.BackColor = SystemColors.Control;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(180, 22);
+            clientesToolStripMenuItem.Size = new Size(121, 22);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
@@ -83,7 +83,7 @@
             temasToolStripMenuItem.BackColor = SystemColors.Control;
             temasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { itensToolStripMenuItem });
             temasToolStripMenuItem.Name = "temasToolStripMenuItem";
-            temasToolStripMenuItem.Size = new Size(180, 22);
+            temasToolStripMenuItem.Size = new Size(121, 22);
             temasToolStripMenuItem.Text = "Temas";
             temasToolStripMenuItem.Click += temasToolStripMenuItem_Click;
             // 
@@ -192,7 +192,7 @@
             // 
             // panelRegistros
             // 
-            panelRegistros.BackColor = SystemColors.GradientActiveCaption;
+            panelRegistros.BackColor = SystemColors.ButtonFace;
             panelRegistros.BorderStyle = BorderStyle.FixedSingle;
             panelRegistros.Dock = DockStyle.Fill;
             panelRegistros.Location = new Point(0, 50);

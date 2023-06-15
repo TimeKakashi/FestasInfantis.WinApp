@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp.ModuloFesta
 {
-    public partial class TelaFestaFiltro : Form
+    public partial class FiltroDeFesta : Form
     {
-        public TelaFestaFiltro()
+        public FiltroDeFesta()
         {
             InitializeComponent();
         }
@@ -44,8 +44,13 @@ namespace FestasInfantis.WinApp.ModuloFesta
             {
                 return "endereco";
             }
-            else 
+            else
                 return "todas";
+        }
+
+        private void rbTodas_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
