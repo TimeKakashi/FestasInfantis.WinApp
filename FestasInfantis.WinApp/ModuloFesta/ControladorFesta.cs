@@ -142,12 +142,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
                     CarregarFestas();
 
                 }
-
             }
-
-            
-
-            
         }
 
         private Festa ObterFestaSelecionada()
