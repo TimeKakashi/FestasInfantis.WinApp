@@ -110,7 +110,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         public override void Filtrar()
         {
-            TelaFestaFiltro telaFiltro = new TelaFestaFiltro();
+            FiltroDeFesta telaFiltro = new FiltroDeFesta();
 
             if(telaFiltro.ShowDialog() == DialogResult.OK)
             {
