@@ -34,7 +34,7 @@
             // 
             // grid
             // 
-            grid.BackgroundColor = SystemColors.GradientActiveCaption;
+            grid.BackgroundColor = Color.LightGray;
             grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grid.Dock = DockStyle.Fill;
             grid.Location = new Point(0, 0);
