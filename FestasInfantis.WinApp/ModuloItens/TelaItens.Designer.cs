@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaItens));
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             lbItens = new ListBox();
             tbValor = new TextBox();
             tbItem = new TextBox();
@@ -45,7 +44,7 @@
             label1.BackColor = SystemColors.ControlLightLight;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(110, 76);
+            label1.Location = new Point(12, 114);
             label1.Name = "label1";
             label1.Size = new Size(46, 21);
             label1.TabIndex = 0;
@@ -57,39 +56,27 @@
             label2.BackColor = SystemColors.ControlLightLight;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Desktop;
-            label2.Location = new Point(110, 125);
+            label2.Location = new Point(12, 48);
             label2.Name = "label2";
             label2.Size = new Size(41, 21);
             label2.TabIndex = 1;
             label2.Text = "Item";
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top;
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.ControlLightLight;
-            label3.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(169, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(268, 45);
-            label3.TabIndex = 2;
-            label3.Text = "Cadastro de itens";
             // 
             // lbItens
             // 
             lbItens.BackColor = SystemColors.ButtonFace;
             lbItens.FormattingEnabled = true;
             lbItens.ItemHeight = 15;
-            lbItens.Location = new Point(169, 175);
+            lbItens.Location = new Point(12, 175);
             lbItens.Name = "lbItens";
-            lbItens.Size = new Size(201, 184);
+            lbItens.Size = new Size(312, 184);
             lbItens.TabIndex = 3;
             // 
             // tbValor
             // 
             tbValor.BackColor = SystemColors.ButtonFace;
             tbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbValor.Location = new Point(169, 76);
+            tbValor.Location = new Point(84, 111);
             tbValor.Name = "tbValor";
             tbValor.Size = new Size(100, 29);
             tbValor.TabIndex = 4;
@@ -98,19 +85,20 @@
             // 
             tbItem.BackColor = SystemColors.ButtonFace;
             tbItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbItem.Location = new Point(169, 125);
+            tbItem.Location = new Point(84, 48);
             tbItem.Name = "tbItem";
             tbItem.Size = new Size(100, 29);
             tbItem.TabIndex = 5;
             // 
             // btnCadastrar
             // 
+            btnCadastrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCadastrar.BackColor = SystemColors.ButtonFace;
             btnCadastrar.DialogResult = DialogResult.OK;
             btnCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadastrar.Location = new Point(413, 272);
+            btnCadastrar.Location = new Point(354, 256);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(86, 28);
+            btnCadastrar.Size = new Size(86, 43);
             btnCadastrar.TabIndex = 6;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
@@ -122,9 +110,9 @@
             btnSair.BackColor = SystemColors.ButtonFace;
             btnSair.DialogResult = DialogResult.Cancel;
             btnSair.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSair.Location = new Point(413, 324);
+            btnSair.Location = new Point(354, 318);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(70, 35);
+            btnSair.Size = new Size(86, 43);
             btnSair.TabIndex = 7;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = false;
@@ -136,13 +124,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(545, 371);
+            ClientSize = new Size(443, 371);
             Controls.Add(btnSair);
             Controls.Add(btnCadastrar);
             Controls.Add(tbItem);
             Controls.Add(tbValor);
             Controls.Add(lbItens);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -151,6 +138,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaItens";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Itens";
             ResumeLayout(false);
             PerformLayout();
@@ -160,7 +148,6 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
         private ListBox lbItens;
         private TextBox tbValor;
         private TextBox tbItem;

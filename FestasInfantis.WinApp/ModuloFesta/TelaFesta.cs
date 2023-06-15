@@ -135,7 +135,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
                 cliente.temDesconto = true;
                 cliente.alugado = true;
-                
+
 
                 festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
 

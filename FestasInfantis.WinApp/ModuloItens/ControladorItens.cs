@@ -53,7 +53,7 @@ namespace FestasInfantis.WinApp.ModuloItens
                 return;
             }
 
-            DialogResult verificarExclusao = MessageBox.Show($"Deseja excluir o tema {item.nomeDoItem}?", "Exclusão de Item",
+            DialogResult verificarExclusao = MessageBox.Show($"Deseja excluir o item {item.nomeDoItem}?", "Exclusão de Item",
               MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (verificarExclusao == DialogResult.OK)

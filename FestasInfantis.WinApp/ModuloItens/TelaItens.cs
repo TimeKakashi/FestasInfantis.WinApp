@@ -28,25 +28,27 @@ namespace FestasInfantis.WinApp.ModuloTema
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string nomeDoItem = tbItem.Text;
+            decimal valor;
 
-            if (tbValor.Text == string.Empty)
+            if (decimal.TryParse(tbValor.Text, out valor))
             {
-                MessageBox.Show("Adicione o preco do item!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DialogResult = DialogResult.None;
-                return;
+                item = new Itens(nomeDoItem, valor);
+
+                string[] erros = item.Validar();
+
+                if (erros.Length > 0)
+                {
+                    TelaPrincipal.Instancia.AtualizarRodape(erros[0]);
+                    DialogResult = DialogResult.None;
+                }
             }
-
-            decimal valor = decimal.Parse(tbValor.Text);
-            item = new Itens(nomeDoItem, valor);
-
-            string[] erros = item.Validar();
-
-            if (erros.Length > 0)
+            else
             {
-                TelaPrincipal.Instancia.AtualizarRodape(erros[0]);
+                TelaPrincipal.Instancia.AtualizarRodape("Valor inválido para o campo Valor.");
                 DialogResult = DialogResult.None;
             }
         }
+
 
         private void Atualizar()
         {
