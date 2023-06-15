@@ -37,8 +37,8 @@ namespace FestaInfantil.Dominio.ModuloTema
             if (string.IsNullOrEmpty(nomeDoItem))
                 lista.Add("Campo Nome do item incorreto!");
 
-            if(valor == null || valor == 0)
-                lista.Add("Campo Nome do item incorreto!");
+            if( valor == 0)
+                lista.Add("Campo Valor do item incorreto!");
 
             return lista.ToArray();
         }

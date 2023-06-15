@@ -79,11 +79,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
                 CarregarClientes();
             }
-            else
-            {
-                MessageBox.Show("Cancelado!");
-                return;
-            }
+            
         }
 
 

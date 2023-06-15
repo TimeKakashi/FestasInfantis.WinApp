@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaFesta));
-            label1 = new Label();
             label2 = new Label();
             cbCliente = new ComboBox();
             cbTema = new ComboBox();
@@ -48,23 +47,12 @@
             button2 = new Button();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(157, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(229, 45);
-            label1.TabIndex = 0;
-            label1.Text = "Cadastro Festa";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = SystemColors.ControlLightLight;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(34, 74);
+            label2.Location = new Point(7, 30);
             label2.Name = "label2";
             label2.Size = new Size(58, 21);
             label2.TabIndex = 1;
@@ -73,7 +61,7 @@
             // cbCliente
             // 
             cbCliente.FormattingEnabled = true;
-            cbCliente.Location = new Point(98, 74);
+            cbCliente.Location = new Point(138, 32);
             cbCliente.Name = "cbCliente";
             cbCliente.Size = new Size(121, 23);
             cbCliente.TabIndex = 2;
@@ -81,7 +69,7 @@
             // cbTema
             // 
             cbTema.FormattingEnabled = true;
-            cbTema.Location = new Point(356, 72);
+            cbTema.Location = new Point(138, 203);
             cbTema.Name = "cbTema";
             cbTema.Size = new Size(121, 23);
             cbTema.TabIndex = 4;
@@ -92,7 +80,7 @@
             label3.AutoSize = true;
             label3.BackColor = SystemColors.ControlLightLight;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(304, 74);
+            label3.Location = new Point(7, 205);
             label3.Name = "label3";
             label3.Size = new Size(46, 21);
             label3.TabIndex = 3;
@@ -100,9 +88,9 @@
             // 
             // tbEndereco
             // 
-            tbEndereco.Location = new Point(356, 159);
+            tbEndereco.Location = new Point(138, 251);
             tbEndereco.Name = "tbEndereco";
-            tbEndereco.Size = new Size(100, 23);
+            tbEndereco.Size = new Size(121, 23);
             tbEndereco.TabIndex = 5;
             // 
             // label4
@@ -110,7 +98,7 @@
             label4.AutoSize = true;
             label4.BackColor = SystemColors.ControlLightLight;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(276, 161);
+            label4.Location = new Point(7, 253);
             label4.Name = "label4";
             label4.Size = new Size(74, 21);
             label4.TabIndex = 6;
@@ -121,7 +109,7 @@
             label5.AutoSize = true;
             label5.BackColor = SystemColors.ControlLightLight;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(198, 213);
+            label5.Location = new Point(7, 306);
             label5.Name = "label5";
             label5.Size = new Size(124, 21);
             label5.TabIndex = 8;
@@ -130,15 +118,15 @@
             // tbValorEntrada
             // 
             tbValorEntrada.Enabled = false;
-            tbValorEntrada.Location = new Point(213, 237);
+            tbValorEntrada.Location = new Point(138, 304);
             tbValorEntrada.Name = "tbValorEntrada";
-            tbValorEntrada.Size = new Size(100, 23);
+            tbValorEntrada.Size = new Size(121, 23);
             tbValorEntrada.TabIndex = 7;
             // 
             // dtData
             // 
             dtData.Format = DateTimePickerFormat.Short;
-            dtData.Location = new Point(98, 155);
+            dtData.Location = new Point(138, 74);
             dtData.Name = "dtData";
             dtData.Size = new Size(121, 23);
             dtData.TabIndex = 9;
@@ -148,7 +136,7 @@
             label6.AutoSize = true;
             label6.BackColor = SystemColors.ControlLightLight;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(50, 157);
+            label6.Location = new Point(7, 74);
             label6.Name = "label6";
             label6.Size = new Size(42, 21);
             label6.TabIndex = 10;
@@ -159,7 +147,7 @@
             label7.AutoSize = true;
             label7.BackColor = SystemColors.ControlLightLight;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(225, 117);
+            label7.Location = new Point(7, 159);
             label7.Name = "label7";
             label7.Size = new Size(125, 21);
             label7.TabIndex = 12;
@@ -168,7 +156,7 @@
             // dtHoraTermino
             // 
             dtHoraTermino.Format = DateTimePickerFormat.Time;
-            dtHoraTermino.Location = new Point(356, 117);
+            dtHoraTermino.Location = new Point(138, 159);
             dtHoraTermino.Name = "dtHoraTermino";
             dtHoraTermino.Size = new Size(121, 23);
             dtHoraTermino.TabIndex = 11;
@@ -178,7 +166,7 @@
             label8.AutoSize = true;
             label8.BackColor = SystemColors.ControlLightLight;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(7, 116);
+            label8.Location = new Point(7, 115);
             label8.Name = "label8";
             label8.Size = new Size(85, 21);
             label8.TabIndex = 14;
@@ -187,7 +175,7 @@
             // dtHoraInicio
             // 
             dtHoraInicio.Format = DateTimePickerFormat.Time;
-            dtHoraInicio.Location = new Point(98, 115);
+            dtHoraInicio.Location = new Point(138, 114);
             dtHoraInicio.Name = "dtHoraInicio";
             dtHoraInicio.Size = new Size(121, 23);
             dtHoraInicio.TabIndex = 13;
@@ -197,7 +185,7 @@
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.DialogResult = DialogResult.OK;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(316, 322);
+            button1.Location = new Point(301, 268);
             button1.Name = "button1";
             button1.Size = new Size(110, 37);
             button1.TabIndex = 15;
@@ -210,11 +198,11 @@
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.DialogResult = DialogResult.Cancel;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(432, 322);
+            button2.Location = new Point(301, 322);
             button2.Name = "button2";
             button2.Size = new Size(110, 37);
             button2.TabIndex = 16;
-            button2.Text = "Cancelar";
+            button2.Text = "Sair";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -224,7 +212,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(554, 371);
+            ClientSize = new Size(423, 371);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label8);
@@ -241,21 +229,19 @@
             Controls.Add(label3);
             Controls.Add(cbCliente);
             Controls.Add(label2);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaFesta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Festa";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private ComboBox cbCliente;
         private ComboBox cbTema;

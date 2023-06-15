@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaTema));
-            label1 = new Label();
             label2 = new Label();
             tbDescricao = new TextBox();
             label3 = new Label();
@@ -38,23 +37,12 @@
             btnCancelar = new Button();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ControlLightLight;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(104, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(289, 45);
-            label1.TabIndex = 0;
-            label1.Text = "Cadastro de Temas";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = SystemColors.ControlLightLight;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(104, 74);
+            label2.Location = new Point(12, 31);
             label2.Name = "label2";
             label2.Size = new Size(98, 25);
             label2.TabIndex = 1;
@@ -62,7 +50,7 @@
             // 
             // tbDescricao
             // 
-            tbDescricao.Location = new Point(241, 74);
+            tbDescricao.Location = new Point(132, 33);
             tbDescricao.Name = "tbDescricao";
             tbDescricao.Size = new Size(143, 23);
             tbDescricao.TabIndex = 2;
@@ -72,7 +60,7 @@
             label3.AutoSize = true;
             label3.BackColor = SystemColors.ControlLightLight;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(104, 114);
+            label3.Location = new Point(12, 129);
             label3.Name = "label3";
             label3.Size = new Size(298, 25);
             label3.TabIndex = 3;
@@ -81,9 +69,9 @@
             // listaItensTema
             // 
             listaItensTema.FormattingEnabled = true;
-            listaItensTema.Location = new Point(143, 160);
+            listaItensTema.Location = new Point(12, 175);
             listaItensTema.Name = "listaItensTema";
-            listaItensTema.Size = new Size(229, 184);
+            listaItensTema.Size = new Size(312, 184);
             listaItensTema.TabIndex = 4;
             listaItensTema.ItemCheck += listaItensTema_ItemCheck;
             // 
@@ -92,11 +80,11 @@
             btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnGravar.BackColor = SystemColors.ControlLightLight;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(396, 249);
+            btnGravar.Location = new Point(354, 256);
             btnGravar.Name = "btnGravar";
-            btnGravar.Size = new Size(93, 38);
+            btnGravar.Size = new Size(86, 43);
             btnGravar.TabIndex = 5;
-            btnGravar.Text = "Gravar";
+            btnGravar.Text = "Cadastrar";
             btnGravar.UseVisualStyleBackColor = false;
             btnGravar.Click += btnGravar_Click_1;
             // 
@@ -105,11 +93,11 @@
             btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.BackColor = SystemColors.ControlLightLight;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(396, 306);
+            btnCancelar.Location = new Point(354, 318);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(93, 38);
+            btnCancelar.Size = new Size(86, 43);
             btnCancelar.TabIndex = 6;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Sair";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -119,28 +107,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(514, 371);
+            ClientSize = new Size(443, 371);
             Controls.Add(btnCancelar);
             Controls.Add(btnGravar);
             Controls.Add(listaItensTema);
             Controls.Add(label3);
             Controls.Add(tbDescricao);
             Controls.Add(label2);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaTema";
-            Text = "TelaTema";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cadastro de Temas";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private TextBox textBox1;
         private Label label3;
