@@ -137,10 +137,9 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
                 }
 
-                else if (status == "todos")
+                else if (status == "todas")
                 {
-                    List<Festa> todasFestas = repositorioFesta.SelecionarTodos();
-                    listagemFesta.AtualizarRegistros(todasFestas);
+                    CarregarFestas();
 
                 }
 
