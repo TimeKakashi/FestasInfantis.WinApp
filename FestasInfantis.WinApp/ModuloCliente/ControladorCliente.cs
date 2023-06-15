@@ -33,23 +33,34 @@ namespace FestasInfantis.WinApp.ModuloCliente
         public override void Inserir()
         {
             TelaCliente telaCliente = new TelaCliente();
+            bool nomeRepetido = false;
 
-            if(telaCliente.ShowDialog() == DialogResult.OK)
+            do
             {
-                Cliente cliente = telaCliente.Cliente;
-
-                List<Cliente> listaClientes = repositorioCliente.SelecionarTodos();
-
-                if (listaClientes.Any(n => n.nome == cliente.nome))
+                if (telaCliente.ShowDialog() == DialogResult.OK)
                 {
-                    TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
-                    Inserir();
-                }
+                    Cliente cliente = telaCliente.Cliente;
+                    List<Cliente> listaClientes = repositorioCliente.SelecionarTodos();
 
-                repositorioCliente.Inserir(cliente);
-                CarregarClientes();
-            }
+                    if (listaClientes.Any(n => n.nome == cliente.nome))
+                    {
+                        TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
+                        nomeRepetido = true;
+                    }
+                    else
+                    {
+                        repositorioCliente.Inserir(cliente);
+                        CarregarClientes();
+                        nomeRepetido = false;
+                    }
+                }
+                else
+                {
+                    nomeRepetido = false;
+                }
+            } while (nomeRepetido);
         }
+
 
         public override void Editar()
         {

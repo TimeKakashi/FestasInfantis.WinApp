@@ -77,7 +77,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             if(festa.pagamento == false)
             {
-                TelaPrincipal.Instancia.AtualizarRodape("Essa festa está ainda não foi finalizada, não é possivel excluí-la");
+                TelaPrincipal.Instancia.AtualizarRodape("Essa festa ainda não foi finalizada, não é possivel excluí-la");
                 return;
             }
 

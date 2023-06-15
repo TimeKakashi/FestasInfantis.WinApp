@@ -73,16 +73,34 @@ namespace FestasInfantis.WinApp.ModuloItens
         public override void Inserir()
         {
             TelaItens telaItens = new TelaItens();
+            bool nomeRepetido = false;
 
-            if (telaItens.ShowDialog() == DialogResult.OK)
+            do
             {
-                Itens item = telaItens.itens;
+                if (telaItens.ShowDialog() == DialogResult.OK)
+                {
+                    Itens item = telaItens.itens;
+                    List<Itens> listaItens = repositorioItem.SelecionarTodos();
 
-                repositorioItem.Inserir(item);
-
-                CarregarItens();
-            }
+                    if (listaItens.Any(i => i.nomeDoItem == item.nomeDoItem))
+                    {
+                        TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
+                        nomeRepetido = true;
+                    }
+                    else
+                    {
+                        repositorioItem.Inserir(item);
+                        CarregarItens();
+                        nomeRepetido = false;
+                    }
+                }
+                else
+                {
+                    nomeRepetido = false;
+                }
+            } while (nomeRepetido);
         }
+
         public void CarregarItens()
         {
             List<Itens> item = repositorioItem.SelecionarTodos();
