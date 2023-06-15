@@ -56,8 +56,8 @@ namespace FestaInfantil.Dominio.ModuloFesta
             else if (horaFinal < horaInicio)
                 erros.Add("A festa não pode terminar antes de começar!");
 
-            if (enderecoFesta == null)
-                erros.Add("Campo endereço está inválido!");
+            if (enderecoFesta.Length < 15)
+                erros.Add("Campo endereço está inválido, Adicione: Rua, Número, Cidade");
 
             if (enderecoFesta == null)
                 erros.Add("Campo endereço está inválido!");
