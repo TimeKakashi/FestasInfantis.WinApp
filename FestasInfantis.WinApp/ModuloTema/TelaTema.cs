@@ -55,6 +55,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             foreach (Itens item in listaItensTema.CheckedItems)
             {
+                item.contador++;
                 valor += item.valor;
                 listaCheck.Add(item);
             }
