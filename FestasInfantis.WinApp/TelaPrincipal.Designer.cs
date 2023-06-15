@@ -53,7 +53,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = SystemColors.InactiveCaption;
+            menuStrip1.BackColor = Color.LightGray;
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, festasToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -63,7 +63,7 @@
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.BackColor = SystemColors.InactiveCaption;
+            cadastroToolStripMenuItem.BackColor = Color.LightGray;
             cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesToolStripMenuItem, temasToolStripMenuItem });
             cadastroToolStripMenuItem.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
@@ -192,7 +192,7 @@
             // 
             // panelRegistros
             // 
-            panelRegistros.BackColor = SystemColors.GradientActiveCaption;
+            panelRegistros.BackColor = SystemColors.ButtonFace;
             panelRegistros.BorderStyle = BorderStyle.FixedSingle;
             panelRegistros.Dock = DockStyle.Fill;
             panelRegistros.Location = new Point(0, 50);

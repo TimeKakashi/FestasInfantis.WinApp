@@ -50,7 +50,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BackColor = Color.LightGray;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(7, 30);
             label2.Name = "label2";
@@ -78,7 +78,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = SystemColors.GradientActiveCaption;
+            label3.BackColor = Color.LightGray;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(7, 205);
             label3.Name = "label3";
@@ -96,7 +96,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = SystemColors.GradientActiveCaption;
+            label4.BackColor = Color.LightGray;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(7, 253);
             label4.Name = "label4";
@@ -107,7 +107,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = SystemColors.GradientActiveCaption;
+            label5.BackColor = Color.LightGray;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(7, 306);
             label5.Name = "label5";
@@ -134,7 +134,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = SystemColors.GradientActiveCaption;
+            label6.BackColor = Color.LightGray;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(7, 74);
             label6.Name = "label6";
@@ -145,7 +145,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = SystemColors.GradientActiveCaption;
+            label7.BackColor = Color.LightGray;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(7, 159);
             label7.Name = "label7";
@@ -164,7 +164,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = SystemColors.GradientActiveCaption;
+            label8.BackColor = Color.LightGray;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.Location = new Point(7, 115);
             label8.Name = "label8";
@@ -185,7 +185,7 @@
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.DialogResult = DialogResult.OK;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(301, 268);
+            button1.Location = new Point(301, 237);
             button1.Name = "button1";
             button1.Size = new Size(110, 37);
             button1.TabIndex = 15;
@@ -198,7 +198,7 @@
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.DialogResult = DialogResult.Cancel;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(301, 322);
+            button2.Location = new Point(301, 287);
             button2.Name = "button2";
             button2.Size = new Size(110, 37);
             button2.TabIndex = 16;
@@ -210,8 +210,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(423, 371);
+            BackColor = Color.LightGray;
+            ClientSize = new Size(423, 336);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label8);

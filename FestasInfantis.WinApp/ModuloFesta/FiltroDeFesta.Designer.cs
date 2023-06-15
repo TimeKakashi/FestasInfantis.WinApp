@@ -1,6 +1,6 @@
 ﻿namespace FestasInfantis.WinApp.ModuloFesta
 {
-    partial class TelaFestaFiltro
+    partial class FiltroDeFesta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            rbTodas = new RadioButton();
             rbEndereco = new RadioButton();
             rbAbertas = new RadioButton();
             rbFinalizadas = new RadioButton();
             btnGravar = new Button();
             button2 = new Button();
-            rbTodas = new RadioButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,16 +44,28 @@
             panel1.Controls.Add(rbEndereco);
             panel1.Controls.Add(rbAbertas);
             panel1.Controls.Add(rbFinalizadas);
-            panel1.Location = new Point(228, 132);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(283, 170);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // rbTodas
+            // 
+            rbTodas.AutoSize = true;
+            rbTodas.Location = new Point(71, 21);
+            rbTodas.Name = "rbTodas";
+            rbTodas.Size = new Size(102, 19);
+            rbTodas.TabIndex = 3;
+            rbTodas.TabStop = true;
+            rbTodas.Text = "Todas as festas";
+            rbTodas.UseVisualStyleBackColor = true;
+            rbTodas.CheckedChanged += rbTodas_CheckedChanged;
+            // 
             // rbEndereco
             // 
             rbEndereco.AutoSize = true;
-            rbEndereco.Location = new Point(63, 124);
+            rbEndereco.Location = new Point(71, 96);
             rbEndereco.Name = "rbEndereco";
             rbEndereco.Size = new Size(179, 19);
             rbEndereco.TabIndex = 2;
@@ -64,7 +76,7 @@
             // rbAbertas
             // 
             rbAbertas.AutoSize = true;
-            rbAbertas.Location = new Point(63, 92);
+            rbAbertas.Location = new Point(71, 71);
             rbAbertas.Name = "rbAbertas";
             rbAbertas.Size = new Size(114, 19);
             rbAbertas.TabIndex = 1;
@@ -75,7 +87,7 @@
             // rbFinalizadas
             // 
             rbFinalizadas.AutoSize = true;
-            rbFinalizadas.Location = new Point(63, 60);
+            rbFinalizadas.Location = new Point(71, 46);
             rbFinalizadas.Name = "rbFinalizadas";
             rbFinalizadas.Size = new Size(127, 19);
             rbFinalizadas.TabIndex = 0;
@@ -86,7 +98,7 @@
             // btnGravar
             // 
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(711, 336);
+            btnGravar.Location = new Point(321, 33);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(77, 46);
             btnGravar.TabIndex = 1;
@@ -96,30 +108,19 @@
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(711, 392);
+            button2.Location = new Point(321, 136);
             button2.Name = "button2";
             button2.Size = new Size(77, 46);
             button2.TabIndex = 2;
             button2.Text = "Sair";
             button2.UseVisualStyleBackColor = true;
             // 
-            // rbTodas
-            // 
-            rbTodas.AutoSize = true;
-            rbTodas.Location = new Point(63, 28);
-            rbTodas.Name = "rbTodas";
-            rbTodas.Size = new Size(102, 19);
-            rbTodas.TabIndex = 3;
-            rbTodas.TabStop = true;
-            rbTodas.Text = "Todas as festas";
-            rbTodas.UseVisualStyleBackColor = true;
-            // 
             // TelaFestaFiltro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.LightGray;
+            ClientSize = new Size(410, 201);
             Controls.Add(button2);
             Controls.Add(btnGravar);
             Controls.Add(panel1);
