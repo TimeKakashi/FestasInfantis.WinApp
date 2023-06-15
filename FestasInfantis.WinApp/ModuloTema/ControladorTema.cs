@@ -91,7 +91,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
                 Tema tema = telaTema.Tema;
 
-                if(listaTema.Any(x => x.descricao == tema.descricao))
+                if(listaTema.Any(x => x.descricao.ToLower() == tema.descricao.ToLower()))
                 {
                     TelaPrincipal.Instancia.AtualizarRodape("Nao é possivel cadastrar um tema com a mesma descrição de outro tema!");
                     return;

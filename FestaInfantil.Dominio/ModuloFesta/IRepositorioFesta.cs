@@ -9,5 +9,9 @@ namespace FestaInfantil.Dominio.ModuloFesta
 {
     public interface IRepositorioFesta : IRepositorioBase<Festa>
     {
+        public List<Festa> FiltrarAlugueisEmAberto();
+        public List<Festa> FiltrarAlugueisPagos();
+        public List<Festa> FiltrarPorAlugueisComMesmoEndereco();
+       
     }
 }

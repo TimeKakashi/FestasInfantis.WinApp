@@ -42,6 +42,12 @@ namespace FestasInfantis.WinApp.ModuloFesta
             }
             return -1;
         }
+
+        public void ObterFiltro()
+        {
+
+        }
+
         private void popularGrid()
         {
             DataGridViewColumn[] colunas = new DataGridViewColumn[]
@@ -94,6 +100,20 @@ namespace FestasInfantis.WinApp.ModuloFesta
             };
 
             grid.Columns.AddRange(colunas);
+        }
+
+        public void MostrarFiltrado(List<Festa> filtro)
+        {
+            grid.Columns.Clear();
+
+            PopularGridFiltro();
+
+            AtualizarRegistros(filtro);
+        }
+
+        private void PopularGridFiltro()
+        {
+            throw new NotImplementedException();
         }
     }
 }

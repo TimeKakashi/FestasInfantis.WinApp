@@ -19,5 +19,20 @@ namespace FestaAniversario.Infra.Dados.Arquivo.ModuloFesta
         {
             return contextoDados.festas;
         }
+
+        public List<Festa> FiltrarAlugueisEmAberto()
+        {
+            return (List<Festa>)ObterRegistros().Where(x => x.pagamento == false).ToList();
+        }
+
+        public List<Festa> FiltrarAlugueisPagos()
+        {
+            return (List<Festa>)ObterRegistros().Where(x => x.pagamento == true).ToList();
+        }
+
+        public List<Festa> FiltrarPorAlugueisComMesmoEndereco()
+        {
+            return (List<Festa>)ObterRegistros().OrderBy(x => x.enderecoFesta).ToList();
+        }
     }
 }

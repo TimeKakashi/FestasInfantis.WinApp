@@ -34,6 +34,8 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         public override bool PagarHabilitado => true;
 
+        public override bool FiltrarHabilitado => true;
+
         public override void Editar()
         {
             Festa festa = ObterFestaSelecionada();
@@ -104,6 +106,49 @@ namespace FestasInfantis.WinApp.ModuloFesta
             }
 
             CarregarFestas();
+        }
+
+        public override void Filtrar()
+        {
+            TelaFestaFiltro telaFiltro = new TelaFestaFiltro();
+
+            if(telaFiltro.ShowDialog() == DialogResult.OK)
+            {
+                string status = telaFiltro.ObterStatus();
+
+                List<Festa> listaFesta = new List<Festa>();
+
+                if(status == "abertas")
+                {
+                    List<Festa> festasAbertas = repositorioFesta.FiltrarAlugueisEmAberto();
+                    listagemFesta.AtualizarRegistros(festasAbertas);
+
+                }
+                else if (status == "finalizadas")
+                {
+                    List<Festa> festasPagas = repositorioFesta.FiltrarAlugueisPagos();
+                    listagemFesta.AtualizarRegistros(festasPagas);
+                }
+
+                else if (status == "endereco")
+                {
+                    List<Festa> festasMesmoEndereco = repositorioFesta.FiltrarPorAlugueisComMesmoEndereco();
+                    listagemFesta.AtualizarRegistros(festasMesmoEndereco);
+
+                }
+
+                else if (status == "todos")
+                {
+                    List<Festa> todasFestas = repositorioFesta.SelecionarTodos();
+                    listagemFesta.AtualizarRegistros(todasFestas);
+
+                }
+
+            }
+
+            
+
+            
         }
 
         private Festa ObterFestaSelecionada()

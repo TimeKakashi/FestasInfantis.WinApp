@@ -42,7 +42,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
                     Cliente cliente = telaCliente.Cliente;
                     List<Cliente> listaClientes = repositorioCliente.SelecionarTodos();
 
-                    if (listaClientes.Any(n => n.nome == cliente.nome))
+                    if (listaClientes.Any(n => n.nome.ToLower() == cliente.nome.ToLower()))
                     {
                         TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
                         nomeRepetido = true;

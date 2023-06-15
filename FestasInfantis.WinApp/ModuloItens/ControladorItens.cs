@@ -82,7 +82,7 @@ namespace FestasInfantis.WinApp.ModuloItens
                     Itens item = telaItens.itens;
                     List<Itens> listaItens = repositorioItem.SelecionarTodos();
 
-                    if (listaItens.Any(i => i.nomeDoItem == item.nomeDoItem))
+                    if (listaItens.Any(i => i.nomeDoItem.ToLower() == item.nomeDoItem.ToLower()))
                     {
                         TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
                         nomeRepetido = true;
