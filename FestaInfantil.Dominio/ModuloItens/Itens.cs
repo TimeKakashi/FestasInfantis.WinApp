@@ -35,7 +35,7 @@ namespace FestaInfantil.Dominio.ModuloTema
             List<String> lista = new List<String>();
 
             if (string.IsNullOrEmpty(nomeDoItem))
-                lista.Add("Campo Nome do item incorreto!");
+                lista.Add("Campo Nome do item está inválido!");
 
             if( valor < 0)
                 lista.Add("Campo Valor do item incorreto!");

@@ -44,10 +44,10 @@ namespace FestaInfantil.Dominio.ModuloCliente
                 erros.Add("O campo nome esta invalido!");
 
             if(!VerificarNumeroTelefone(telefone))
-                erros.Add("O campo telefone esta inválido, insira o número no modelo DDD + 123456789!");
+                erros.Add("O campo telefone está inválido, insira o número no modelo DDD + 123456789!");
 
             if (string.IsNullOrEmpty(endereco) || endereco.Length < 7)
-                erros.Add("O campo endereco esta invalido!");
+                erros.Add("O campo endereço está inválido!");
 
             return erros.ToArray();
 

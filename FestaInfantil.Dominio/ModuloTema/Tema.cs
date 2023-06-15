@@ -35,10 +35,10 @@ namespace FestaInfantil.Dominio.ModuloTema
             List<String> lista = new List<String>();
 
             if (string.IsNullOrEmpty(descricao) || descricao.Length < 5)
-                lista.Add("O campo descricao esta incorreto!");
+                lista.Add("O campo descrição está inválido!");
 
             if (itensCheck.Count == 0)
-                lista.Add("O campo de itens esta incorreto!");
+                lista.Add("O campo de itens está inválido!");
 
             return lista.ToArray();
         }
