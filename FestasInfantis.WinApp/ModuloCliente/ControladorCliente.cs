@@ -1,5 +1,6 @@
 ﻿using FestaAniversario.Infra.Dados.Arquivo.ModuloCliente;
 using FestaInfantil.Dominio.ModuloCliente;
+using FestaInfantil.Dominio.ModuloFesta;
 using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloCliente
@@ -19,6 +20,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
         public override string ToolTipEditar { get { return "Editar Cliente existente"; } }
 
         public override string ToolTipExcluir { get { return "Excluir Cliente existente"; } }
+        public override bool FiltrarHabilitado => true;
+
+
 
         private Cliente ObterClienteSelecionado()
         {
@@ -113,6 +117,20 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 CarregarClientes();
             }
         }
+
+        public override void Filtrar()
+        {
+            Cliente cliente = ObterClienteSelecionado();
+
+            if(cliente.festas.Count == 0) 
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Esse cliente não possui nenhuma festa em seu nome!");
+                return;
+            }
+
+            listagemCliente.MostrarAlugueisFeitos(cliente.festas);
+        }
+
         public override UserControl ObterListagem()
         {
             if (listagemCliente == null)
@@ -138,5 +156,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }

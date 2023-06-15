@@ -32,6 +32,8 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
         public override string ToolTipPagar => "Realizar Pagamento de uma Festa";
 
+        public override bool PagarHabilitado => true;
+
         public override void Editar()
         {
             Festa festa = ObterFestaSelecionada();

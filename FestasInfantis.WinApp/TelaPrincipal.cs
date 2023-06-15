@@ -34,6 +34,7 @@ namespace FestasInfantis.WinApp
             labelTipoCadastro.Text = controlador.ObterTipoCadastro();
             ConfigurarToolTips(controlador);
             ConfigurarListagem(controlador);
+            ConfigurarEstados(controlador);
 
         }
         private void ConfigurarToolTips(ControladorBase controlador)
@@ -82,16 +83,17 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorCliente(repositorioCliente);
             ConfigurarTelaPrincipal(controlador);
-            btnPagar.Visible = false;
+
 
 
         }
+
 
         private void festasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador = new ControladorFesta(repositorioFesta, repositorioCliente, repositorioTema);
             ConfigurarTelaPrincipal(controlador);
-            btnPagar.Visible = true;
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -120,7 +122,7 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorTema(repositorioTema, repositorioItens);
             ConfigurarTelaPrincipal(controlador);
-            btnPagar.Visible = false;
+
 
         }
 
@@ -128,7 +130,7 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorItens(repositorioItens);
             ConfigurarTelaPrincipal(controlador);
-            btnPagar.Visible = false;
+
         }
 
         private void btnPagar_Click_1(object sender, EventArgs e)
@@ -139,6 +141,26 @@ namespace FestasInfantis.WinApp
                 return;
             }
             controlador.RealizarPagamento();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            if (controlador == null)
+            {
+                MessageBox.Show("Selecione uma area primeiro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            controlador.Filtrar();
+        }
+
+        private void ConfigurarEstados(ControladorBase controlador)
+        {
+            btnInserir.Enabled = controlador.InserirHabilitado;
+            btnEditar.Enabled = controlador.EditarHabilitado;
+            btnExcluir.Enabled = controlador.ExcluirHabilitado;
+            btnFiltrar.Enabled = controlador.FiltrarHabilitado;
+            btnPagar.Enabled = controlador.PagarHabilitado;
         }
     }
 }

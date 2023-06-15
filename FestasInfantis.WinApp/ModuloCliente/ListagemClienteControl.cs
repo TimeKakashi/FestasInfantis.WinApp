@@ -1,14 +1,6 @@
 ﻿using FestaInfantil.Dominio.ModuloCliente;
+using FestaInfantil.Dominio.ModuloFesta;
 using FestasInfantis.WinApp.Compartilhado;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp.ModuloCliente
 {
@@ -31,8 +23,18 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 grid.Rows.Add(cli.id, cli.nome, cli.endereco, cli.telefone, cli.festas.Count);
             }
         }
-        
-       public int ObterIdSelecionado()
+
+        public void AtualizarRegistros(List<Festa> festas)
+        {
+            grid.Rows.Clear();
+
+            foreach (Festa festa in festas)
+            {
+                grid.Rows.Add(festa.id, festa.cliente, festa.tema, festa.data, festa.valorEntrada, festa.valorTotal, festa.estaPago);
+            } 
+        }
+
+        public int ObterIdSelecionado()
         {
             if (grid.SelectedRows.Count > 0 && grid.SelectedRows[0].Cells["id"].Value != null)
             {
@@ -40,11 +42,63 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 return id;
             }
             else
-            {
-              
                 return -1;
-            }
         }
+
+        public void MostrarAlugueisFeitos(List<Festa> listaFestas)
+        {
+            grid.Columns.Clear();
+
+            PopularGridFiltro();
+
+            AtualizarRegistros(listaFestas);
+        }
+
+        private void PopularGridFiltro()
+        {
+            DataGridViewColumn[] colunas = new DataGridViewColumn[]
+            {
+                new DataGridViewTextBoxColumn()
+                {
+                    Name = "id",
+                    HeaderText = "Id"
+                },
+                 new DataGridViewTextBoxColumn()
+                {
+                    Name = "cliente",
+                    HeaderText = "Cliente"
+                },
+                 new DataGridViewTextBoxColumn()
+                {
+                    Name = "tema",
+                    HeaderText = "Tema"
+                },
+                  new DataGridViewTextBoxColumn()
+                {
+                    Name = "data",
+                    HeaderText = "Data"
+                },
+                   new DataGridViewTextBoxColumn()
+                {
+                    Name = "valorEntrada",
+                    HeaderText = "ValorEntrada"
+                }
+                   ,
+                   new DataGridViewTextBoxColumn()
+                {
+                    Name = "valorTotal",
+                    HeaderText = "Valor Total"
+                },
+                   new DataGridViewTextBoxColumn()
+                {
+                    Name = "statusPagamento",
+                    HeaderText = "Status Pagamento"
+                }
+            };
+
+            grid.Columns.AddRange(colunas);
+        }
+
         private void popularGrid()
         {
             DataGridViewColumn[] colunas = new DataGridViewColumn[]

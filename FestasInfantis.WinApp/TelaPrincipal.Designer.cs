@@ -39,6 +39,7 @@
             btnInserir = new ToolStripButton();
             btnEditar = new ToolStripButton();
             btnExcluir = new ToolStripButton();
+            btnFiltrar = new ToolStripButton();
             btnPagar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             labelTipoCadastro = new ToolStripLabel();
@@ -104,7 +105,7 @@
             // toolStrip1
             // 
             toolStrip1.BackColor = SystemColors.Control;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, btnPagar, toolStripSeparator1, labelTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, btnFiltrar, btnPagar, toolStripSeparator1, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 25);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
@@ -142,6 +143,16 @@
             btnExcluir.Text = "Excluir";
             btnExcluir.Click += btnExcluir_Click;
             // 
+            // btnFiltrar
+            // 
+            btnFiltrar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnFiltrar.Image = (Image)resources.GetObject("btnFiltrar.Image");
+            btnFiltrar.ImageTransparentColor = Color.Magenta;
+            btnFiltrar.Name = "btnFiltrar";
+            btnFiltrar.Size = new Size(60, 22);
+            btnFiltrar.Text = "Visualizar";
+            btnFiltrar.Click += btnFiltrar_Click;
+            // 
             // btnPagar
             // 
             btnPagar.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -151,7 +162,6 @@
             btnPagar.Size = new Size(115, 22);
             btnPagar.Text = "Realizar Pagamento";
             btnPagar.Click += btnPagar_Click_1;
-            btnPagar.Visible = false;
             // 
             // toolStripSeparator1
             // 
@@ -163,7 +173,6 @@
             labelTipoCadastro.Name = "labelTipoCadastro";
             labelTipoCadastro.Size = new Size(181, 22);
             labelTipoCadastro.Text = "Rafaela Decorações Tela Principal";
-            
             // 
             // statusStrip1
             // 
@@ -234,5 +243,6 @@
         private ToolStripButton btnEditar;
         private ToolStripButton btnExcluir;
         private ToolStripButton btnPagar;
+        private ToolStripButton btnFiltrar;
     }
 }
