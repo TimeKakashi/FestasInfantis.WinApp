@@ -58,7 +58,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
                     if (listaTemas.Any(t => t.descricao.ToLower() == temaEditado.descricao.ToLower() && t.id != id))
                     {
-                        TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
+                        TelaPrincipal.Instancia.AtualizarRodape("Descrição já utilizada!");
                         nomeRepetido = true;
                     }
                     else
