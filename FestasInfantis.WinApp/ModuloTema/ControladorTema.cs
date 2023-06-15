@@ -57,11 +57,17 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Excluir()
         {
-           
             Tema tema = ObterTemaSelecionado();
+
             if (tema == null)
             {
                 MessageBox.Show("Selecione um tema primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if(tema.contador > 0)
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Esse tema possui uma festa em aberto, não é possivel excluí-lo");
                 return;
             }
 
@@ -87,7 +93,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
                 if(listaTema.Any(x => x.descricao == tema.descricao))
                 {
-                    TelaPrincipal.Instancia.AtualizarRodape("Nao é possivel cadastrar um tema com o mesmo nome do outro tema!");
+                    TelaPrincipal.Instancia.AtualizarRodape("Nao é possivel cadastrar um tema com a mesma descrição de outro tema!");
                     return;
                 }
 

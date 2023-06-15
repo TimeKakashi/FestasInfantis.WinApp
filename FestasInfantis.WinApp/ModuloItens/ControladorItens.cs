@@ -47,9 +47,16 @@ namespace FestasInfantis.WinApp.ModuloItens
         public override void Excluir()
         {
             Itens item = ObterItemSelecionado();
+
             if (item == null)
             {
                 MessageBox.Show("Selecione um item primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if(item.contador > 0)
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Esse item esta sendo usando em uma festa aberta, não é possivel excluí-lo");
                 return;
             }
 

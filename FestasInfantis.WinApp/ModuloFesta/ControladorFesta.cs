@@ -44,6 +44,12 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 return;
             }
 
+            if (festa.pagamento)
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Essa festa está finalizada, não é possivel editá-la");
+                return;
+            }
+
             int id = festa.id;
             
             TelaFesta telaFesta = new TelaFesta(repositorioCliente.SelecionarTodos(), repositorioTema.SelecionarTodos());
@@ -66,6 +72,12 @@ namespace FestasInfantis.WinApp.ModuloFesta
             if (festa == null)
             {
                 MessageBox.Show("Selecione uma festa primeiro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if(festa.pagamento == false)
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Essa festa está ainda não foi finalizada, não é possivel excluí-la");
                 return;
             }
 
@@ -132,11 +144,25 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 return;
             }
 
+            if (festa.pagamento)
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Essa festa está finalizada, não é possivel finalizá-la novamente");
+                return;
+            }
+
             if(MessageBox.Show("Deseja confirmar o pagamento?") == DialogResult.OK)
             {
                 festa.pagamento = true;
                 festa.estaPago = "Pago";
                 festa.cliente.contador--;
+                festa.tema.contador--;
+
+                foreach (Itens item in festa.tema.itensCheck)
+                {
+                    item.contador--;
+                }
+
+                festa.dataEncerramento = DateTime.Now;
             }
 
             CarregarFestas();

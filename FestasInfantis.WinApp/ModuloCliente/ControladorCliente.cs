@@ -46,7 +46,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
                     Inserir();
                 }
 
-                    repositorioCliente.Inserir(cliente);
+                repositorioCliente.Inserir(cliente);
                 CarregarClientes();
             }
         }

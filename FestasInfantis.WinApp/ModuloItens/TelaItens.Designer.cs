@@ -41,7 +41,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.ControlLightLight;
+            label1.BackColor = SystemColors.GradientActiveCaption;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
             label1.Location = new Point(12, 114);
@@ -53,7 +53,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ControlLightLight;
+            label2.BackColor = SystemColors.GradientActiveCaption;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Desktop;
             label2.Location = new Point(12, 48);
@@ -123,7 +123,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(443, 371);
             Controls.Add(btnSair);
             Controls.Add(btnCadastrar);

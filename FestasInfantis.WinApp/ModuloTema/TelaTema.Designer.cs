@@ -40,7 +40,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ControlLightLight;
+            label2.BackColor = SystemColors.GradientActiveCaption;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(12, 31);
             label2.Name = "label2";
@@ -58,7 +58,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = SystemColors.ControlLightLight;
+            label3.BackColor = SystemColors.GradientActiveCaption;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(12, 129);
             label3.Name = "label3";
@@ -106,7 +106,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(443, 371);
             Controls.Add(btnCancelar);
             Controls.Add(btnGravar);

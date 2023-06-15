@@ -7,7 +7,7 @@ namespace FestaInfantil.Dominio.ModuloTema
     {
         public string nomeDoItem { get; set; }
         public decimal valor { get; set; }
-
+        public int contador = 0;
         public bool marcado = false;
 
         public Itens()
@@ -37,7 +37,7 @@ namespace FestaInfantil.Dominio.ModuloTema
             if (string.IsNullOrEmpty(nomeDoItem))
                 lista.Add("Campo Nome do item incorreto!");
 
-            if( valor == 0)
+            if( valor < 0)
                 lista.Add("Campo Valor do item incorreto!");
 
             return lista.ToArray();

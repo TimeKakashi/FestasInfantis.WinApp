@@ -10,6 +10,8 @@ namespace FestaInfantil.Dominio.ModuloTema
         public List<Itens> listaItens { get; set; }
         public List<Itens> itensCheck { get; set; }
 
+        public int contador = 0;
+
         public Tema()
         {
             this.listaItens = new List<Itens>();

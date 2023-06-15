@@ -104,12 +104,12 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 }
 
                 int numeroAlugueisCliente = cliente.festas.Count;
-                decimal valorDesconto = 0;
+                decimal valorDesconto = 0.99m;
 
                 switch (numeroAlugueisCliente)
                 {
                     case 0:
-                        valorDesconto = 1;
+                        valorDesconto = 0.99m;
                         break;
 
                     case 1:
@@ -136,6 +136,12 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
                 festa.cliente.festas.Add(festa);
                 festa.cliente.contador++;
+                festa.tema.contador++;
+
+                foreach (Itens item in festa.tema.itensCheck)
+                {
+                    item.contador++;
+                }
 
                 string[] erros = festa.Validar();
 

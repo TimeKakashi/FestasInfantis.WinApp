@@ -29,7 +29,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             foreach (Festa festa in festas)
             {
-                grid.Rows.Add(festa.id, festa.cliente, festa.tema ,festa.data, festa.horaInicio, festa.horaFinal.Hours, festa.enderecoFesta, festa.valorEntrada, festa.valorTotal, festa.estaPago);
+                grid.Rows.Add(festa.id, festa.cliente.nome, festa.cliente.telefone, festa.tema, festa.data, festa.valorEntrada, festa.valorTotal, festa.estaPago, festa.dataEncerramento);
             }
         }
         public int ObterIdSelecionado()
@@ -58,6 +58,11 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 },
                    new DataGridViewTextBoxColumn()
                 {
+                    Name = "telefone",
+                    HeaderText = "Telefone"
+                },
+                   new DataGridViewTextBoxColumn()
+                {
                     Name = "tema",
                     HeaderText = "Tema"
                 },
@@ -65,21 +70,6 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 {
                     Name = "data",
                     HeaderText = "Data"
-                },
-                   new DataGridViewTextBoxColumn()
-                {
-                    Name = "horaInicio",
-                    HeaderText = "Hora Inicio"
-                },
-                   new DataGridViewTextBoxColumn()
-                {
-                    Name = "horaFinal",
-                    HeaderText = "Hora Término"
-                },
-                   new DataGridViewTextBoxColumn()
-                {
-                    Name = "endereco",
-                    HeaderText = "Endereço"
                 },
                    new DataGridViewTextBoxColumn()
                 {
@@ -95,6 +85,11 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 {
                     Name = "pgamento",
                     HeaderText = "Status Pagamento"
+                },
+                   new DataGridViewTextBoxColumn()
+                {
+                    Name = "dataPagamento",
+                    HeaderText = "Data de Encerramento"
                 }
             };
 

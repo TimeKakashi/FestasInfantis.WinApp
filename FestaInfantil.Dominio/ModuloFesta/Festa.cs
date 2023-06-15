@@ -14,6 +14,8 @@ namespace FestaInfantil.Dominio.ModuloFesta
         public DateTime data { get; set; }
         public TimeSpan horaInicio { get; set; }
         public TimeSpan horaFinal { get; set; }
+
+        public DateTime dataEncerramento { get; set; }
         public decimal valorEntrada { get; set; }
         public string estaPago { get; set; }
         public decimal valorTotal { get; set; }

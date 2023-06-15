@@ -31,7 +31,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             foreach (Festa festa in festas)
             {
                 grid.Rows.Add(festa.id, festa.cliente, festa.tema, festa.data, festa.valorEntrada, festa.valorTotal, festa.estaPago);
-            } 
+            }
         }
 
         public int ObterIdSelecionado()
