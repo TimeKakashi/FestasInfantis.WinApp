@@ -80,7 +80,7 @@ namespace FestasInfantis.WinApp.ModuloFesta
             DateTime data = dtData.Value;
             decimal sinal;
 
-            if(decimal.TryParse(tbSinal.Text, out sinal))
+            if (decimal.TryParse(tbSinal.Text, out sinal))
             {
                 Tema tema = (Tema)cbTema.SelectedItem;
                 Cliente cliente = (Cliente)cbCliente.SelectedItem;

@@ -54,7 +54,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.LightGray;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(7, 30);
+            label2.Location = new Point(7, 68);
             label2.Name = "label2";
             label2.Size = new Size(58, 21);
             label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             cbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCliente.FormattingEnabled = true;
-            cbCliente.Location = new Point(138, 32);
+            cbCliente.Location = new Point(138, 70);
             cbCliente.Name = "cbCliente";
             cbCliente.Size = new Size(121, 23);
             cbCliente.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             cbTema.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTema.FormattingEnabled = true;
-            cbTema.Location = new Point(138, 203);
+            cbTema.Location = new Point(138, 250);
             cbTema.Name = "cbTema";
             cbTema.Size = new Size(121, 23);
             cbTema.TabIndex = 4;
@@ -84,7 +84,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.LightGray;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(7, 205);
+            label3.Location = new Point(7, 248);
             label3.Name = "label3";
             label3.Size = new Size(46, 21);
             label3.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // tbEndereco
             // 
-            tbEndereco.Location = new Point(138, 251);
+            tbEndereco.Location = new Point(138, 295);
             tbEndereco.Name = "tbEndereco";
             tbEndereco.Size = new Size(121, 23);
             tbEndereco.TabIndex = 5;
@@ -102,7 +102,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.LightGray;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(7, 253);
+            label4.Location = new Point(7, 293);
             label4.Name = "label4";
             label4.Size = new Size(74, 21);
             label4.TabIndex = 6;
@@ -113,7 +113,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.LightGray;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(7, 306);
+            label5.Location = new Point(7, 338);
             label5.Name = "label5";
             label5.Size = new Size(124, 21);
             label5.TabIndex = 8;
@@ -122,7 +122,7 @@
             // tbValorEntrada
             // 
             tbValorEntrada.Enabled = false;
-            tbValorEntrada.Location = new Point(138, 304);
+            tbValorEntrada.Location = new Point(138, 340);
             tbValorEntrada.Name = "tbValorEntrada";
             tbValorEntrada.Size = new Size(121, 23);
             tbValorEntrada.TabIndex = 7;
@@ -130,7 +130,7 @@
             // dtData
             // 
             dtData.Format = DateTimePickerFormat.Short;
-            dtData.Location = new Point(138, 74);
+            dtData.Location = new Point(138, 115);
             dtData.Name = "dtData";
             dtData.Size = new Size(121, 23);
             dtData.TabIndex = 9;
@@ -140,7 +140,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.LightGray;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(7, 74);
+            label6.Location = new Point(7, 113);
             label6.Name = "label6";
             label6.Size = new Size(42, 21);
             label6.TabIndex = 10;
@@ -151,7 +151,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.LightGray;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(7, 159);
+            label7.Location = new Point(7, 203);
             label7.Name = "label7";
             label7.Size = new Size(125, 21);
             label7.TabIndex = 12;
@@ -160,7 +160,7 @@
             // dtHoraTermino
             // 
             dtHoraTermino.Format = DateTimePickerFormat.Time;
-            dtHoraTermino.Location = new Point(138, 159);
+            dtHoraTermino.Location = new Point(138, 205);
             dtHoraTermino.Name = "dtHoraTermino";
             dtHoraTermino.Size = new Size(121, 23);
             dtHoraTermino.TabIndex = 11;
@@ -170,7 +170,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.LightGray;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(7, 115);
+            label8.Location = new Point(7, 158);
             label8.Name = "label8";
             label8.Size = new Size(85, 21);
             label8.TabIndex = 14;
@@ -179,7 +179,7 @@
             // dtHoraInicio
             // 
             dtHoraInicio.Format = DateTimePickerFormat.Time;
-            dtHoraInicio.Location = new Point(138, 114);
+            dtHoraInicio.Location = new Point(138, 160);
             dtHoraInicio.Name = "dtHoraInicio";
             dtHoraInicio.Size = new Size(121, 23);
             dtHoraInicio.TabIndex = 13;
@@ -189,7 +189,7 @@
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.DialogResult = DialogResult.OK;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(301, 237);
+            button1.Location = new Point(301, 290);
             button1.Name = "button1";
             button1.Size = new Size(110, 37);
             button1.TabIndex = 15;
@@ -202,7 +202,7 @@
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.DialogResult = DialogResult.Cancel;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(301, 287);
+            button2.Location = new Point(301, 340);
             button2.Name = "button2";
             button2.Size = new Size(110, 37);
             button2.TabIndex = 16;
@@ -215,7 +215,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.LightGray;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(281, 32);
+            label1.Location = new Point(10, 23);
             label1.Name = "label1";
             label1.Size = new Size(44, 21);
             label1.TabIndex = 18;
@@ -223,7 +223,7 @@
             // 
             // tbSinal
             // 
-            tbSinal.Location = new Point(331, 32);
+            tbSinal.Location = new Point(138, 25);
             tbSinal.Name = "tbSinal";
             tbSinal.Size = new Size(72, 23);
             tbSinal.TabIndex = 17;
@@ -233,7 +233,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(423, 336);
+            ClientSize = new Size(423, 389);
             Controls.Add(label1);
             Controls.Add(tbSinal);
             Controls.Add(button2);
