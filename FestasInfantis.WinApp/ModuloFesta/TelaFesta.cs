@@ -132,11 +132,6 @@ namespace FestasInfantis.WinApp.ModuloFesta
                 //valorTotal -= valorTotal / valorDesconto;
                 valorTotal *= valorDesconto;
 
-
-                cliente.temDesconto = true;
-                cliente.alugado = true;
-                
-
                 festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
 
                 festa.cliente.festas.Add(festa);

@@ -12,13 +12,9 @@ namespace FestaInfantil.Dominio.ModuloCliente
         public string telefone { get; set; }
         public string endereco { get; set; }
 
-        public bool temDesconto = false;
-
         public List<Festa> festas;
 
         public  int contador = 0;
-
-        public bool alugado = false;
 
         private Cliente cliente;
 
