@@ -42,7 +42,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
                 if (listaClientes.Any(n => n.nome == cliente.nome))
                 {
-                    TelaPrincipal.Instancia.AtualizarRodape("Nome ja utilizado!");
+                    TelaPrincipal.Instancia.AtualizarRodape("Nome já utilizado!");
                     Inserir();
                 }
 
