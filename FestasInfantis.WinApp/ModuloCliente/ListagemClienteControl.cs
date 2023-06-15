@@ -28,7 +28,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             foreach (Cliente cli in clientes)
             {
-                grid.Rows.Add(cli.id, cli.nome, cli.endereco, cli.telefone );
+                grid.Rows.Add(cli.id, cli.nome, cli.endereco, cli.telefone, cli.festas.Count);
             }
         }
         
@@ -64,11 +64,16 @@ namespace FestasInfantis.WinApp.ModuloCliente
                     Name = "endereco",
                     HeaderText = "endereço"
                 },
-
                    new DataGridViewTextBoxColumn()
                 {
                     Name = "telefone",
                     HeaderText = "Telefone"
+                }
+                   ,
+                   new DataGridViewTextBoxColumn()
+                {
+                    Name = "quantiadeAlugada",
+                    HeaderText = "Quantidade de Alugueis"
                 }
             };
 

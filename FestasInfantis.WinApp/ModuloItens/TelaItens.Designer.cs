@@ -151,7 +151,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "TelaItens";
-            Text = "TelaItens";
+            Text = "Cadastro de Itens";
             ResumeLayout(false);
             PerformLayout();
         }

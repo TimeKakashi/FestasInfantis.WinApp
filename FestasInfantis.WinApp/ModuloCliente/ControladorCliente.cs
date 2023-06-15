@@ -34,7 +34,15 @@ namespace FestasInfantis.WinApp.ModuloCliente
             {
                 Cliente cliente = telaCliente.Cliente;
 
-                repositorioCliente.Inserir(cliente);
+                List<Cliente> listaClientes = repositorioCliente.SelecionarTodos();
+
+                if (listaClientes.Any(n => n.nome == cliente.nome))
+                {
+                    TelaPrincipal.Instancia.AtualizarRodape("Nome ja utilizado!");
+                    Inserir();
+                }
+
+                    repositorioCliente.Inserir(cliente);
                 CarregarClientes();
             }
         }
@@ -86,6 +94,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
 
+                return;
+            }
+
+            if (cliente.contador > 0)
+            {
+                TelaPrincipal.Instancia.AtualizarRodape("Esse cliente possui um aluguel, não é possivel exclui-lo");
                 return;
             }
 

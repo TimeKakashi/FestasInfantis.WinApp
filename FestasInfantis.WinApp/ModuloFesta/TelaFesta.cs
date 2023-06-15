@@ -85,14 +85,14 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
             if (tema == null)
             {
-                MessageBox.Show("O campo tema é obrigatorio!");
+                TelaPrincipal.Instancia.AtualizarRodape("O Campo tema é obrigatorio!");
                 DialogResult = DialogResult.None;
             }
 
 
             else if (cliente == null)
             {
-                MessageBox.Show("O campo cliente é obrigatorio!");
+                TelaPrincipal.Instancia.AtualizarRodape("O Campo cliente é obrigatorio!");
                 DialogResult = DialogResult.None;
             }
 
@@ -103,14 +103,44 @@ namespace FestasInfantis.WinApp.ModuloFesta
                     valorTotal += Convert.ToDecimal(item.valor);
                 }
 
-                if (cliente.temDesconto == true)
+                int numeroAlugueisCliente = cliente.festas.Count;
+                decimal valorDesconto = 0;
+
+                switch (numeroAlugueisCliente)
                 {
-                    valorTotal -= valorTotal / 10;
+                    case 0:
+                        valorDesconto = 1;
+                        break;
+
+                    case 1:
+                        valorDesconto = 0.95m;
+                        break;
+
+                    case 2:
+                        valorDesconto = 0.9m;
+                        break;
+
+                    case 3:
+                        valorDesconto = 0.85m;
+                        break;
+
+                    default:
+                        valorDesconto = 0.85m;
+                        break;
                 }
 
+                //valorTotal -= valorTotal / valorDesconto;
+                valorTotal *= valorDesconto;
+
+
                 cliente.temDesconto = true;
+                cliente.alugado = true;
+                
 
                 festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal);
+
+                festa.cliente.festas.Add(festa);
+                festa.cliente.contador++;
 
                 string[] erros = festa.Validar();
 

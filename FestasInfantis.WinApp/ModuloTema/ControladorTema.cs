@@ -81,7 +81,15 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             if(telaTema.ShowDialog() == DialogResult.OK)
             {
+                List<Tema> listaTema = repositorioTema.SelecionarTodos();
+
                 Tema tema = telaTema.Tema;
+
+                if(listaTema.Any(x => x.descricao == tema.descricao))
+                {
+                    TelaPrincipal.Instancia.AtualizarRodape("Nao é possivel cadastrar um tema com o mesmo nome do outro tema!");
+                    return;
+                }
 
                 repositorioTema.Inserir(tema);
 

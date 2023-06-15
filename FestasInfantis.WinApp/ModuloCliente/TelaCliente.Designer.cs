@@ -66,9 +66,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.ControlLightLight;
+            label1.BackColor = SystemColors.GradientActiveCaption;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(113, 114);
+            label1.Location = new Point(78, 114);
             label1.Name = "label1";
             label1.Size = new Size(63, 25);
             label1.TabIndex = 2;
@@ -77,20 +77,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ControlLightLight;
+            label2.BackColor = SystemColors.GradientActiveCaption;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(346, 114);
+            label2.Location = new Point(58, 166);
             label2.Name = "label2";
-            label2.Size = new Size(81, 25);
+            label2.Size = new Size(83, 25);
             label2.TabIndex = 3;
-            label2.Text = "Numero";
+            label2.Text = "Telefone";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = SystemColors.ControlLightLight;
+            label3.BackColor = SystemColors.GradientActiveCaption;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(224, 220);
+            label3.Location = new Point(50, 233);
             label3.Name = "label3";
             label3.Size = new Size(91, 25);
             label3.TabIndex = 4;
@@ -99,7 +99,7 @@
             // tbNome
             // 
             tbNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbNome.Location = new Point(78, 158);
+            tbNome.Location = new Point(147, 114);
             tbNome.Name = "tbNome";
             tbNome.Size = new Size(130, 33);
             tbNome.TabIndex = 5;
@@ -107,7 +107,7 @@
             // tbEndereco
             // 
             tbEndereco.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbEndereco.Location = new Point(132, 258);
+            tbEndereco.Location = new Point(147, 230);
             tbEndereco.Name = "tbEndereco";
             tbEndereco.Size = new Size(282, 33);
             tbEndereco.TabIndex = 6;
@@ -115,7 +115,7 @@
             // tbNumero
             // 
             tbNumero.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbNumero.Location = new Point(332, 158);
+            tbNumero.Location = new Point(147, 166);
             tbNumero.Name = "tbNumero";
             tbNumero.Size = new Size(130, 33);
             tbNumero.TabIndex = 7;
@@ -123,7 +123,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = SystemColors.ControlLight;
+            label4.BackColor = SystemColors.GradientActiveCaption;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(184, 41);
             label4.Name = "label4";
@@ -135,7 +135,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(560, 371);
             Controls.Add(label4);
             Controls.Add(tbNumero);
@@ -153,7 +153,7 @@
             MinimizeBox = false;
             Name = "TelaCliente";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "TelaCliente";
+            Text = "Castro de Cliente";
             ResumeLayout(false);
             PerformLayout();
         }

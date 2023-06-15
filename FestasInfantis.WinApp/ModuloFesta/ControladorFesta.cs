@@ -134,6 +134,8 @@ namespace FestasInfantis.WinApp.ModuloFesta
             {
                 festa.pagamento = true;
                 festa.estaPago = "Pago";
+                festa.cliente.alugado = false;
+                festa.cliente.contador--;
             }
 
             CarregarFestas();
