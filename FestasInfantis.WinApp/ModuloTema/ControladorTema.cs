@@ -87,11 +87,11 @@ namespace FestasInfantis.WinApp.ModuloTema
                 return;
             }
 
-            if(tema.contador > 0)
-            {
-                TelaPrincipal.Instancia.AtualizarRodape("Esse tema possui uma festa em aberto, não é possivel excluí-lo");
-                return;
-            }
+            //if(tema.contador > 0)
+            //{
+            //    TelaPrincipal.Instancia.AtualizarRodape("Esse tema possui uma festa em aberto, não é possivel excluí-lo");
+            //    return;
+            //}
 
             DialogResult verificarExclusao = MessageBox.Show($"Deseja excluir o tema {tema.descricao}?", "Exclusão de Temas",
               MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
