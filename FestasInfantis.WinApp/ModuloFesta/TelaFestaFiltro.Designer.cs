@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiltroDeFesta));
             panel1 = new Panel();
             rbTodas = new RadioButton();
             rbEndereco = new RadioButton();
@@ -115,7 +116,7 @@
             button2.Text = "Sair";
             button2.UseVisualStyleBackColor = true;
             // 
-            // TelaFestaFiltro
+            // FiltroDeFesta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -124,8 +125,13 @@
             Controls.Add(button2);
             Controls.Add(btnGravar);
             Controls.Add(panel1);
-            Name = "TelaFestaFiltro";
-            Text = "TelaFestaFiltro";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
+            Name = "FiltroDeFesta";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Filtro de Festa";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
