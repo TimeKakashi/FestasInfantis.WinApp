@@ -138,21 +138,24 @@ namespace FestasInfantis.WinApp.ModuloFesta
 
                     festa = new Festa(endereco, cliente, tema, data, horaComeco, horaFinal, valorTotal, sinal);
 
-                    festa.cliente.festas.Add(festa);
-                    festa.cliente.contador++;
-                    festa.tema.contador++;
-
-                    foreach (Itens item in festa.tema.itensCheck)
-                    {
-                        item.contador++;
-                    }
-
                     string[] erros = festa.Validar();
 
                     if (erros.Length > 0)
                     {
                         TelaPrincipal.Instancia.AtualizarRodape(erros[0]);
                         DialogResult = DialogResult.None;
+                    }
+
+                    foreach (Itens item in festa.tema.itensCheck)
+                    {
+                        item.contador++;
+                    }
+
+                    if(DialogResult == DialogResult.OK)
+                    {
+                        festa.cliente.festas.Add(festa);
+                        festa.cliente.contador++;
+                        festa.tema.contador++;
                     }
                 }
             }

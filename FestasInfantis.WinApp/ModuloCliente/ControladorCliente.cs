@@ -145,6 +145,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
         public override void Filtrar()
         {
             Cliente cliente = ObterClienteSelecionado();
+
             if (cliente == null)
             {
                 MessageBox.Show($"Não existem Clientes Cadastrados",
